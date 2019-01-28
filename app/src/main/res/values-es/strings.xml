@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ttv1</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_con_password">Confirmar Contraseña</string>
+    <string name="hint_name">Nombre Completo</string>
+    <string name="hint_first_name">Nombre</string>
+    <string name="hint_last_name">Apellido Paterno</string>
+    <string name="hint_last_name_two">Apellido Materno</string>
+    <string name="btn_login">INICIO DE SESIÓN</string>
+    <string name="btn_register">REGISTRAR</string>
+    <string name="btn_link_to_register">¿No estas resgistrado? Registrate.</string>
+    <string name="btn_link_to_login">¡Ya estas registrado! Inicia Sesión.</string>
+    <string name="welcome">¡Bienvenido!</string>
+    <string name="btn_logout">Cerrar Sesión</string>
+    <string name="name">Nombre Completo</string>
+    <string name="title_activity_home">Home</string>
+    <string name="Birthday">Fecha de Nacimiento - dd/mm/yyyy</string>
+    <string name="genderM">Masculino</string>
+    <string name="genderF">Femenino</string>
+
+    <string name="FoodSlogan">“Es importante cambiar los hábitos alimenticios poco a poco y bajo supervisión médica.”</string>
+    <string name="FoodTitle1">Pescado azul</string>
+    <string name="FoodTitle2">Frutas y verduras</string>
+    <string name="FoodTitle3">Legumbres</string>
+    <string name="FoodTitle4">Frutos secos (nueces, almendras, avellanas, cacahuetes, etc.)</string>
+    <string name="FoodTitle5">Alimentos de origen animal (carnes, huevos)</string>
+
+    <string name="Exerlogan">“Es importante consultar con su médico el tipo de ejercicios que pueda realizar.”</string>
+
+    <string name="btn_goOut">Salir</string>
+    <string name="btn_next">Siguiente</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola Fragmento en blanco</string>
+</resources>

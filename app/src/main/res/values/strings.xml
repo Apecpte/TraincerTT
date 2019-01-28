@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Ttv1</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_con_password">Confirm Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_last_name_two">Last Name Two</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome!</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string name="title_activity_home">Home</string>
+    <string name="Birthday">Birthdate - dd/mm/yyyy</string>
+    <string name="genderM">Male</string>
+    <string name="genderF">Female</string>
+
+    <string name="FoodSlogan">"It is important to change eating habits little by little and under supervision medical."</string>
+    <string name="FoodTitle1">Blue fish</string>
+    <string name="FoodTitle2">Fruits and vegetables</string>
+    <string name="FoodTitle3">Vegetables</string>
+    <string name="FoodTitle4">Nuts (nuts, almonds, hazelnuts, peanuts, etc.)</string>
+    <string name="FoodTitle5">Foods of animal origin (meats, eggs)</string>
+
+    <string name="Exerlogan">"It is important to consult with your doctor about the type of exercises you can perform."</string>
+
+    <string name="btn_goOut">Go out</string>
+    <string name="btn_next">Next</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

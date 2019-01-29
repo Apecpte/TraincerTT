@@ -11,11 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.ConfirmRegistration" />
-        <activity android:name=".activity.Display" />
         <activity android:name=".activity.Home" />
         <activity android:name=".activity.Register" />
-        <activity android:name=".activity.Update" />
         <activity android:name=".activity.Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

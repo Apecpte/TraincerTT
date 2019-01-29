@@ -20,6 +20,13 @@
     <string name="genderM">Masculino</string>
     <string name="genderF">Femenino</string>
 
+    <string name="menuhome">Inicio</string>
+    <string name="menuTest">Test de Montreal</string>
+    <string name="menuAlim">Recomendaciones de alimentación</string>
+    <string name="menuEjer">Ejercicios cognitivos</string>
+    <string name="menuRelax">Recomendaciones de relajación y de activación física</string>
+    <string name="menuGoOut">Cerrar Sesión</string>
+
     <string name="FoodSlogan">“Es importante cambiar los hábitos alimenticios poco a poco y bajo supervisión médica.”</string>
     <string name="FoodTitle1">Pescado azul</string>
     <string name="FoodTitle2">Frutas y verduras</string>

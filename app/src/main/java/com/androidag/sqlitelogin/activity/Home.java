@@ -38,28 +38,6 @@ public class Home extends AppCompatActivity {
 
         // setFragmentByDefault();
 
-        drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
-            @Override
-            public void onDrawerSlide(View drawerView, float slideOffset) {
-
-            }
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                Toast.makeText(Home.this, "Open", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                Toast.makeText(Home.this, "Close", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onDrawerStateChanged(int newState) {
-
-            }
-        });
-
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -70,7 +48,6 @@ public class Home extends AppCompatActivity {
 
                     case R.id.menu_home:fragment = new HomeFragment();
                         fragmentTransaction = true;
-
                         break;
                     case R.id.menu_test:
                         fragment = new TestFragment();

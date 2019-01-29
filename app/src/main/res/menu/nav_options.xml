@@ -4,30 +4,30 @@
         <item
             android:id="@+id/menu_home"
             android:icon="@drawable/ic_menuhome"
-            android:title="Home" />
+            android:title="@string/menuhome" />
         <item
             android:id="@+id/menu_test"
             android:icon="@android:drawable/ic_media_play"
-            android:title="Montreal Test" />
+            android:title="@string/menuTest" />
         <item
             android:id="@+id/menu_recom_ali"
             android:icon="@android:drawable/ic_media_play"
-            android:title="Recommendations of feeding" />
+            android:title="@string/menuAlim" />
         <item
             android:id="@+id/menu_exer"
             android:icon="@android:drawable/ic_media_play"
-            android:title="Cognitive stimulation exercises" />
+            android:title="@string/menuEjer" />
         <item
             android:id="@+id/menu_recom_ejerc"
             android:icon="@android:drawable/ic_media_play"
-            android:title="Recommendations of relaxation and physical activation" />
+            android:title="@string/menuRelax" />
     </group>
     <item android:title="">
         <menu>
             <item
                 android:id="@+id/menu_logout"
                 android:icon="@android:drawable/ic_lock_power_off"
-                android:title="Logout" />
+                android:title="@string/menuGoOut" />
         </menu>
     </item>
 </menu>

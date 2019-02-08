@@ -1,12 +1,15 @@
 package com.androidag.sqlitelogin.fragments;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.androidag.sqlitelogin.Food.RecomFoodFragment2;
 import com.androidag.sqlitelogin.R;
@@ -18,6 +21,7 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
 
     private Button btnGoOut;
     private Button btnNext;
+    private Button btnYT;
 
 
     public RecomFoodFragment() {
@@ -32,9 +36,11 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
+        btnYT = (Button) view.findViewById(R.id.btnYT);
 
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
+        btnYT.setOnClickListener(this);
 
         // Inflate the layout for this fragment
         return view;
@@ -55,6 +61,10 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
                 fragment = new RecomFoodFragment2();
                 fragmentTransaction = true;
                 break;
+
+            case R.id.btnYT:
+                youtubeFish("uD_2jTSb4aY");
+                break;
         }
         if (fragmentTransaction) {
             changeFragment(fragment);
@@ -67,6 +77,12 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
                 .replace(R.id.content_frame, fragment)
                 .commit();
 
+    }
+
+    public void youtubeFish(String id) {
+        //id = "uD_2jTSb4aY";
+        Intent youtubeFishIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
+        startActivity(youtubeFishIntent);
     }
 
 }

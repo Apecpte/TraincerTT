@@ -51,6 +51,19 @@
         android:textSize="25dp" />
 
     <Button
+        android:id="@+id/btnYT"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="474dp"
+        android:background="@null"
+        android:text="Si quieres ver saber más beneficios del pescado azul. Da click aquí."
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="18dp" />
+
+    <Button
         android:id="@+id/buttonGoOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

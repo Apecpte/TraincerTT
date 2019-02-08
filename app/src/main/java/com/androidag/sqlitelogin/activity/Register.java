@@ -147,8 +147,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
                         // Below code ****** all setData(User) are send to confirmRegister activity****
                         helper.onInsert(user);
                         Intent i = new Intent(Register.this,MainActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         Toast.makeText(Register.this, "You are SuccTessfully Register your Data", Toast.LENGTH_SHORT).show();
                         startActivity(i);i.putExtra("Model",user);
+                        finish();
                     } else {
                         et_confirm_password.setError("Password Not Matched");
                     }
@@ -171,12 +173,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
         switch (i)
         {
-            case R.id.rb_male :
-                gender= "Male";
-                break;
             case R.id.rb_female :
                 gender= "Female";
                 break;
+            case R.id.rb_male :
+                gender= "Male";
+                break;
         }
     }
+
 }

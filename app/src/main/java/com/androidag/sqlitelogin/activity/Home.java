@@ -1,17 +1,19 @@
 package com.androidag.sqlitelogin.activity;
 
+import android.content.DialogInterface;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.ExercisesFragment;
@@ -36,7 +38,7 @@ public class Home extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.navView);
 
-        // setFragmentByDefault();
+        setFragmentByDefault();
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -46,34 +48,38 @@ public class Home extends AppCompatActivity {
 
                 switch (item.getItemId()) {
 
-                    case R.id.menu_home:fragment = new HomeFragment();
-                        fragmentTransaction = true;
-                        break;
-                    case R.id.menu_test:
-                        fragment = new TestFragment();
-                        fragmentTransaction = true;
-                        break;
-                    case R.id.menu_recom_ali:
-                        fragment = new RecomFoodFragment();
-                        fragmentTransaction = true;
-                        break;
-                    case R.id.menu_exer:
-                        fragment = new ExercisesFragment();
-                        fragmentTransaction = true;
-                        break;
-                    case R.id.menu_recom_ejerc:
-                        fragment = new RecomExerFragment();
-                        fragmentTransaction = true;;
-                        break;
-                    case R.id.menu_logout:
-                        PrefUtil.clearBoolean("done",false,Home.this);
-                        startActivity(new Intent(Home.this,Welcome.class));
-                        break;
+                case R.id.menu_home:
+                    fragment = new HomeFragment();
+                    fragmentTransaction = true;
+                    break;
+                case R.id.menu_test:
+                    fragment = new TestFragment();
+                    fragmentTransaction = true;
+                    break;
+                case R.id.menu_recom_ali:
+                    alertRecomFood();
+                    fragment = new RecomFoodFragment();
+                    fragmentTransaction = true;
+                    break;
+                case R.id.menu_exer:
+                    fragment = new ExercisesFragment();
+                    fragmentTransaction = true;
+                    break;
+                case R.id.menu_recom_ejerc:
+                    alertRecomRelax();
+                    fragment = new RecomExerFragment();
+                    fragmentTransaction = true;;
+                    break;
+                case R.id.menu_logout:
+                    onBackLogin();
+                    //PrefUtil.clearBoolean("done",false,Home.this);
+                    //startActivity(new Intent(Home.this,Welcome.class));
+                    break;
                 }
 
                 if (fragmentTransaction) {
-                    changeFragment(fragment, item);
-                    drawerLayout.closeDrawers();
+                changeFragment(fragment, item);
+                drawerLayout.closeDrawers();
                 }
                 return true;
             }
@@ -86,15 +92,16 @@ public class Home extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-/*
+
     private void setFragmentByDefault() {
-        changeFragment(new EmailFragment(), navigationView.getMenu().getItem(0));
-    } */
+        changeFragment(new HomeFragment(), navigationView.getMenu().getItem(0));
+    }
 
     private void changeFragment(Fragment fragment, MenuItem item) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.content_frame, fragment)
+                //.addToBackStack(null)
                 .commit();
         item.setChecked(true);
         getSupportActionBar().setTitle(item.getTitle());
@@ -106,9 +113,102 @@ public class Home extends AppCompatActivity {
         switch (item.getItemId()){
             case android.R.id.home:
                 // abrir menu lateral
-                drawerLayout.openDrawer(GravityCompat.START);
+                //drawerLayout.openDrawer(GravityCompat.START);
+                //return true;
+
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawers();
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+/*
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+        builder.setTitle("Information");
+        builder.setMessage("This alert dialog is just to show a normal informative message to the user, nothing to interact with");
+        builder.setCancelable(true);
+        builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        builder.setPositiveButton("Close!", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    } */
+
+    public void alertRecomFood() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+        //builder.setTitle("Cerrar Sesión");
+        builder.setMessage(R.string.FoodSlogan);
+        //builder.setIcon(R.drawable.ic_logout);
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        textView.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+    }
+
+    public void alertRecomRelax() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+        //builder.setTitle("Cerrar Sesión");
+        builder.setMessage(R.string.Exerlogan);
+        //builder.setIcon(R.drawable.ic_logout);
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        textView.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+    }
+
+    public void onBackLogin() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+        //builder.setTitle("Cerrar Sesión");
+        builder.setMessage("¿Estas seguro de cerrar sesión?");
+        //builder.setIcon(R.drawable.ic_logout);
+        builder.setCancelable(true);
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                PrefUtil.clearBoolean("Realizado",false,Home.this);
+                startActivity(new Intent(Home.this,Welcome.class));
+                //finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        textView.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
+        //dialog.getWindow().setLayout(600, 400);
     }
 }

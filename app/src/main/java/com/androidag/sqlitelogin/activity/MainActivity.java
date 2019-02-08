@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.database.DatabaseHelper;
+import com.androidag.sqlitelogin.fragments.HomeFragment;
 import com.androidag.sqlitelogin.model.User;
 import com.androidag.sqlitelogin.util.PrefUtil;
 
@@ -82,6 +83,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if (view.getId() == R.id.btnLinkToRegisterScreen) {
             startActivity(new Intent(this,Register.class));
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
 

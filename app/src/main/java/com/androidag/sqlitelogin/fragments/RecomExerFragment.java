@@ -3,6 +3,7 @@ package com.androidag.sqlitelogin.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,7 @@ public class RecomExerFragment extends Fragment implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
+
         boolean fragmentTransaction = false;
         Fragment fragment = null;
 

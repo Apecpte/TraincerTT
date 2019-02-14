@@ -206,7 +206,7 @@ public class Home extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
         TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(31);
+        textView.setTextSize(30);
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
         //dialog.getWindow().setLayout(600, 400);

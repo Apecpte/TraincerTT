@@ -29,12 +29,16 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/domino" />
+                android:src="@drawable/domino"
+                android:background="@android:color/transparent"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button Test"/>
+                android:text="@string/menuTest"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -51,13 +55,17 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/toy" />
+                android:src="@drawable/toy"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button Food"/>
+                android:text="@string/menuAlim"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -84,13 +92,17 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/pyramid" />
+                android:src="@drawable/pyramid"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button Exercise"/>
+                android:text="@string/menuEjer"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -107,13 +119,17 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/plane" />
+                android:src="@drawable/plane"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button Relax"/>
+                android:text="@string/menuRelax"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -1,6 +1,9 @@
 package com.androidag.sqlitelogin.activity;
 
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -89,8 +92,18 @@ public class Home extends AppCompatActivity {
     private void setToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if(getSupportActionBar()!=null)
+        {
+            Drawable drawable = getResources().getDrawable(R.drawable.ic_home);
+            Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+            Drawable newdrawable = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, 50, 50, true));
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(newdrawable);
+        }
+
+        //getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     private void setFragmentByDefault() {

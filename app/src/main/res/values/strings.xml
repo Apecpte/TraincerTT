@@ -20,10 +20,10 @@
     <string name="genderF">Female</string>
 
     <string name="menuhome">Home</string>
-    <string name="menuTest">Montreal Test</string>
-    <string name="menuAlim">Recommendations of feeding</string>
+    <string name="menuTest">Cognitive evaluation test</string>
+    <string name="menuAlim">Recomm. of feeding</string>
     <string name="menuEjer">Cognitive stimulation exercises</string>
-    <string name="menuRelax">Recommendations of relaxation and physical activation</string>
+    <string name="menuRelax">Relaxation and physical activation</string>
     <string name="menuGoOut">Logout</string>
 
     <string name="FoodSlogan">"It is important to change eating habits little by little and under supervision medical."</string>

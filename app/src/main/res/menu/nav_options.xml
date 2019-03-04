@@ -8,20 +8,24 @@
             android:title="@string/menuhome" />
         <item
             android:id="@+id/menu_test"
-            android:icon="@android:drawable/ic_media_play"
+            android:icon="@drawable/test"
             android:title="@string/menuTest" />
         <item
             android:id="@+id/menu_recom_ali"
-            android:icon="@android:drawable/ic_media_play"
+            android:icon="@drawable/diet"
             android:title="@string/menuAlim" />
         <item
             android:id="@+id/menu_exer"
-            android:icon="@android:drawable/ic_media_play"
+            android:icon="@drawable/brain"
             android:title="@string/menuEjer" />
         <item
-            android:id="@+id/menu_recom_ejerc"
-            android:icon="@android:drawable/ic_media_play"
+            android:id="@+id/menu_recom_relax"
+            android:icon="@drawable/meditation"
             android:title="@string/menuRelax" />
+        <item
+            android:id="@+id/menu_recom_ejerc"
+            android:icon="@drawable/exercise"
+            android:title="@string/menExercise" />
     </group>
 
     <group android:id="@+id/groupGoOut">

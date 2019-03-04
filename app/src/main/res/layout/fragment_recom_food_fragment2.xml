@@ -1,77 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Food.RecomFoodFragment2">
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
+        android:id="@+id/food1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal"
-        android:text="@string/FoodTitle2"
-        android:textColor="@color/colorBlack"
-        android:textSize="36dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="70dp"
-        android:text="@string/FoodSlogan"
-        android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:textSize="30dp" />
-
-    <ImageView
-        android:layout_width="420dp"
-        android:layout_height="188dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/frutasyver" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="350dp"
-        android:text="Son una fuente de antioxidantes y compuestos bioactivos. Además, tienen bajo contenido en grasas saturadas"
-        android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:textSize="25dp" />
-
-    <Button
-        android:id="@+id/buttonGoOut"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="start"
-        android:layout_marginStart="150dp"
-        android:layout_marginBottom="30dp"
-        android:text="@string/btn_goOut"
-        android:textSize="25dp" />
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        tools:context=".fragments.RecomFoodFragment">
 
-    <Button
-        android:id="@+id/buttonNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="end"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="30dp"
-        android:text="@string/btn_next"
-        android:textSize="25dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/FoodTitle2"
+            android:textColor="@color/colorBlack"
+            android:textSize="70sp"
+            android:textStyle="bold" />
 
+        <!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/FoodSlogan"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="30dp" />
+        -->
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="752dp"
+                android:layout_height="330dp"
+                android:paddingLeft="32dp"
+                android:paddingTop="32dp"
+                android:text="Son una fuente de antioxidantes y compuestos bioactivos. \nAdemás, tienen bajo contenido en grasas saturadas"
+                android:textColor="@color/colorBlack"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="165dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="right"
+                android:padding="10sp"
+                android:src="@drawable/vegetables" />
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="165dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="165dp"
+                android:layout_marginEnd="0dp"
+                android:padding="10sp"
+                android:src="@drawable/ensalada" />
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="165dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="330dp"
+                android:layout_marginEnd="0dp"
+                android:padding="10sp"
+                android:src="@drawable/fruitbowl" />
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="165dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="330dp"
+                android:layout_marginEnd="800dp"
+                android:padding="10sp"
+                android:src="@drawable/agriculture" />
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="165dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="330dp"
+                android:layout_marginEnd="400dp"
+                android:padding="10sp"
+                android:src="@drawable/fruitheart" />
+
+            <Button
+                android:id="@+id/btnYT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="495dp"
+                android:background="@null"
+                android:text="Si quieres  saber más beneficios de las frutas y verduras. Da click aquí."
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonGoOut"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="start"
+                android:layout_marginStart="150dp"
+                android:layout_marginBottom="16dp"
+                android:padding="25dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:text="@string/btn_goOut"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="32dp"
+                android:padding="25dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:text="Atrás"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="end"
+                android:layout_marginEnd="150dp"
+                android:layout_marginBottom="16dp"
+                android:padding="25dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:text="@string/btn_next"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

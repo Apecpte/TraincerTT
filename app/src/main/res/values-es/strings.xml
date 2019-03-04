@@ -10,7 +10,7 @@
     <string name="hint_last_name_two">Apellido Materno</string>
     <string name="btn_login">INICIO DE SESIÓN</string>
     <string name="btn_register">REGISTRAR</string>
-    <string name="btn_link_to_register">¿No estas resgistrado? Registrate.</string>
+    <string name="btn_link_to_register">¿No estas registrado? Registrate.</string>
     <string name="btn_link_to_login">¡Ya estas registrado! Inicia Sesión.</string>
     <string name="welcome">¡Bienvenido!</string>
     <string name="btn_logout">Cerrar Sesión</string>
@@ -21,10 +21,11 @@
     <string name="genderF">Femenino</string>
 
     <string name="menuhome">Inicio</string>
-    <string name="menuTest">Test de Evaluación Cognitiva</string>
+    <string name="menuTest">Test de evaluación cognitiva</string>
     <string name="menuAlim">Recom. de alimentación</string>
     <string name="menuEjer">Ejercicios cognitivos</string>
-    <string name="menuRelax">Relajación y de activación física</string>
+    <string name="menuRelax">Recom. de relajación</string>
+    <string name="menExercise">Recom. de activación física</string>
     <string name="menuGoOut">Cerrar Sesión</string>
 
     <string name="FoodSlogan">“Es importante cambiar los hábitos alimenticios poco a poco y bajo supervisión médica.”</string>
@@ -32,10 +33,11 @@
     <string name="FoodTitle2">Frutas y verduras</string>
     <string name="FoodTitle3">Legumbres</string>
     <string name="FoodTitle4">Frutos secos (nueces, almendras, avellanas, cacahuetes, etc.)</string>
-    <string name="FoodTitle5">Alimentos de origen animal (carnes, huevos)</string>
+    <string name="FoodTitle5">Alimentos de origen animal \n(carnes, huevos)</string>
 
     <string name="Exerlogan">“Es importante consultar con su médico el tipo de ejercicios que pueda realizar.”</string>
 
+    <string name="btn_start">Iniciar</string>
     <string name="btn_goOut">Salir</string>
     <string name="btn_next">Siguiente</string>
 
@@ -46,4 +48,5 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hola Fragmento en blanco</string>
+    <string name="aboutTest">Las siguientes preguntas son una ayuda para determinar si se recomienda o no buscar asesoramiento médico para una evaluación cognitiva.  \nNo proporcionan un diagnóstico de ninguna manera, sino que actúan como una ayuda para dar sus primeros signos de alerta para obtener un diagnóstico temprano.</string>
 </resources>

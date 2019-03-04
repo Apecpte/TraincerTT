@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Relax.RecomExerFragment5">
+    tools:context=".fragments.RelaxFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <!--
@@ -18,7 +18,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textSize="30dp" />
-    -->
+        -->
 
     <ImageView
         android:layout_width="900dp"
@@ -26,7 +26,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:src="@drawable/ejerc5" />
+        android:src="@drawable/banner" />
 
     <Button
         android:id="@+id/buttonGoOut"
@@ -44,19 +44,6 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/buttonBack"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:padding="25dp"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="Atrás"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-
-    <Button
         android:id="@+id/buttonNext"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
@@ -69,6 +56,6 @@
         android:backgroundTint="@android:color/holo_blue_dark"
         android:text="@string/btn_next"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
 </RelativeLayout>

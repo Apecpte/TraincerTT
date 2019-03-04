@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+import com.androidag.sqlitelogin.fragments.RecomExerFragment;
+import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +20,7 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
 
     private Button btnGoOut;
     private Button btnNext;
+    private Button btnBack;
 
     public RecomFoodFragment2() {
         // Required empty public constructor
@@ -30,10 +33,12 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
         View view = inflater.inflate(R.layout.fragment_recom_food_fragment2, container, false);
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
+        btnBack = (Button) view.findViewById(R.id.buttonBack);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
 
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
+        btnBack.setOnClickListener(this);
         // Inflate the layout for this fragment
         return view;
     }
@@ -46,6 +51,11 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
         switch (view.getId()) {
             case R.id.buttonGoOut:
                 fragment = new HomeFragment();
+                fragmentTransaction = true;
+                break;
+
+            case R.id.buttonBack:
+                fragment = new RecomFoodFragment();
                 fragmentTransaction = true;
                 break;
 

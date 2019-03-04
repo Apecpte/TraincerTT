@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="2"
+    android:weightSum="3"
     tools:context=".fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -29,7 +29,7 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/domino"
+                android:src="@drawable/test"
                 android:background="@android:color/transparent"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/toy"
+                android:src="@drawable/diet"
                 android:background="@android:color/transparent"/>
 
             <TextView
@@ -92,7 +92,7 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/pyramid"
+                android:src="@drawable/brain"
                 android:background="@android:color/transparent"/>
 
             <TextView
@@ -119,7 +119,7 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/plane"
+                android:src="@drawable/meditation"
                 android:background="@android:color/transparent"/>
 
             <TextView
@@ -127,6 +127,42 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/menuRelax"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/buttonRecommExercise"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/exercise"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/menExercise"
                 android:textStyle="bold"
                 android:textSize="40sp"
                 android:textColor="@android:color/black"/>

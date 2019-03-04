@@ -1,6 +1,7 @@
 package com.androidag.sqlitelogin.fragments;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.androidag.sqlitelogin.Food.RecomFoodFragment2;
 import com.androidag.sqlitelogin.R;
@@ -31,6 +33,8 @@ public class RecomExerFragment extends Fragment implements View.OnClickListener 
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_recom_exer, container, false);
+
+        alertRecomRelax();
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
@@ -70,5 +74,22 @@ public class RecomExerFragment extends Fragment implements View.OnClickListener 
                 .replace(R.id.content_frame, fragment)
                 .commit();
 
+    }
+
+    public void alertRecomRelax() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        //builder.setTitle("Cerrar Sesión");
+        builder.setMessage(R.string.Exerlogan);
+        //builder.setIcon(R.drawable.ic_logout);
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        textView.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 }

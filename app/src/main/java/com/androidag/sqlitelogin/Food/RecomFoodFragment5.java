@@ -19,6 +19,7 @@ public class RecomFoodFragment5 extends Fragment implements View.OnClickListener
 
     private Button btnGoOut;
     private Button btnNext;
+    private Button btnBack;
 
     public RecomFoodFragment5() {
         // Required empty public constructor
@@ -33,9 +34,11 @@ public class RecomFoodFragment5 extends Fragment implements View.OnClickListener
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
+        btnBack = (Button) view.findViewById(R.id.buttonBack);
 
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
+        btnBack.setOnClickListener(this);
         // Inflate the layout for this fragment
         return view;
     }
@@ -48,6 +51,11 @@ public class RecomFoodFragment5 extends Fragment implements View.OnClickListener
         switch (view.getId()) {
             case R.id.buttonGoOut:
                 fragment = new HomeFragment();
+                fragmentTransaction = true;
+                break;
+
+            case R.id.buttonBack:
+                fragment = new RecomFoodFragment4();
                 fragmentTransaction = true;
                 break;
 

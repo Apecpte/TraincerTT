@@ -1,14 +1,17 @@
 package com.androidag.sqlitelogin.fragments;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidag.sqlitelogin.Food.RecomFoodFragment2;
@@ -33,6 +36,8 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom_food, container, false);
+
+        alertRecomFood();
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
@@ -83,6 +88,23 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
         //id = "uD_2jTSb4aY";
         Intent youtubeFishIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
         startActivity(youtubeFishIntent);
+    }
+
+    public void alertRecomFood() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        //builder.setTitle("Cerrar Sesión");
+        builder.setMessage(R.string.FoodSlogan);
+        //builder.setIcon(R.drawable.ic_logout);
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        textView.setTextSize(40);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 
 }

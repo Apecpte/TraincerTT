@@ -1,0 +1,28 @@
+package com.androidag.sqlitelogin.exercises;
+
+public class MathQuestionModel {
+
+    public MathQuestionModel(String questionString, String answer) {
+        QuestionString = questionString;
+        Answer = answer;
+    }
+
+    public String getQuestionString() {
+        return QuestionString;
+    }
+
+    public void setQuestionString(String questionString) {
+        QuestionString = questionString;
+    }
+
+    public String getAnswer() {
+        return Answer;
+    }
+
+    public void setAnswer(String answer) {
+        Answer = answer;
+    }
+
+    private String QuestionString;
+    private String Answer;
+}

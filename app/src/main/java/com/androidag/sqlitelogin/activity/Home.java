@@ -14,7 +14,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -23,6 +22,7 @@ import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 import com.androidag.sqlitelogin.fragments.RecomExerFragment;
 import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
+import com.androidag.sqlitelogin.fragments.RelaxFragment;
 import com.androidag.sqlitelogin.fragments.TestFragment;
 import com.androidag.sqlitelogin.util.PrefUtil;
 
@@ -40,6 +40,8 @@ public class Home extends AppCompatActivity {
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.navView);
+
+        navigationView.setItemIconTintList(null);
 
         setFragmentByDefault();
 
@@ -60,7 +62,6 @@ public class Home extends AppCompatActivity {
                     fragmentTransaction = true;
                     break;
                 case R.id.menu_recom_ali:
-                    alertRecomFood();
                     fragment = new RecomFoodFragment();
                     fragmentTransaction = true;
                     break;
@@ -68,8 +69,11 @@ public class Home extends AppCompatActivity {
                     fragment = new ExercisesFragment();
                     fragmentTransaction = true;
                     break;
+                case R.id.menu_recom_relax:
+                    fragment = new RelaxFragment();
+                    fragmentTransaction = true;;
+                    break;
                 case R.id.menu_recom_ejerc:
-                    alertRecomRelax();
                     fragment = new RecomExerFragment();
                     fragmentTransaction = true;;
                     break;
@@ -162,40 +166,6 @@ public class Home extends AppCompatActivity {
         dialog.show();
     } */
 
-    public void alertRecomFood() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
-        //builder.setTitle("Cerrar Sesión");
-        builder.setMessage(R.string.FoodSlogan);
-        //builder.setIcon(R.drawable.ic_logout);
-        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(30);
-        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
-    }
-
-    public void alertRecomRelax() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
-        //builder.setTitle("Cerrar Sesión");
-        builder.setMessage(R.string.Exerlogan);
-        //builder.setIcon(R.drawable.ic_logout);
-        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(30);
-        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
-    }
-
     public void onBackLogin() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
         //builder.setTitle("Cerrar Sesión");
@@ -223,5 +193,17 @@ public class Home extends AppCompatActivity {
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
         //dialog.getWindow().setLayout(600, 400);
+    }
+
+    public void onBackPressed() {
+        if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            this.drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            onBackPressed2();
+        }
+    }
+
+    public void onBackPressed2() {
+        this.moveTaskToBack(true);
     }
 }

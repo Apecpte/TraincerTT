@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
-    android:padding="16dp"
+    android:paddingLeft="48dp"
+    android:paddingRight="48dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
     tools:context=".fragments.TestFragment">
 
     <TextView
+        android:id="@+id/textViewTitleTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Montreal Test"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:text="@string/menuTest"
         android:textColor="@android:color/black"
+        android:textStyle="bold"
         android:textSize="85sp" />
 
     <TextView
-        android:id="@+id/text_view_highscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/button_start_test"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:text="Highscore: 0"
-        android:textSize="50sp" />
+        android:layout_gravity="center"
+        android:text="@string/aboutTest"
+        android:textSize="45sp"/>
 
     <Button
         android:id="@+id/button_start_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="237dp"
-        android:text="Start"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:text="@string/btn_start"
         android:textSize="50sp" />
 
-</RelativeLayout>
+</LinearLayout>

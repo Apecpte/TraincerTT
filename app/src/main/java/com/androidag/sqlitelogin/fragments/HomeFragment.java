@@ -25,6 +25,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private ImageButton btnFood;
     private ImageButton btnExer;
     private ImageButton btnRelax;
+    private ImageButton btnRecomExer;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -41,11 +42,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         btnFood = (ImageButton) view.findViewById(R.id.buttonFood);
         btnExer = (ImageButton) view.findViewById(R.id.buttonExercise);
         btnRelax = (ImageButton) view.findViewById(R.id.buttonRelax);
+        btnRecomExer = (ImageButton) view.findViewById(R.id.buttonRecommExercise);
 
         btnTest.setOnClickListener(this);
         btnFood.setOnClickListener(this);
         btnExer.setOnClickListener(this);
         btnRelax.setOnClickListener(this);
+        btnRecomExer.setOnClickListener(this);
 
         // Inflate the layout for this fragment
         return view;
@@ -63,7 +66,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 fragmentTransaction = true;
                 break;
             case R.id.buttonFood:
-                alertRecomFood();
                 fragment = new RecomFoodFragment();
                 fragmentTransaction = true;
                 break;
@@ -72,7 +74,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 fragmentTransaction = true;
                 break;
             case R.id.buttonRelax:
-                alertRecomRelax();
+                fragment = new RelaxFragment();
+                fragmentTransaction = true;
+                break;
+            case R.id.buttonRecommExercise:
                 fragment = new RecomExerFragment();
                 fragmentTransaction = true;
                 break;
@@ -83,48 +88,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-
     private void changeFragment(Fragment fragment) {
                 getActivity()
                 .getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.content_frame, fragment)
-                //.addToBackStack(null)
+                .addToBackStack(null)
                 .commit();
-    }
-
-    public void alertRecomFood() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        //builder.setTitle("Cerrar Sesión");
-        builder.setMessage(R.string.FoodSlogan);
-        //builder.setIcon(R.drawable.ic_logout);
-        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(30);
-        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
-    }
-
-    public void alertRecomRelax() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        //builder.setTitle("Cerrar Sesión");
-        builder.setMessage(R.string.Exerlogan);
-        //builder.setIcon(R.drawable.ic_logout);
-        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(30);
-        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 
 }

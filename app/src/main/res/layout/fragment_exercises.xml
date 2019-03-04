@@ -29,12 +29,16 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/domino" />
+                android:src="@drawable/abcblock"
+                android:background="@android:color/transparent"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button 1"/>
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"
+                android:text="Lenguaje"/>
         </LinearLayout>
 
         <LinearLayout
@@ -51,13 +55,17 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/toy" />
+                android:src="@drawable/focus"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button 2"/>
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"
+                android:text="Atención"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -84,13 +92,17 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/pyramid" />
+                android:src="@drawable/memory"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button 3"/>
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"
+                android:text="Memoria"/>
         </LinearLayout>
 
         <LinearLayout
@@ -107,13 +119,17 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/plane" />
+                android:src="@drawable/abacus"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button 4"/>
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"
+                android:text="Cálculo"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -139,37 +155,47 @@
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/block" />
+                android:src="@drawable/shapes"
+                android:background="@android:color/transparent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Button 5"/>
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@android:color/black"
+                android:text="Percepción y Gnosias"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+        <!--
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           android:gravity="center">
 
-            <ImageButton
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/dice" />
+           <ImageButton
+               android:id="@+id/button6"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:padding="20dp"
+               android:scaleType="fitCenter"
+               android:src="@drawable/dice"
+               android:background="@android:color/transparent"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Button 6"/>
-        </LinearLayout>
-    </LinearLayout>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:textStyle="bold"
+               android:textSize="40sp"
+               android:textColor="@android:color/black"
+               android:text="Button 6"/>
+       </LinearLayout>
+       -->
+   </LinearLayout>
 
 </LinearLayout>

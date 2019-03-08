@@ -1,4 +1,4 @@
-package com.androidag.sqlitelogin.Relax;
+package com.androidag.sqlitelogin.RecomExer;
 
 
 import android.os.Bundle;
@@ -7,23 +7,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
-import com.androidag.sqlitelogin.Food.RecomFoodFragment2;
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 import com.androidag.sqlitelogin.fragments.RecomExerFragment;
-import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
+import com.bumptech.glide.Glide;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RecomExerFragment5 extends Fragment implements View.OnClickListener {
+public class RecomExerFragment2 extends Fragment implements View.OnClickListener {
 
     private Button btnGoOut;
     private Button btnNext;
     private Button btnBack;
 
-    public RecomExerFragment5() {
+    public RecomExerFragment2() {
         // Required empty public constructor
     }
 
@@ -32,7 +32,11 @@ public class RecomExerFragment5 extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_recom_exer_fragment5, container, false);
+        View view = inflater.inflate(R.layout.fragment_recom_exer_fragment2, container, false);
+
+        ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
+
+        Glide.with(getContext()).load(R.drawable.re_cadera).into(imageView);
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
@@ -58,12 +62,12 @@ public class RecomExerFragment5 extends Fragment implements View.OnClickListener
                 break;
 
             case R.id.buttonBack:
-                fragment = new RecomExerFragment4();
+                fragment = new RecomExerFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.buttonNext:
-                fragment = new RecomExerFragment();
+                fragment = new RecomExerFragment3();
                 fragmentTransaction = true;
                 break;
         }

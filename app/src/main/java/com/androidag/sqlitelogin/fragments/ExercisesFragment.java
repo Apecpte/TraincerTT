@@ -9,9 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
+import com.androidag.sqlitelogin.exercises.AtentionFragment;
 import com.androidag.sqlitelogin.exercises.ExerciseOne;
 import com.androidag.sqlitelogin.exercises.MathsFragment;
 import com.androidag.sqlitelogin.exercises.MemoFragment;
+import com.androidag.sqlitelogin.exercises.PerceFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -65,12 +67,11 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.button2:
                 //Atención
-                fragment = new ExerciseOne();
+                fragment = new AtentionFragment();
                 fragmentTransaction = true;
                 break;
             case R.id.button3:
                 //Memoria
-                //startActivity(new Intent(getActivity(), MemoActivity.class));
                 fragment = new MemoFragment();
                 fragmentTransaction = true;
                 break;
@@ -81,7 +82,7 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.button5:
                 //Percepcion
-                fragment = new ExerciseOne();
+                fragment = new PerceFragment();
                 fragmentTransaction = true;
                 break;
         }

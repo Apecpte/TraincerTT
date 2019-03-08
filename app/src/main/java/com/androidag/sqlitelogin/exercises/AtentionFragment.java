@@ -23,7 +23,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MathsFragment extends Fragment {
+public class AtentionFragment extends Fragment {
 
     TextView questionLabel, questionCountLabel, scoreLabel;
     EditText answerEdt;
@@ -34,7 +34,7 @@ public class MathsFragment extends Fragment {
     int currentPosition = 0;
     int numberOfCorrectAnswer = 0;
 
-    public MathsFragment() {
+    public AtentionFragment() {
         // Required empty public constructor
     }
 
@@ -42,15 +42,16 @@ public class MathsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_maths, container, false);
 
-        questionCountLabel = view.findViewById(R.id.noQuestionMath);
-        questionLabel = view.findViewById(R.id.textViewMathQ);
-        scoreLabel = view.findViewById(R.id.scoreMath);
+        View view = inflater.inflate(R.layout.fragment_atention, container, false);
 
-        answerEdt = view.findViewById(R.id.editTextMathA);
-        submitButton = view.findViewById(R.id.btnMath);
-        progressBar = view.findViewById(R.id.progressMath);
+        questionCountLabel = view.findViewById(R.id.noQuestionAte);
+        questionLabel = view.findViewById(R.id.textViewAteQ);
+        scoreLabel = view.findViewById(R.id.scoreAte);
+
+        answerEdt = view.findViewById(R.id.editTextAteA);
+        submitButton = view.findViewById(R.id.btnAte);
+        progressBar = view.findViewById(R.id.progressAte);
 
         questionModelArraylist = new ArrayList<>();
 
@@ -136,12 +137,16 @@ public class MathsFragment extends Fragment {
 
     public void setUpQuestion(){
 
-        questionModelArraylist.add(new MathQuestionModel(" 5892\n+4371","10263"));
-        questionModelArraylist.add(new MathQuestionModel(" 3750\n+1983","5733"));
-        questionModelArraylist.add(new MathQuestionModel(" 22 * 18","396"));
-        questionModelArraylist.add(new MathQuestionModel(" 5892\n-4371","1521"));
-        questionModelArraylist.add(new MathQuestionModel(" 558\n-327","231"));
-        questionModelArraylist.add(new MathQuestionModel(" 138 " +"\u00F7" +" 6","23"));
+        questionModelArraylist.add(new MathQuestionModel("625 el inverso es :","526"));
+        questionModelArraylist.add(new MathQuestionModel("47682  el inverso es :","28674"));
+        questionModelArraylist.add(new MathQuestionModel("69173  el inverso es :","37196"));
+        questionModelArraylist.add(new MathQuestionModel("7265637  el inverso es :","7365627"));
+        questionModelArraylist.add(new MathQuestionModel("497846465  el inverso es :","564648794"));
+        questionModelArraylist.add(new MathQuestionModel("674942536  el inverso es :","635249476"));
+        questionModelArraylist.add(new MathQuestionModel("541368267  el inverso es :","762863145"));
+        questionModelArraylist.add(new MathQuestionModel("648662513  el inverso es :","315266846"));
+        questionModelArraylist.add(new MathQuestionModel("564788225  el inverso es :","522887465"));
+        questionModelArraylist.add(new MathQuestionModel("456356157 el inverso es :","751653654"));
 
     }
 

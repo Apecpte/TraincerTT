@@ -23,7 +23,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MathsFragment extends Fragment {
+public class PerceFragment extends Fragment {
 
     TextView questionLabel, questionCountLabel, scoreLabel;
     EditText answerEdt;
@@ -34,7 +34,8 @@ public class MathsFragment extends Fragment {
     int currentPosition = 0;
     int numberOfCorrectAnswer = 0;
 
-    public MathsFragment() {
+
+    public PerceFragment() {
         // Required empty public constructor
     }
 
@@ -42,15 +43,16 @@ public class MathsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_maths, container, false);
 
-        questionCountLabel = view.findViewById(R.id.noQuestionMath);
-        questionLabel = view.findViewById(R.id.textViewMathQ);
-        scoreLabel = view.findViewById(R.id.scoreMath);
+        View view = inflater.inflate(R.layout.fragment_perce, container, false);
 
-        answerEdt = view.findViewById(R.id.editTextMathA);
-        submitButton = view.findViewById(R.id.btnMath);
-        progressBar = view.findViewById(R.id.progressMath);
+        questionCountLabel = view.findViewById(R.id.noQuestionPerce);
+        questionLabel = view.findViewById(R.id.textViewPerceQ);
+        scoreLabel = view.findViewById(R.id.scorePerce);
+
+        answerEdt = view.findViewById(R.id.editTextPerceA);
+        submitButton = view.findViewById(R.id.btnPerce);
+        progressBar = view.findViewById(R.id.progressPerce);
 
         questionModelArraylist = new ArrayList<>();
 
@@ -136,13 +138,11 @@ public class MathsFragment extends Fragment {
 
     public void setUpQuestion(){
 
-        questionModelArraylist.add(new MathQuestionModel(" 5892\n+4371","10263"));
-        questionModelArraylist.add(new MathQuestionModel(" 3750\n+1983","5733"));
-        questionModelArraylist.add(new MathQuestionModel(" 22 * 18","396"));
-        questionModelArraylist.add(new MathQuestionModel(" 5892\n-4371","1521"));
-        questionModelArraylist.add(new MathQuestionModel(" 558\n-327","231"));
-        questionModelArraylist.add(new MathQuestionModel(" 138 " +"\u00F7" +" 6","23"));
-
+        questionModelArraylist.add(new MathQuestionModel("¿Qué encontramos en la intersección B4?","rombo"));
+        questionModelArraylist.add(new MathQuestionModel("¿Dónde hay un triángulo?","E2"));
+        questionModelArraylist.add(new MathQuestionModel("¿Qué encontramos en la intersección C5?","pentagono"));
+        questionModelArraylist.add(new MathQuestionModel("¿Dónde hay un círculo?","A1"));
+        questionModelArraylist.add(new MathQuestionModel("¿Dónde hay un hexagono?","D4"));
     }
 
     public void setData(){
@@ -179,4 +179,5 @@ public class MathsFragment extends Fragment {
             dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
         }
     }
+
 }

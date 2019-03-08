@@ -26,7 +26,6 @@ import com.androidag.sqlitelogin.fragments.RelaxFragment;
 import com.androidag.sqlitelogin.fragments.TestFragment;
 import com.androidag.sqlitelogin.util.PrefUtil;
 
-//Complete
 public class Home extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;

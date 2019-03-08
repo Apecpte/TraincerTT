@@ -1,4 +1,4 @@
-package com.androidag.sqlitelogin.Relax;
+package com.androidag.sqlitelogin.RecomExer;
 
 
 import android.os.Bundle;
@@ -7,11 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
-import com.androidag.sqlitelogin.Food.RecomFoodFragment2;
-import com.androidag.sqlitelogin.Food.RecomFoodFragment4;
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+import com.bumptech.glide.Glide;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,6 +32,10 @@ public class RecomExerFragment3 extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_recom_exer_fragment3, container, false);
+
+        ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
+
+        Glide.with(getContext()).load(R.drawable.re_hombros).into(imageView);
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);

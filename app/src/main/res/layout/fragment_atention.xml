@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".exercises.MathsFragment">
+    tools:context=".exercises.AtentionFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <ProgressBar
-            android:id="@+id/progressMath"
+            android:id="@+id/progressAte"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
@@ -30,7 +30,7 @@
             android:layout_marginBottom="5dp"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/noQuestionMath"
+                android:id="@+id/noQuestionAte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
@@ -38,7 +38,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="Pregunta No : "/>
             <TextView
-                android:id="@+id/scoreMath"
+                android:id="@+id/scoreAte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
@@ -66,20 +66,20 @@
             android:textSize="25sp"/>
 -->
         <TextView
-            android:id="@+id/textViewMathQ"
+            android:id="@+id/textViewAteQ"
             android:layout_width="700dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:text="1 + 2 = ?"
+            android:text="666 el inverso es: "
             android:textColor="@android:color/black"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:background="@color/bg_main"
-            android:textSize="60sp"
+            android:textSize="50sp"
             android:gravity="center"/>
 
         <EditText
-            android:id="@+id/editTextMathA"
+            android:id="@+id/editTextAteA"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -91,7 +91,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/btnMath"
+            android:id="@+id/btnAte"
             android:layout_width="700dp"
             android:layout_height="80dp"
             android:layout_gravity="center"

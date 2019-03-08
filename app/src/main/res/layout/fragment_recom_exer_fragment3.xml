@@ -3,30 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Relax.RecomExerFragment3">
+    android:background="@color/white"
+    tools:context=".RecomExer.RecomExerFragment3">
 
     <!-- TODO: Update blank fragment layout -->
-    <!--
     <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginStart="0dp"
-    android:layout_marginTop="70dp"
-    android:text="@string/Exerlogan"
-    android:textAlignment="center"
-    android:textColor="@color/colorBlack"
-    android:textSize="30dp" />
-    -->
+        android:id="@+id/textViewExer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Círculos con los hombros"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:textSize="70sp" />
+
+    <TextView
+        android:id="@+id/tvE2"
+        android:layout_width="780dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:padding="24dp"
+        android:text="De pie. Hacemos movimientos circulares con los hombros, primero hacia delante y después hacia atrás.
+        \n15 repeticiones hacia adelante y \n15 repeticiones hacia atrás."
+        android:layout_below="@+id/textViewExer2"
+        android:layout_above="@id/buttonGoOut"
+        android:textColor="@color/colorBlack"
+        android:textStyle="italic"
+        android:textAlignment="textEnd"
+        android:textSize="40sp" />
 
     <ImageView
-        android:layout_width="900dp"
-        android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/ejerc3" />
+        android:id="@+id/imageViewGifExer"
+        android:layout_width="500dp"
+        android:padding="24dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonNext"
+        android:layout_below="@+id/textViewExer2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/re_brazos" />
+
 
     <Button
         android:id="@+id/buttonGoOut"
@@ -40,7 +58,7 @@
         android:padding="25dp"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:text="@string/btn_goOut"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <Button
@@ -53,7 +71,7 @@
         android:padding="25dp"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:text="Atrás"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <Button

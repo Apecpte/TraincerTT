@@ -9,11 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.androidag.sqlitelogin.Food.RecomFoodFragment2;
 import com.androidag.sqlitelogin.R;
-import com.androidag.sqlitelogin.Relax.RecomExerFragment2;
+import com.androidag.sqlitelogin.RecomExer.RecomExerFragment2;
+import com.bumptech.glide.Glide;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,6 +34,11 @@ public class RecomExerFragment extends Fragment implements View.OnClickListener 
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_recom_exer, container, false);
+
+        ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
+
+        Glide.with(getContext()).load(R.drawable.re_rodillas).into(imageView);
+
 
         alertRecomRelax();
 

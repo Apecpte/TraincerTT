@@ -35,7 +35,7 @@ public class RecomExerFragment3 extends Fragment implements View.OnClickListener
 
         ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
 
-        Glide.with(getContext()).load(R.drawable.re_hombros).into(imageView);
+        Glide.with(getContext()).load(R.drawable.re1_caderagiro).into(imageView);
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);

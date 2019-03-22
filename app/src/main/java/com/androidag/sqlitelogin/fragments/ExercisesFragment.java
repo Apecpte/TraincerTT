@@ -1,6 +1,5 @@
 package com.androidag.sqlitelogin.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,10 +9,11 @@ import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.exercises.AtentionFragment;
-import com.androidag.sqlitelogin.exercises.ExerciseOne;
+import com.androidag.sqlitelogin.exercises.LanguageFragment;
 import com.androidag.sqlitelogin.exercises.MathsFragment;
-import com.androidag.sqlitelogin.exercises.MemoFragment;
+import com.androidag.sqlitelogin.exercises.MemorFragment;
 import com.androidag.sqlitelogin.exercises.PerceFragment;
+import com.androidag.sqlitelogin.exercises.SplashAtentionFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,17 +62,17 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
 
             case R.id.button1:
                 //Lenguaje
-                fragment = new ExerciseOne();
+                fragment = new LanguageFragment();
                 fragmentTransaction = true;
                 break;
             case R.id.button2:
                 //Atención
-                fragment = new AtentionFragment();
+                fragment = new SplashAtentionFragment();
                 fragmentTransaction = true;
                 break;
             case R.id.button3:
                 //Memoria
-                fragment = new MemoFragment();
+                fragment = new MemorFragment();
                 fragmentTransaction = true;
                 break;
             case R.id.button4:

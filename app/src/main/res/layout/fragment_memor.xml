@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        android:paddingTop="16dp"
+        tools:context=".exercises.MemorFragment"
+
+        android:background="#b0beff"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imbCarta1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/brain_memory"
+                android:background="@drawable/imageview_border"/>
+            <ImageButton
+                android:id="@+id/imbCarta2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/brain_memory"
+                android:background="@drawable/imageview_border"/>
+
+            <ImageButton
+                android:id="@+id/imbCarta3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/brain_memory"
+                android:background="@drawable/imageview_border"/>
+            <ImageButton
+                android:id="@+id/imbCarta4"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/brain_memory"
+                android:background="@drawable/imageview_border"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/imbCarta5"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/brain_memory"
+                android:background="@drawable/imageview_border"/>
+            <ImageButton
+                android:id="@+id/imbCarta6"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/brain_memory"
+                android:background="@drawable/imageview_border"/>
+            <ImageButton
+                android:id="@+id/imbCarta7"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@mipmap/brain_memory"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/imageview_border"/>
+            <ImageButton
+                android:id="@+id/imbCarta8"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@mipmap/brain_memory"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/imageview_border"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

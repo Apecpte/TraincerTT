@@ -11,7 +11,6 @@ import android.widget.ImageView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
-import com.androidag.sqlitelogin.fragments.RecomExerFragment;
 import com.bumptech.glide.Glide;
 
 /**
@@ -36,7 +35,7 @@ public class RecomExerFragment2 extends Fragment implements View.OnClickListener
 
         ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
 
-        Glide.with(getContext()).load(R.drawable.re_cadera).into(imageView);
+        Glide.with(getContext()).load(R.drawable.re1_rodillas).into(imageView);
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);

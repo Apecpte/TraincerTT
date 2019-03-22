@@ -6,7 +6,7 @@ public class QuizDatabase {
 
 
     public String testQuestions[] = {
-            "¿Cual es la secuencia correcta?",
+            "¿Cuál es la secuencia correcta?",
             "¿Qué figura es?",
             "¿Qué hora es en la imagen?",
             "¿Qué animales hay?",

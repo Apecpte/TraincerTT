@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RecomExer.RecomExerFragment7">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textViewExer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Caminar"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:textSize="70sp" />
+
+    <TextView
+        android:id="@+id/tvE2"
+        android:layout_width="780dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:padding="24dp"
+        android:text="Caminamos solos o acompañados \ndurante 20-30 minutos al día, \nentre 3 y 5 días a la semana."
+        android:layout_below="@+id/textViewExer2"
+        android:layout_above="@id/buttonGoOut"
+        android:textColor="@color/colorBlack"
+        android:textStyle="italic"
+        android:textAlignment="textEnd"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/imageViewGifExer"
+        android:layout_width="500dp"
+        android:padding="24dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonNext"
+        android:layout_below="@+id/textViewExer2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
+
+    <Button
+        android:id="@+id/buttonGoOut"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="32dp"
+        android:padding="25dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_goOut"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:padding="25dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Atrás"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="32dp"
+        android:padding="25dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="@string/btn_next"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

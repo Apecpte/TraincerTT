@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="3"
+    tools:context=".fragments.NivelExerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/buttonExerN1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/input_login_hint"
+        android:text="Ejercicios FASE 1"
+        android:textSize="70sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/buttonExerN2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:background="@color/btn_logut_bg"
+        android:text="Ejercicios FASE 2"
+        android:textSize="70sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/buttonExerN3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:background="@color/bg_login"
+        android:text="Ejercicios FASE 3"
+        android:textSize="70sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

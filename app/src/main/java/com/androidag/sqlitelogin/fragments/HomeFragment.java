@@ -72,11 +72,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 fragmentTransaction = true;
                 break;
             case R.id.buttonRecommExercise:
-                fragment = new RecomExerFragment();
+                fragment = new NivelExerFragment();
                 fragmentTransaction = true;
                 break;
         }
-
         if (fragmentTransaction) {
             changeFragment(fragment);
         }

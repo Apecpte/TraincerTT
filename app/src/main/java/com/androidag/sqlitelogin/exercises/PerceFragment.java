@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -90,45 +91,63 @@ public class PerceFragment extends Fragment {
     public void checkAnswer(){
         String answerString  = answerEdt.getText().toString().trim();
 
-        if(answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer())){
-            numberOfCorrectAnswer ++;
+        if(!answerEdt.getText().toString().isEmpty()){
+            if(answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer())){
+                numberOfCorrectAnswer ++;
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("¡Bien hecho!");
-            builder.setMessage("Respuesta correcta");
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    currentPosition ++;
-                    setData();
-                    answerEdt.setText("");
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show();
-            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(40);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                TextView titleG = new TextView(getContext());
+                titleG.setText("¡Bien hecho!");
+                titleG.setPadding(10, 10, 10, 10);
+                titleG.setGravity(Gravity.CENTER);
+                titleG.setTextSize(40);
+                builder.setMessage("Respuesta correcta");
+                builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        currentPosition ++;
+                        setData();
+                        answerEdt.setText("");
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.setCustomTitle(titleG);
+                dialog.show();
+                TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+                textView.setTextSize(30);
+                dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
 
-        }else {
+            }else {
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("¡Respuesta incorrecta!");
-            builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer());
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    currentPosition ++;
-                    setData();
-                    answerEdt.setText("");
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show();
-            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(40);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                TextView titleB = new TextView(getContext());
+                titleB.setText("¡Respuesta incorrecta!");
+                titleB.setPadding(10, 10, 10, 10);
+                titleB.setGravity(Gravity.CENTER);
+                titleB.setTextSize(40);
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer());
+                builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        currentPosition ++;
+                        setData();
+                        answerEdt.setText("");
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.setCustomTitle(titleB);
+                dialog.show();
+                TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+                textView.setTextSize(30);
+                dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+            }
+        }else
+        {
+            answerEdt.setError("¡El campo esta vacío!");
         }
+
 
         int x = ((currentPosition+1) * 100) / questionModelArraylist.size();
 
@@ -137,7 +156,6 @@ public class PerceFragment extends Fragment {
     }
 
     public void setUpQuestion(){
-
         questionModelArraylist.add(new MathQuestionModel("¿Qué encontramos en la intersección B4?","rombo"));
         questionModelArraylist.add(new MathQuestionModel("¿Dónde hay un triángulo?","E2"));
         questionModelArraylist.add(new MathQuestionModel("¿Qué encontramos en la intersección C5?","pentagono"));
@@ -155,11 +173,27 @@ public class PerceFragment extends Fragment {
             questionCountLabel.setText("Pregunta No : " + (currentPosition + 1));
 
         }else{
-
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Haz concluido con el ejercicio");
-            builder.setMessage("Tu score es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size());
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            TextView title = new TextView(getContext());
+            title.setText("¡Haz concluido con el ejercicio!");
+            title.setPadding(10, 10, 10, 10);
+            title.setGravity(Gravity.CENTER);
+            title.setTextSize(40);
+            builder.setMessage("Tu score es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //getActivity().finish();
+                    PerceFragment2 pF2 = new PerceFragment2();
+                    getActivity()
+                            .getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.content_frame, pF2)
+                            .addToBackStack(null)
+                            .commit();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //getActivity().finish();
@@ -173,11 +207,13 @@ public class PerceFragment extends Fragment {
                 }
             });
             AlertDialog dialog = builder.create();
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setCustomTitle(title);
             dialog.show();
             TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(40);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+            textView.setTextSize(30);
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
         }
     }
-
 }

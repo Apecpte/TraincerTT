@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Círculos con los hombros"
+        android:text="Giros de caderas"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorBlack"
         android:textStyle="bold"
@@ -24,8 +24,8 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:padding="24dp"
-        android:text="De pie. Hacemos movimientos circulares con los hombros, primero hacia delante y después hacia atrás.
-        \n15 repeticiones hacia adelante y \n15 repeticiones hacia atrás."
+        android:text="De pie con las piernas ligeramente separadas. Colocamos las manos en las caderas y hacemos círculos.
+        \n15 repeticiones hacia la izquierda y \n15 repeticiones hacia la derecha."
         android:layout_below="@+id/textViewExer2"
         android:layout_above="@id/buttonGoOut"
         android:textColor="@color/colorBlack"
@@ -42,9 +42,7 @@
         android:layout_below="@+id/textViewExer2"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:src="@drawable/re_brazos" />
-
+        android:layout_marginBottom="0dp" />
 
     <Button
         android:id="@+id/buttonGoOut"
@@ -86,7 +84,7 @@
         android:padding="25dp"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:text="@string/btn_next"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

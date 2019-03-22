@@ -11,7 +11,6 @@ import android.widget.ImageView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
-import com.androidag.sqlitelogin.fragments.RecomExerFragment;
 import com.bumptech.glide.Glide;
 
 /**
@@ -34,9 +33,9 @@ public class RecomExerFragment5 extends Fragment implements View.OnClickListener
 
         View view = inflater.inflate(R.layout.fragment_recom_exer_fragment5, container, false);
 
-        //ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
+        ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
 
-        //Glide.with(getContext()).load(R.drawable.re_piedere).into(imageView);
+        Glide.with(getContext()).load(R.drawable.re1_hombros).into(imageView);
 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
@@ -67,7 +66,7 @@ public class RecomExerFragment5 extends Fragment implements View.OnClickListener
                 break;
 
             case R.id.buttonNext:
-                fragment = new RecomExerFragment();
+                fragment = new RecomExerFragment6();
                 fragmentTransaction = true;
                 break;
         }
@@ -81,6 +80,5 @@ public class RecomExerFragment5 extends Fragment implements View.OnClickListener
                 .beginTransaction()
                 .replace(R.id.content_frame, fragment)
                 .commit();
-
     }
 }

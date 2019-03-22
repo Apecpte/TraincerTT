@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -14,13 +15,15 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
-import com.androidag.sqlitelogin.fragments.RecomExerFragment;
+import com.androidag.sqlitelogin.fragments.NivelExerFragment;
 import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
 import com.androidag.sqlitelogin.fragments.RelaxFragment;
 import com.androidag.sqlitelogin.fragments.TestFragment;
@@ -30,6 +33,7 @@ public class Home extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +77,7 @@ public class Home extends AppCompatActivity {
                     fragmentTransaction = true;;
                     break;
                 case R.id.menu_recom_ejerc:
-                    fragment = new RecomExerFragment();
+                    fragment = new NivelExerFragment();
                     fragmentTransaction = true;;
                     break;
                 case R.id.menu_logout:
@@ -138,11 +142,20 @@ public class Home extends AppCompatActivity {
                     drawerLayout.openDrawer(GravityCompat.START);
                 }
                 return true;
+            //case R.id.menu_song:
+
+              //  break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-/*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_song, menu);
+        return true;
+    }
+
+    /*
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
@@ -193,6 +206,12 @@ public class Home extends AppCompatActivity {
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
         //dialog.getWindow().setLayout(600, 400);
     }
+/*
+    public void play (View v){
+        if (mediaPlayer == null){
+            mediaPlayer = MediaPlayer.create(this,)
+        }
+    } */
 
     public void onBackPressed() {
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {

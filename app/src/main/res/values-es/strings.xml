@@ -32,8 +32,8 @@
     <string name="FoodTitle1">Pescado azul</string>
     <string name="FoodTitle2">Frutas y verduras</string>
     <string name="FoodTitle3">Legumbres</string>
-    <string name="FoodTitle4">Frutos secos (nueces, almendras, avellanas, cacahuetes, etc.)</string>
-    <string name="FoodTitle5">Alimentos de origen animal \n(carnes, huevos)</string>
+    <string name="FoodTitle4">Frutos secos</string>
+    <string name="FoodTitle5">Alimentos de origen animal</string>
 
     <string name="Exerlogan">“Es importante consultar con su médico el tipo de ejercicios que pueda realizar.”</string>
 

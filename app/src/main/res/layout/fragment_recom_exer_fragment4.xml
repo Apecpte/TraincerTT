@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Levantar y bajar los brazos"
+        android:text="Flexión lateral del tronco"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorBlack"
         android:textStyle="bold"
@@ -24,14 +24,14 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:padding="24dp"
-        android:text="De pie, levantamos los brazos estirados por encima de la cabeza y los bajamos.
-        \nRepetir 15 veces"
+        android:text="De pie con las piernas ligeramente separadas. Ponemos las manos en las \ncaderas con la espalda lo más recta posible, e inclinamos el tronco hacia un \nlado y después hacia el otro.
+\n30 repeticiones."
         android:layout_below="@+id/textViewExer2"
         android:layout_above="@id/buttonGoOut"
         android:textColor="@color/colorBlack"
         android:textStyle="italic"
         android:textAlignment="textEnd"
-        android:textSize="35sp" />
+        android:textSize="40sp" />
 
     <ImageView
         android:id="@+id/imageViewGifExer"
@@ -42,9 +42,7 @@
         android:layout_below="@+id/textViewExer2"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:src="@drawable/re_brazos" />
-
+        android:layout_marginBottom="0dp" />
 
     <Button
         android:id="@+id/buttonGoOut"

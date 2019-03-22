@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".fragments.RecomExerFragment">
+    tools:context=".RecomExer.RecomExerFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Giros de rodillas"
+        android:text="Giros de tobillo"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorBlack"
         android:textStyle="bold"
@@ -24,8 +24,8 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:padding="24dp"
-        android:text="De pie con ambas piernas juntas, flexionamos un poco las rodillas y hacemos círculos con ellas.
-        \n15 repeticiones hacia la izquierda y \n15 repeticiones hacia la derecha."
+        android:text="De pie, hacemos círculos primero con un tobillo y después con el otro.
+        \n15 repeticiones hacia la izquierda y 15 repeticiones hacia la derecha."
         android:layout_below="@+id/textViewExer1"
         android:layout_above="@id/buttonGoOut"
         android:textColor="@color/colorBlack"
@@ -42,8 +42,7 @@
         android:layout_below="@+id/textViewExer1"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:src="@drawable/re_brazos" />
+        android:layout_marginBottom="0dp"/>
 
     <Button
         android:id="@+id/buttonGoOut"

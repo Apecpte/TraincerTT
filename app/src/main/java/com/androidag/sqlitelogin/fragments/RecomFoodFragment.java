@@ -101,6 +101,7 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
             }
         });
         AlertDialog dialog = builder.create();
+        dialog.setCanceledOnTouchOutside(false);
         dialog.show();
         TextView textView = (TextView) dialog.findViewById(android.R.id.message);
         textView.setTextSize(40);

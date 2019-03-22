@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -88,44 +89,61 @@ public class MathsFragment extends Fragment {
     public void checkAnswer(){
         String answerString  = answerEdt.getText().toString().trim();
 
-        if(answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer())){
-            numberOfCorrectAnswer ++;
+        if(!answerEdt.getText().toString().isEmpty()){
+            if(answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer())){
+                numberOfCorrectAnswer ++;
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("¡Bien hecho!");
-            builder.setMessage("Respuesta correcta");
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    currentPosition ++;
-                    setData();
-                    answerEdt.setText("");
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show();
-            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(40);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                TextView titleG = new TextView(getContext());
+                titleG.setText("¡Bien hecho!");
+                titleG.setPadding(10, 10, 10, 10);
+                titleG.setGravity(Gravity.CENTER);
+                titleG.setTextSize(40);
+                builder.setMessage("Respuesta correcta");
+                builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        currentPosition ++;
+                        setData();
+                        answerEdt.setText("");
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.setCustomTitle(titleG);
+                dialog.show();
+                TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+                textView.setTextSize(30);
+                dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
 
-        }else {
+            }else {
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("¡Respuesta incorrecta!");
-            builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer());
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    currentPosition ++;
-                    setData();
-                    answerEdt.setText("");
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show();
-            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(40);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                TextView titleB = new TextView(getContext());
+                titleB.setText("¡Respuesta incorrecta!");
+                titleB.setPadding(10, 10, 10, 10);
+                titleB.setGravity(Gravity.CENTER);
+                titleB.setTextSize(40);
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer());
+                builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        currentPosition ++;
+                        setData();
+                        answerEdt.setText("");
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.setCustomTitle(titleB);
+                dialog.show();
+                TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+                textView.setTextSize(30);
+                dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+            }
+        }else
+        {
+            answerEdt.setError("¡El campo esta vacío!");
         }
 
         int x = ((currentPosition+1) * 100) / questionModelArraylist.size();
@@ -135,14 +153,16 @@ public class MathsFragment extends Fragment {
     }
 
     public void setUpQuestion(){
-
-        questionModelArraylist.add(new MathQuestionModel(" 5892\n+4371","10263"));
-        questionModelArraylist.add(new MathQuestionModel(" 3750\n+1983","5733"));
-        questionModelArraylist.add(new MathQuestionModel(" 22 * 18","396"));
-        questionModelArraylist.add(new MathQuestionModel(" 5892\n-4371","1521"));
-        questionModelArraylist.add(new MathQuestionModel(" 558\n-327","231"));
-        questionModelArraylist.add(new MathQuestionModel(" 138 " +"\u00F7" +" 6","23"));
-
+        questionModelArraylist.add(new MathQuestionModel("1 + 3 + 4 + 5 + 4","17"));
+        questionModelArraylist.add(new MathQuestionModel("7 + 4 + 5 + 7","23"));
+        questionModelArraylist.add(new MathQuestionModel("14 + 6 + 12 + 7 + 5 + 3","47"));
+        questionModelArraylist.add(new MathQuestionModel("38 - 3 - 9 - 6","20"));
+        questionModelArraylist.add(new MathQuestionModel("15 - 7 - 4 - 2","2"));
+        questionModelArraylist.add(new MathQuestionModel("27 - 6 - 9","12"));
+        questionModelArraylist.add(new MathQuestionModel("17 - 5 - 5 + 1","8"));
+        questionModelArraylist.add(new MathQuestionModel("15 + 10 - 2 + 8 - 4","27"));
+        questionModelArraylist.add(new MathQuestionModel("12 + 6 - 3 + 3","18"));
+        questionModelArraylist.add(new MathQuestionModel("14 - 4 + 7 + 8 + 2", "27"));
     }
 
     public void setData(){
@@ -157,9 +177,26 @@ public class MathsFragment extends Fragment {
         }else{
 
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Haz concluido con el ejercicio");
-            builder.setMessage("Tu score es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size());
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            TextView title = new TextView(getContext());
+            title.setText("¡Haz concluido con el ejercicio!");
+            title.setPadding(10, 10, 10, 10);
+            title.setGravity(Gravity.CENTER);
+            title.setTextSize(40);
+            builder.setMessage("Tu score es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //getActivity().finish();
+                    MathsFragment2 mF2 = new MathsFragment2();
+                    getActivity()
+                            .getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.content_frame, mF2)
+                            .addToBackStack(null)
+                            .commit();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //getActivity().finish();
@@ -173,10 +210,13 @@ public class MathsFragment extends Fragment {
                 }
             });
             AlertDialog dialog = builder.create();
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setCustomTitle(title);
             dialog.show();
             TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(40);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+            textView.setTextSize(30);
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
         }
     }
 }

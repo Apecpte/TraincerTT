@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-
-<!-- TODO: Update blank fragment layout -->
-
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/food1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".fragments.RecomFoodFragment">
 
     <TextView
@@ -23,22 +13,8 @@ android:orientation="vertical">
         android:gravity="center_horizontal"
         android:text="@string/FoodTitle1"
         android:textColor="@color/colorBlack"
-        android:textSize="70sp"
+        android:textSize="55sp"
         android:textStyle="bold" />
-
-    <!--
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="70dp"
-        android:text="@string/FoodSlogan"
-        android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:textSize="30dp" />
-    -->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -46,18 +22,17 @@ android:orientation="vertical">
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="752dp"
-            android:layout_height="330dp"
-            android:paddingLeft="32dp"
-            android:paddingTop="32dp"
-            android:text="Coma de preferencia pescado azul ya que tiene mayor contenido en omega 3. \nPor ejemplo, atún, sardina, salmón, trucha, cazón, etcétera.
-                \nMínimo 2 veces por semana."
+            android:layout_width="550dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="300dp"
+            android:paddingTop="24dp"
+            android:text="Coma de preferencia pescado azul ya \nque tiene mayor contenido en omega 3. \nPor ejemplo, atún, sardina, salmón, \ntrucha, cazón, etcétera. \nMínimo 2 veces por semana."
             android:textColor="@color/colorBlack"
-            android:textSize="40sp" />
+            android:textSize="30sp" />
 
         <ImageView
-            android:layout_width="400dp"
-            android:layout_height="165dp"
+            android:layout_width="425dp"
+            android:layout_height="125dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:gravity="right"
@@ -65,42 +40,37 @@ android:orientation="vertical">
             android:src="@drawable/atun" />
 
         <ImageView
-            android:layout_width="400dp"
-            android:layout_height="165dp"
+            android:layout_width="425dp"
+            android:layout_height="125dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="165dp"
+            android:layout_marginTop="125dp"
             android:layout_marginEnd="0dp"
             android:padding="10sp"
             android:src="@drawable/sardina" />
 
         <ImageView
-            android:layout_width="400dp"
-            android:layout_height="165dp"
-            android:layout_alignParentTop="true"
+            android:layout_width="425dp"
+            android:layout_height="125dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="330dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginTop="250dp"
             android:padding="10sp"
             android:src="@drawable/salmon" />
 
         <ImageView
-            android:layout_width="400dp"
-            android:layout_height="165dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="330dp"
+            android:layout_width="425dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="250dp"
             android:layout_marginEnd="800dp"
             android:padding="10sp"
             android:src="@drawable/bowlpez" />
 
         <ImageView
-            android:layout_width="400dp"
-            android:layout_height="165dp"
-            android:layout_alignParentTop="true"
+            android:layout_width="425dp"
+            android:layout_height="125dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="330dp"
-            android:layout_marginEnd="400dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="427dp"
             android:padding="10sp"
             android:src="@drawable/trucha" />
 
@@ -109,32 +79,30 @@ android:orientation="vertical">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="495dp"
+            android:layout_marginTop="375dp"
             android:background="@null"
             android:text="Si quieres saber más beneficios del pescado azul. Da click aquí."
             android:textAllCaps="false"
             android:textColor="@android:color/holo_purple"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:textStyle="bold"/>
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/buttonGoOut"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
             android:layout_gravity="start"
-            android:layout_marginStart="150dp"
-            android:layout_marginBottom="16dp"
-            android:padding="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="240dp"
             android:backgroundTint="@android:color/holo_blue_dark"
+            android:padding="25dp"
             android:text="@string/btn_goOut"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -143,19 +111,15 @@ android:orientation="vertical">
             android:id="@+id/buttonNext"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="end"
-            android:layout_marginEnd="150dp"
-            android:layout_marginBottom="16dp"
-            android:padding="25dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="385dp"
+            android:layout_marginTop="4dp"
             android:backgroundTint="@android:color/holo_blue_dark"
+            android:padding="25dp"
             android:text="@string/btn_next"
             android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
-
-</ScrollView>

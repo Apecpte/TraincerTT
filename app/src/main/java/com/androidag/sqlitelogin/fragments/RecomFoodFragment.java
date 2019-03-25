@@ -11,6 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +30,8 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
     private Button btnNext;
     private Button btnYT;
 
+    private ImageView img1;
+    boolean isImageFitToScreen;
 
     public RecomFoodFragment() {
         // Required empty public constructor
@@ -42,10 +48,12 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
         btnYT = (Button) view.findViewById(R.id.btnYT);
+        //img1 = (ImageView) view.findViewById(R.id.imageV1);
 
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         btnYT.setOnClickListener(this);
+        //img1.setOnClickListener(this);
 
         // Inflate the layout for this fragment
         return view;
@@ -57,6 +65,20 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
         Fragment fragment = null;
 
         switch (view.getId()) {
+             /*
+            case R.id.imageV1:
+
+                if(isImageFitToScreen) {
+                    isImageFitToScreen=false;
+                    img1.setLayoutParams(new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                    img1.setAdjustViewBounds(true);
+                }else{
+                    isImageFitToScreen=true;
+                    img1.setLayoutParams(new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    img1.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
+                break;
+ */
             case R.id.buttonGoOut:
                 fragment = new HomeFragment();
                 fragmentTransaction = true;

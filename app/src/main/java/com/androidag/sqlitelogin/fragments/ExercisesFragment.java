@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.exercises.AtentionFragment;
 import com.androidag.sqlitelogin.exercises.LanguageFragment;
+import com.androidag.sqlitelogin.exercises.LanguageFragment3;
 import com.androidag.sqlitelogin.exercises.MathsFragment;
 import com.androidag.sqlitelogin.exercises.MemorFragment;
 import com.androidag.sqlitelogin.exercises.PerceFragment;

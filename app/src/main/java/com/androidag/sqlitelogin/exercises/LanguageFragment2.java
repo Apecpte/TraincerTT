@@ -80,15 +80,31 @@ public class LanguageFragment2 extends Fragment {
             }
         });
 
+        answerEdt2.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                Log.e("event.getAction()",event.getAction()+"");
+                Log.e("event.keyCode()",keyCode+"");
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+
+                    checkAnswer();
+                    return true;
+                }
+                return false;
+            }
+        });
+
         // Inflate the layout for this fragment
         return view;
     }
 
     public void checkAnswer(){
         String answerString  = answerEdt.getText().toString().trim();
+        String answerString2  = answerEdt2.getText().toString().trim();
 
         if(!answerEdt.getText().toString().isEmpty() && !answerEdt2.getText().toString().isEmpty()){
-            if(answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer()) && answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer2())){
+            if(answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer()) && answerString2.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer2())){
                 numberOfCorrectAnswer ++;
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -165,7 +181,7 @@ public class LanguageFragment2 extends Fragment {
         questionModelArraylist.add(new LanguageQuestionModel2("Hoy ", "e comido crema de cala","aza.","h", "b"));
         questionModelArraylist.add(new LanguageQuestionModel2("Las ", "elas del ", "arco eran blancas.","v", "b"));
         questionModelArraylist.add(new LanguageQuestionModel2("El pá", "aro se escapó de la ", "aula.","j","j"));
-        questionModelArraylist.add(new LanguageQuestionModel2("Los domin"," os no ", "ay colegio.", "g", "h"));
+        questionModelArraylist.add(new LanguageQuestionModel2("Los domin","os no ", "ay colegio.", "g", "h"));
         questionModelArraylist.add(new LanguageQuestionModel2("Estu","e jugando al ", "alón.", "v", "b"));
         questionModelArraylist.add(new LanguageQuestionModel2("" ,"eneralmente voy al ","imnasio los martes.", "g", "g"));
         questionModelArraylist.add(new LanguageQuestionModel2("A mi ", "ermana Candy le dio ","ripa.", "h" , "g"));

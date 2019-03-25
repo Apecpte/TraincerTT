@@ -3,6 +3,13 @@ package com.androidag.sqlitelogin.exercises;
 public class LanguageQuestionModel3 {
 
     public LanguageQuestionModel3(String questionString, String questionString2, String questionString3, String questionString4, String answer, String answer2, String answer3) {
+        QuestionString = questionString;
+        QuestionString2 = questionString2;
+        QuestionString3 = questionString3;
+        QuestionString4 = questionString4;
+        Answer = answer;
+        Answer2 = answer2;
+        Answer3 = answer3;
     }
 
     public String getQuestionString() {

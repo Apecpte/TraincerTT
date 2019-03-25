@@ -30,7 +30,20 @@
             android:textColor="@color/colorBlack"
             android:textSize="30sp" />
 
+        <!--
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="425dp"
+            android:layout_height="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="right"
+            android:padding="10sp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/atun"/>
+-->
         <ImageView
+            android:id="@+id/imageV1"
             android:layout_width="425dp"
             android:layout_height="125dp"
             android:layout_alignParentTop="true"
@@ -38,6 +51,7 @@
             android:gravity="right"
             android:padding="10sp"
             android:src="@drawable/atun" />
+
 
         <ImageView
             android:layout_width="425dp"

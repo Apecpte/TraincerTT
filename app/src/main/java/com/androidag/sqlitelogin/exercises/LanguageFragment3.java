@@ -51,13 +51,13 @@ public class LanguageFragment3 extends Fragment {
         questionLabel2 = view.findViewById(R.id.textViewLeng2Q3);
         questionLabel3 = view.findViewById(R.id.textViewLeng3Q3);
         questionLabel4 = view.findViewById(R.id.textViewLeng4Q3);
-        scoreLabel = view.findViewById(R.id.scoreLeng2);
+        scoreLabel = view.findViewById(R.id.scoreLeng3);
 
-        answerEdt = view.findViewById(R.id.editTextLeng1A2);
-        answerEdt2 = view.findViewById(R.id.editTextLeng2A2);
-        answerEdt3 = view.findViewById(R.id.editTextLeng2A3);
-        submitButton = view.findViewById(R.id.btnLeng2);
-        progressBar = view.findViewById(R.id.progressLeng2);
+        answerEdt = view.findViewById(R.id.editTextLeng1A3);
+        answerEdt2 = view.findViewById(R.id.editTextLeng2A3);
+        answerEdt3 = view.findViewById(R.id.editTextLeng3A3);
+        submitButton = view.findViewById(R.id.btnLeng3);
+        progressBar = view.findViewById(R.id.progressLeng3);
 
         questionModelArraylist = new ArrayList<>();
 
@@ -86,17 +86,49 @@ public class LanguageFragment3 extends Fragment {
                 return false;
             }
         });
+
+        answerEdt2.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                Log.e("event.getAction()",event.getAction()+"");
+                Log.e("event.keyCode()",keyCode+"");
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+
+                    checkAnswer();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        answerEdt3.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+                Log.e("event.getAction()",event.getAction()+"");
+                Log.e("event.keyCode()",keyCode+"");
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+
+                    checkAnswer();
+                    return true;
+                }
+                return false;
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }
 
     public void checkAnswer() {
         String answerString = answerEdt.getText().toString().trim();
+        String answerString2  = answerEdt2.getText().toString().trim();
+        String answerString3  = answerEdt3.getText().toString().trim();
 
         if (!answerEdt.getText().toString().isEmpty() && !answerEdt2.getText().toString().isEmpty() && !answerEdt3.getText().toString().isEmpty()) {
             if (answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer())
-                    && answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer2())
-                    && answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer3())) {
+                    && answerString2.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer2())
+                    && answerString3.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer3())) {
                 numberOfCorrectAnswer++;
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -163,7 +195,7 @@ public class LanguageFragment3 extends Fragment {
             } else if (answerEdt2.getText().toString().isEmpty()) {
                 answerEdt2.setError("¡El campo esta vacío!");
             } else if (answerEdt3.getText().toString().isEmpty()) {
-                answerEdt2.setError("¡El campo esta vacío!");
+                answerEdt3.setError("¡El campo esta vacío!");
                 //  submitButton.setError("¡El campo esta vacío!");
             }
         }
@@ -172,7 +204,7 @@ public class LanguageFragment3 extends Fragment {
     }
 
     public void setUpQuestion () {
-        questionModelArraylist.add(new LanguageQuestionModel3(" oy he jugado al ", "alón con ", "mi ", "ecino.", "h", "b", "v"));
+        questionModelArraylist.add(new LanguageQuestionModel3(" ", "oy he jugado al ", "alón con mi ", "ecino.", "h", "b", "v"));
         questionModelArraylist.add(new LanguageQuestionModel3("El a", "ión ", "iaja a gran ", "elocidad.", "v", "v", "v"));
         questionModelArraylist.add(new LanguageQuestionModel3("El ", "avilán es un a", "e de rap", "ña.", "g", "v", "i"));
         questionModelArraylist.add(new LanguageQuestionModel3("", "e dormido ", "asta las nue", "e.", "h", "h", "v"));

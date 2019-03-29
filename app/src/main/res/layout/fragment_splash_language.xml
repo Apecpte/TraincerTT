@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".exercises.SplashLanguageFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Completa en el guión las letras que falten."
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingTop="40dp"
+        android:paddingLeft="100dp"
+        android:text="EJEMPLO:"
+        android:textSize="45sp"
+        android:textColor="@color/colorBlack"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:text="F A "
+            android:textColor="@android:color/black"
+            android:textSize="60sp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=" V "
+                android:textColor="@color/colorAccent"
+                android:textSize="60sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:paddingLeft="2.5dp"
+                android:gravity="bottom"
+                android:hint=" _ "
+                android:textSize="60sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:text=" O R I T O"
+            android:textColor="@android:color/black"
+            android:textSize="60sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

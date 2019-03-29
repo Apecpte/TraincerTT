@@ -12,9 +12,13 @@ import com.androidag.sqlitelogin.exercises.AtentionFragment;
 import com.androidag.sqlitelogin.exercises.LanguageFragment;
 import com.androidag.sqlitelogin.exercises.LanguageFragment3;
 import com.androidag.sqlitelogin.exercises.MathsFragment;
+import com.androidag.sqlitelogin.exercises.MemoFragment;
 import com.androidag.sqlitelogin.exercises.MemorFragment;
 import com.androidag.sqlitelogin.exercises.PerceFragment;
 import com.androidag.sqlitelogin.exercises.SplashAtentionFragment;
+import com.androidag.sqlitelogin.exercises.SplashLanguageFragment;
+import com.androidag.sqlitelogin.exercises.SplashMathsFragment;
+import com.androidag.sqlitelogin.exercises.SplashPerceFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,7 +67,7 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
 
             case R.id.button1:
                 //Lenguaje
-                fragment = new LanguageFragment();
+                fragment = new SplashLanguageFragment();
                 fragmentTransaction = true;
                 break;
             case R.id.button2:
@@ -73,17 +77,17 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.button3:
                 //Memoria
-                fragment = new MemorFragment();
+                fragment = new MemoFragmentMenu();
                 fragmentTransaction = true;
                 break;
             case R.id.button4:
                 //Calculo
-                fragment = new MathsFragment();
+                fragment = new SplashMathsFragment();
                 fragmentTransaction = true;
                 break;
             case R.id.button5:
                 //Percepcion
-                fragment = new PerceFragment();
+                fragment = new SplashPerceFragment();
                 fragmentTransaction = true;
                 break;
         }

@@ -118,7 +118,6 @@ public class AtentionFragment extends Fragment {
                 dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
 
             }else {
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 TextView titleB = new TextView(getContext());
                 titleB.setText("¡Respuesta incorrecta!");

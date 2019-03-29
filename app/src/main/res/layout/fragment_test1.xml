@@ -38,7 +38,7 @@
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:gravity="center"
-            android:text=""
+            android:text="To many questions?"
             android:textSize="50sp"/>
 
         <ImageView
@@ -120,8 +120,5 @@
             android:textSize="35sp"/>
 
     </RelativeLayout>
-
-
-
 
 </RelativeLayout>

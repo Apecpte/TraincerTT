@@ -9,20 +9,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class RecomFoodFragment5 extends Fragment implements View.OnClickListener {
 
+    private Button btnLeftFood;
+    private Button btnRightFood;
     private Button btnGoOut;
     private Button btnNext;
     private Button btnBack;
     private Button btnYT;
+    private ImageView imageViewFood5;
+    private ViewFlipper viewFlipper5;
 
     public RecomFoodFragment5() {
         // Required empty public constructor
@@ -35,15 +43,23 @@ public class RecomFoodFragment5 extends Fragment implements View.OnClickListener
 
         View view = inflater.inflate(R.layout.fragment_recom_food_fragment5, container, false);
 
+        btnLeftFood = (Button) view.findViewById(R.id.btnLeftFood5);
+        btnRightFood = (Button) view.findViewById(R.id.btnRightFood5);
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
         btnBack = (Button) view.findViewById(R.id.buttonBack);
         btnYT = (Button) view.findViewById(R.id.btnYT);
+        viewFlipper5 = (ViewFlipper) view.findViewById(R.id.viewFlipperFood5);
 
+        btnLeftFood.setOnClickListener(this);
+        btnRightFood.setOnClickListener(this);
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         btnBack.setOnClickListener(this);
         btnYT.setOnClickListener(this);
+
+        //imageViewFood5.setImageResource(R.drawable.asparagus);
+
         // Inflate the layout for this fragment
         return view;
     }
@@ -54,6 +70,14 @@ public class RecomFoodFragment5 extends Fragment implements View.OnClickListener
         Fragment fragment = null;
 
         switch (view.getId()) {
+            case R.id.btnLeftFood5:
+                viewFlipper5.showPrevious();
+                break;
+
+            case R.id.btnRightFood5:
+                viewFlipper5.showNext();
+                break;
+
             case R.id.buttonGoOut:
                 fragment = new HomeFragment();
                 fragmentTransaction = true;

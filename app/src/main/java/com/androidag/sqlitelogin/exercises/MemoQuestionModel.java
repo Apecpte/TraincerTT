@@ -1,8 +1,8 @@
-package com.androidag.sqlitelogin.test;
+package com.androidag.sqlitelogin.exercises;
 
 import com.androidag.sqlitelogin.R;
 
-public class QuizDatabase {
+public class MemoQuestionModel {
 
     public String testQuestions[] = {
             "¿Cuál es la secuencia correcta?",
@@ -20,14 +20,18 @@ public class QuizDatabase {
     };
 
     Integer testImage[] = {
-            R.drawable.test_image1,
-            R.drawable.cubo,
-            R.drawable.test_image3,
-            R.drawable.test_image4,
-            0,
-            0,
-            0,
-            0,
+            R.drawable.memo1,
+            R.drawable.memo2,
+            R.drawable.memo1,
+            R.drawable.memo2,
+            R.drawable.memo1,
+            R.drawable.memo2,
+            R.drawable.memo1,
+            R.drawable.memo2,
+            R.drawable.memo1,
+            R.drawable.memo2,
+            R.drawable.memo1,
+            R.drawable.memo2,
             0,
             0
     };

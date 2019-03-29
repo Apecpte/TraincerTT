@@ -13,36 +13,29 @@ import com.androidag.sqlitelogin.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SplashAtentionFragment extends Fragment {
+public class SplashLanguageFragment extends Fragment {
 
 
-    public SplashAtentionFragment() {
+    public SplashLanguageFragment() {
         // Required empty public constructor
     }
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_splash_atention, container, false);
-
-      /*  AtentionFragment aF = new AtentionFragment();
-        getActivity()
-                .getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.content_frame, aF)
-                .addToBackStack(null)
-                .commit(); */
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_splash_language, container, false);
 
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 //Second fragment after 5 seconds appears
-                AtentionFragment aF = new AtentionFragment();
+                LanguageFragment l1F = new LanguageFragment();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.content_frame, aF)
+                        .replace(R.id.content_frame, l1F)
                         .addToBackStack(null)
                         .commit();
 
@@ -50,8 +43,8 @@ public class SplashAtentionFragment extends Fragment {
         };
 
         handler.postDelayed(runnable, 10000);
-
         // Inflate the layout for this fragment
         return view;
     }
+
 }

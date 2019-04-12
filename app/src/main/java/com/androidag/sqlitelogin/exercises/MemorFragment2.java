@@ -23,12 +23,13 @@ import com.androidag.sqlitelogin.fragments.HomeFragment;
  */
 public class MemorFragment2 extends Fragment implements View.OnClickListener{
 
-    ImageButton imbCarta1, imbCarta2, imbCarta3, imbCarta4, imbCarta5, imbCarta6, imbCarta7, imbCarta8, imbCarta9, imbCarta10;
-    int[] imagenes = {R.mipmap.angry_memory,R.mipmap.emba_memory,R.mipmap.hapopen_memory,R.mipmap.happy_memory,R.mipmap.sad_memory};
-    int[] juego = new int[10];
+    ImageButton imbCarta1, imbCarta2, imbCarta3, imbCarta4, imbCarta5, imbCarta6, imbCarta7, imbCarta8,
+            imbCarta9, imbCarta10, imbCarta11, imbCarta12, imbCarta13, imbCarta14, imbCarta15, imbCarta16;
+    int[] imagenes = {R.mipmap.angry_memory,R.mipmap.emba_memory,R.mipmap.hapopen_memory,R.mipmap.happy_memory,R.mipmap.sad_memory, R.mipmap.dientes_memory, R.mipmap.crying_memory, R.mipmap.in_love_memory};
+    int[] juego = new int[16];
     int[] cartas_selecionadas = new int[2];
     int[] imagenes_selecionadas = new int[2];
-    int[] juego_terminado = new int[10];
+    int[] juego_terminado = new int[16];
     int turno=0, ganador=0;
 
     public MemorFragment2() {
@@ -61,14 +62,26 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
         imbCarta9.setOnClickListener(this);
         imbCarta10 = (ImageButton) view.findViewById(R.id.imb2Carta10);
         imbCarta10.setOnClickListener(this);
+        imbCarta11 = (ImageButton) view.findViewById(R.id.imb2Carta11);
+        imbCarta11.setOnClickListener(this);
+        imbCarta12 = (ImageButton) view.findViewById(R.id.imb2Carta12);
+        imbCarta12.setOnClickListener(this);
+        imbCarta13 = (ImageButton) view.findViewById(R.id.imb2Carta13);
+        imbCarta13.setOnClickListener(this);
+        imbCarta14 = (ImageButton) view.findViewById(R.id.imb2Carta14);
+        imbCarta14.setOnClickListener(this);
+        imbCarta15 = (ImageButton) view.findViewById(R.id.imb2Carta15);
+        imbCarta15.setOnClickListener(this);
+        imbCarta16 = (ImageButton) view.findViewById(R.id.imb2Carta16);
+        imbCarta16.setOnClickListener(this);
 
         if (savedInstanceState == null)
         {
             asignarImagenes();
-            for (int i=0;i<10;i++)
+            for (int i=0;i<16;i++)
                 juego_terminado[i]=0;
 
-            cartas_selecionadas[0]=10;
+            cartas_selecionadas[0]=16;
         }
 
         // Inflate the layout for this fragment
@@ -79,9 +92,9 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
     {
         int posicion, contador = 0;
 
-        for (int i=0;i<5;)
+        for (int i=0;i<8;)
         {
-            posicion = (int)(Math.random()*10);
+            posicion = (int)(Math.random()*16);
 
             if(juego[posicion]==0) {
                 juego[posicion] = imagenes[i];
@@ -160,6 +173,42 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
                 imagenes_selecionadas[turno]=juego[9];
                 cartas_selecionadas[turno]=9;
                 imbCarta10.setEnabled(false);
+                break;
+            case R.id.imb2Carta11:
+                imbCarta11.setImageResource(juego[10]);
+                imagenes_selecionadas[turno]=juego[10];
+                cartas_selecionadas[turno]=10;
+                imbCarta11.setEnabled(false);
+                break;
+            case R.id.imb2Carta12:
+                imbCarta12.setImageResource(juego[11]);
+                imagenes_selecionadas[turno]=juego[11];
+                cartas_selecionadas[turno]=11;
+                imbCarta12.setEnabled(false);
+                break;
+            case R.id.imb2Carta13:
+                imbCarta13.setImageResource(juego[12]);
+                imagenes_selecionadas[turno]=juego[12];
+                cartas_selecionadas[turno]=12;
+                imbCarta13.setEnabled(false);
+                break;
+            case R.id.imb2Carta14:
+                imbCarta14.setImageResource(juego[13]);
+                imagenes_selecionadas[turno]=juego[13];
+                cartas_selecionadas[turno]=13;
+                imbCarta14.setEnabled(false);
+                break;
+            case R.id.imb2Carta15:
+                imbCarta15.setImageResource(juego[14]);
+                imagenes_selecionadas[turno]=juego[14];
+                cartas_selecionadas[turno]=14;
+                imbCarta15.setEnabled(false);
+                break;
+            case R.id.imb2Carta16:
+                imbCarta16.setImageResource(juego[15]);
+                imagenes_selecionadas[turno]=juego[15];
+                cartas_selecionadas[turno]=15;
+                imbCarta16.setEnabled(false);
                 break;
         }
 
@@ -252,6 +301,42 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
                 imbCarta10.setImageResource(juego[9]);
                 imbCarta10.setEnabled(false);
             }
+
+            if (juego_terminado[10] == 1 || cartas_selecionadas[0]==10)
+            {
+                imbCarta11.setImageResource(juego[10]);
+                imbCarta11.setEnabled(false);
+            }
+
+            if (juego_terminado[11] == 1 || cartas_selecionadas[0]==11)
+            {
+                imbCarta12.setImageResource(juego[11]);
+                imbCarta12.setEnabled(false);
+            }
+
+            if (juego_terminado[12] == 1 || cartas_selecionadas[0]==12)
+            {
+                imbCarta13.setImageResource(juego[12]);
+                imbCarta13.setEnabled(false);
+            }
+
+            if (juego_terminado[13] == 1 || cartas_selecionadas[0]==13)
+            {
+                imbCarta14.setImageResource(juego[13]);
+                imbCarta14.setEnabled(false);
+            }
+
+            if (juego_terminado[14] == 1 || cartas_selecionadas[0]==14)
+            {
+                imbCarta15.setImageResource(juego[14]);
+                imbCarta15.setEnabled(false);
+            }
+
+            if (juego_terminado[15] == 1 || cartas_selecionadas[0]==15)
+            {
+                imbCarta16.setImageResource(juego[15]);
+                imbCarta16.setEnabled(false);
+            }
         }
     }
 
@@ -272,6 +357,12 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
             imbCarta8.setEnabled(false);
             imbCarta9.setEnabled(false);
             imbCarta10.setEnabled(false);
+            imbCarta11.setEnabled(false);
+            imbCarta12.setEnabled(false);
+            imbCarta13.setEnabled(false);
+            imbCarta14.setEnabled(false);
+            imbCarta15.setEnabled(false);
+            imbCarta16.setEnabled(false);
         }
 
         @Override
@@ -296,7 +387,7 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
 
                 ganador++;
 
-                if(ganador==5){
+                if(ganador==8){
                     //Toast.makeText(getApplicationContext(),"!Felicidades has ganado¡",Toast.LENGTH_SHORT).show();
                     alertScoreMemo();
                 }
@@ -362,35 +453,53 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
                 imbCarta10.setImageResource(R.mipmap.brain_memory);
                 imbCarta10.setEnabled(true);
             }
+            if (juego_terminado[10] == 0)
+            {
+                imbCarta11.setImageResource(R.mipmap.brain_memory);
+                imbCarta11.setEnabled(true);
+            }
 
-            cartas_selecionadas[0]=10;
+            if (juego_terminado[11] == 0)
+            {
+                imbCarta12.setImageResource(R.mipmap.brain_memory);
+                imbCarta12.setEnabled(true);
+            }
+
+            if (juego_terminado[12] == 0)
+            {
+                imbCarta13.setImageResource(R.mipmap.brain_memory);
+                imbCarta13.setEnabled(true);
+            }
+
+            if (juego_terminado[13] == 0)
+            {
+                imbCarta14.setImageResource(R.mipmap.brain_memory);
+                imbCarta14.setEnabled(true);
+            }
+
+            if (juego_terminado[14] == 0)
+            {
+                imbCarta15.setImageResource(R.mipmap.brain_memory);
+                imbCarta15.setEnabled(true);
+            }
+
+            if (juego_terminado[15] == 0)
+            {
+                imbCarta16.setImageResource(R.mipmap.brain_memory);
+                imbCarta16.setEnabled(true);
+            }
+
+            cartas_selecionadas[0]=16;
 
         }
     }
 
     public void alertScoreMemo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        TextView title = new TextView(getContext());
-        title.setText("!Felicidades, has ganado¡");
-        title.setPadding(10, 10, 10, 10);
-        title.setGravity(Gravity.CENTER);
-        title.setTextSize(40);
+        //builder.setTitle("Cerrar Sesión");
         builder.setMessage("!Felicidades has ganado¡");
         //builder.setIcon(R.drawable.ic_logout);
-        builder.setPositiveButton("SÍ", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                //getActivity().finish();
-                MemorFragment3 mF3 = new MemorFragment3();
-                getActivity()
-                        .getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.content_frame, mF3)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
@@ -405,11 +514,9 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
         });
         AlertDialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
-        dialog.setCustomTitle(title);
         dialog.show();
         TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(30);
-        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
+        textView.setTextSize(40);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 }

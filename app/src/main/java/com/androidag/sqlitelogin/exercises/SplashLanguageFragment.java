@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.androidag.sqlitelogin.R;
 
@@ -15,6 +16,7 @@ import com.androidag.sqlitelogin.R;
  */
 public class SplashLanguageFragment extends Fragment {
 
+    private Button btnStartMemo;
 
     public SplashLanguageFragment() {
         // Required empty public constructor
@@ -26,23 +28,20 @@ public class SplashLanguageFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_language, container, false);
 
-        Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        btnStartMemo = (Button) view.findViewById(R.id.buttonStartMemo);
+
+        btnStartMemo.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                //Second fragment after 5 seconds appears
-                LanguageFragment l1F = new LanguageFragment();
+            public void onClick(View view) {
+                LanguageFragment2 l2F = new LanguageFragment2();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.content_frame, l1F)
+                        .replace(R.id.content_frame, l2F)
                         .addToBackStack(null)
                         .commit();
-
             }
-        };
-
-        handler.postDelayed(runnable, 10000);
+        });
         // Inflate the layout for this fragment
         return view;
     }

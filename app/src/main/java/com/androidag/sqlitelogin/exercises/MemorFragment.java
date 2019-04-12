@@ -8,7 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,8 +67,6 @@ public class MemorFragment extends Fragment implements View.OnClickListener{
 
             cartas_selecionadas[0]=8;
         }
-
-
         // Inflate the layout for this fragment
         return view;
     }
@@ -342,11 +339,11 @@ public class MemorFragment extends Fragment implements View.OnClickListener{
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
-                MemorFragment2 mF2 = new MemorFragment2();
+                MemorFragment3 mF3 = new MemorFragment3();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.content_frame, mF2)
+                        .replace(R.id.content_frame, mF3)
                         .addToBackStack(null)
                         .commit();
             }

@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -409,8 +410,11 @@ public class MemorFragment3 extends Fragment implements View.OnClickListener{
 
     public void alertScoreMemo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        //builder.setTitle("Cerrar Sesión");
-        builder.setMessage("!Felicidades has ganado¡");
+        TextView title = new TextView(getContext());
+        title.setText("¡Haz concluido con los tres niveles del ejercicio!");
+        title.setPadding(10, 10, 10, 10);
+        title.setGravity(Gravity.CENTER);
+        title.setTextSize(40);
         //builder.setIcon(R.drawable.ic_logout);
         builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -427,9 +431,10 @@ public class MemorFragment3 extends Fragment implements View.OnClickListener{
         });
         AlertDialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
+        dialog.setCustomTitle(title);
         dialog.show();
         TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(40);
+        textView.setTextSize(30);
         dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 }

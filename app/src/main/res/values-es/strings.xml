@@ -22,10 +22,10 @@
 
     <string name="menuhome">Inicio</string>
     <string name="menuTest">Test de evaluación cognitiva</string>
-    <string name="menuAlim">Recom. de alimentación</string>
+    <string name="menuAlim">Recomendaciones de alimentación</string>
     <string name="menuEjer">Ejercicios cognitivos</string>
-    <string name="menuRelax">Recom. de relajación</string>
-    <string name="menExercise">Recom. de activación física</string>
+    <string name="menuRelax">Recomendaciones de relajación</string>
+    <string name="menExercise">Recomendaciones de activación física</string>
     <string name="menuGoOut">Cerrar Sesión</string>
 
     <string name="FoodSlogan">“Es importante cambiar los hábitos alimenticios poco a poco y bajo supervisión médica.”</string>

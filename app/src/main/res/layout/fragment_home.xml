@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:weightSum="3"
     tools:context=".fragments.HomeFragment">
@@ -37,7 +38,7 @@
                 android:gravity="center"
                 android:text="@string/menuTest"
                 android:textStyle="bold"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textColor="@android:color/black"/>
         </LinearLayout>
 
@@ -64,7 +65,7 @@
                 android:gravity="center"
                 android:text="@string/menuAlim"
                 android:textStyle="bold"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textColor="@android:color/black"/>
 
         </LinearLayout>
@@ -101,7 +102,7 @@
                 android:gravity="center"
                 android:text="@string/menuEjer"
                 android:textStyle="bold"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textColor="@android:color/black"/>
         </LinearLayout>
 
@@ -128,7 +129,7 @@
                 android:gravity="center"
                 android:text="@string/menuRelax"
                 android:textStyle="bold"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textColor="@android:color/black"/>
         </LinearLayout>
     </LinearLayout>
@@ -164,9 +165,8 @@
                 android:gravity="center"
                 android:text="@string/menExercise"
                 android:textStyle="bold"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 android:textColor="@android:color/black"/>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

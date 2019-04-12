@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.androidag.sqlitelogin.Food.RecomFoodFragment2;
 import com.androidag.sqlitelogin.R;
@@ -26,12 +27,12 @@ import com.androidag.sqlitelogin.R;
  */
 public class RecomFoodFragment extends Fragment implements View.OnClickListener {
 
+    private Button btnLeftFood;
+    private Button btnRightFood;
     private Button btnGoOut;
     private Button btnNext;
     private Button btnYT;
-
-    private ImageView img1;
-    boolean isImageFitToScreen;
+    private ViewFlipper viewFlipper1;
 
     public RecomFoodFragment() {
         // Required empty public constructor
@@ -45,11 +46,15 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
 
         alertRecomFood();
 
+        btnLeftFood = (Button) view.findViewById(R.id.btnLeftFood1);
+        btnRightFood = (Button) view.findViewById(R.id.btnRightFood1);
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
         btnYT = (Button) view.findViewById(R.id.btnYT);
-        //img1 = (ImageView) view.findViewById(R.id.imageV1);
+        viewFlipper1 = (ViewFlipper) view.findViewById(R.id.viewFlipperFood1);
 
+        btnLeftFood.setOnClickListener(this);
+        btnRightFood.setOnClickListener(this);
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         btnYT.setOnClickListener(this);
@@ -65,20 +70,14 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
         Fragment fragment = null;
 
         switch (view.getId()) {
-             /*
-            case R.id.imageV1:
-
-                if(isImageFitToScreen) {
-                    isImageFitToScreen=false;
-                    img1.setLayoutParams(new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                    img1.setAdjustViewBounds(true);
-                }else{
-                    isImageFitToScreen=true;
-                    img1.setLayoutParams(new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-                    img1.setScaleType(ImageView.ScaleType.FIT_XY);
-                }
+            case R.id.btnLeftFood1:
+                viewFlipper1.showPrevious();
                 break;
- */
+
+            case R.id.btnRightFood1:
+                viewFlipper1.showNext();
+                break;
+
             case R.id.buttonGoOut:
                 fragment = new HomeFragment();
                 fragmentTransaction = true;

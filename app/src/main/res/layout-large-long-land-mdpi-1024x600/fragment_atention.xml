@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".exercises.AtentionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20000000"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressAte"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="5dp"
+            android:progressTint="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/noQuestionAte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_alignParentLeft="true"
+                android:text="Pregunta No : "/>
+            <TextView
+                android:id="@+id/scoreAte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:text="Puntuación: "/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <!--
+        <Button
+            android:id="@+id/mathsbButtonPista"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Pista"
+            android:layout_gravity="end"
+            android:layout_marginRight="100dp"
+            android:textSize="25sp"/>
+-->
+        <TextView
+            android:id="@+id/textViewAteQ"
+            android:layout_width="700dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:text="666 el inverso es: "
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/bg_main"
+            android:textSize="40sp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editTextAteA"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Escribe tu respuesta"
+            android:inputType="number"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/btnAte"
+            android:layout_width="700dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/colorAccent"
+            android:text="Enviar"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+</LinearLayout>

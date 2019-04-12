@@ -2,11 +2,11 @@ package com.androidag.sqlitelogin.exercises;
 
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.androidag.sqlitelogin.R;
 
@@ -15,6 +15,7 @@ import com.androidag.sqlitelogin.R;
  */
 public class SplashMathsFragment extends Fragment {
 
+    private Button btnStartMaths;
 
     public SplashMathsFragment() {
         // Required empty public constructor
@@ -26,11 +27,11 @@ public class SplashMathsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_maths, container, false);
 
-        Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        btnStartMaths = (Button) view.findViewById(R.id.buttonStartMaths);
+
+        btnStartMaths.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                //Second fragment after 5 seconds appears
+            public void onClick(View view) {
                 MathsFragment m1F = new MathsFragment();
                 getActivity()
                         .getSupportFragmentManager()
@@ -39,9 +40,7 @@ public class SplashMathsFragment extends Fragment {
                         .addToBackStack(null)
                         .commit();
             }
-        };
-
-        handler.postDelayed(runnable, 10000);
+        });
         // Inflate the layout for this fragment
         return view;
     }

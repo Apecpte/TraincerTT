@@ -2,11 +2,11 @@ package com.androidag.sqlitelogin.exercises;
 
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.androidag.sqlitelogin.R;
 
@@ -15,6 +15,7 @@ import com.androidag.sqlitelogin.R;
  */
 public class SplashAtentionFragment extends Fragment {
 
+    private Button btnStartAtention;
 
     public SplashAtentionFragment() {
         // Required empty public constructor
@@ -25,19 +26,11 @@ public class SplashAtentionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_atention, container, false);
 
-      /*  AtentionFragment aF = new AtentionFragment();
-        getActivity()
-                .getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.content_frame, aF)
-                .addToBackStack(null)
-                .commit(); */
+        btnStartAtention = (Button) view.findViewById(R.id.buttonStartAtention);
 
-        Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        btnStartAtention.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                //Second fragment after 5 seconds appears
+            public void onClick(View view) {
                 AtentionFragment aF = new AtentionFragment();
                 getActivity()
                         .getSupportFragmentManager()
@@ -45,12 +38,8 @@ public class SplashAtentionFragment extends Fragment {
                         .replace(R.id.content_frame, aF)
                         .addToBackStack(null)
                         .commit();
-
             }
-        };
-
-        handler.postDelayed(runnable, 10000);
-
+        });
         // Inflate the layout for this fragment
         return view;
     }

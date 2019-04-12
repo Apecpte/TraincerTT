@@ -35,7 +35,6 @@ public class PerceFragment extends Fragment {
     int currentPosition = 0;
     int numberOfCorrectAnswer = 0;
 
-
     public PerceFragment() {
         // Required empty public constructor
     }
@@ -83,7 +82,6 @@ public class PerceFragment extends Fragment {
                 return false;
             }
         });
-
         // Inflate the layout for this fragment
         return view;
     }

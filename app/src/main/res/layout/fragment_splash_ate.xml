@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".exercises.SplashAteFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="¿Cuántos objetos hay en la imagen?"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingLeft="100dp"
+        android:text="EJEMPLO:"
+        android:textSize="45sp"
+        android:textColor="@color/colorBlack"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/splashAteImage"
+            android:layout_width="700dp"
+            android:layout_height="450dp"
+            android:padding="20dp"
+            android:src="@drawable/ate_1"
+            android:layout_gravity="center" />
+
+        <!-- ate_1
+        <Button
+            android:id="@+id/mathsbButtonPista"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Pista"
+            android:layout_gravity="end"
+            android:layout_marginRight="100dp"
+            android:textSize="25sp"/>
+-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/splashAteImage"
+            android:background="@color/bg_main"
+            android:gravity="center"
+            android:text="¿Cuántas llaves hay en la imagen?"
+            android:textColor="@android:color/black"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/tvSplashAte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/splashAteImage"
+            android:layout_gravity="center"
+            android:layout_marginTop="255dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="4"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/buttonStartAte"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/tvSplashAte"
+            android:layout_toEndOf="@+id/splashAteImage"
+            android:layout_marginLeft="165dp"
+            android:layout_marginRight="160dp"
+            android:background="@color/bg_login"
+            android:layout_gravity="center"
+            android:text="EMPEZAR"
+            android:textSize="40sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

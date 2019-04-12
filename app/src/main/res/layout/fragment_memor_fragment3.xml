@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:paddingLeft="64dp"
         android:paddingRight="64dp"
-        android:paddingTop="16dp"
+        android:paddingTop="8dp"
         tools:context=".exercises.MemorFragment3"
 
         android:background="#b0beff"

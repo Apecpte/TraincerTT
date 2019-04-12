@@ -43,18 +43,28 @@
             android:textSize="50sp"
             android:gravity="center"/>
 
-        <EditText
+        <TextView
             android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:text="4"
             android:inputType="number"
             android:gravity="center"
-            android:textSize="60sp" />
+            android:textSize="50sp" />
 
+        <Button
+            android:id="@+id/buttonStartMaths"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/bg_login"
+            android:layout_gravity="center"
+            android:text="EMPEZAR"
+            android:textSize="40sp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 </LinearLayout>

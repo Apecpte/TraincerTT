@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@color/bg_login"
+    tools:context=".exercises.PerceptionFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:text="Selecciona cúal imagen es \nexactamente igual a la de la izquierda."
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:baselineAligned="false"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/imageview_border">
+
+            <ImageView
+                android:id="@+id/imageViewPerception1"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:background="@drawable/imageview_borderblack"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:id="@+id/cartaPerce1"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:scaleY=".50"
+                    android:scaleX=".50"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/imageview_borderblack"/>
+
+                <ImageButton
+                    android:id="@+id/cartaPerce2"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/imageview_borderblack"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:id="@+id/cartaPerce3"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:scaleY=".65"
+                    android:scaleX=".65"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/imageview_borderblack"/>
+
+                <ImageButton
+                    android:id="@+id/cartaPerce4"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:scaleY=".80"
+                    android:scaleX=".80"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/imageview_borderblack"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

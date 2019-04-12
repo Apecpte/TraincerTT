@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".exercises.SplashLanguFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Lee la frase y elige la palabra adecuada."
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingLeft="100dp"
+        android:text="EJEMPLO:"
+        android:textSize="45sp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:background="@color/bg_login"
+        android:gravity="center"
+        android:text="Objeto para colgar y llevar las llaves: "
+        android:textColor="@android:color/black"
+        android:textSize="50sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="500dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:text="Llavero"
+            android:textSize="25sp"/>
+
+        <Button
+            android:layout_width="500dp"
+            android:layout_height="match_parent"
+            android:text="Pulsera"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonStartLangu"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorAccent"
+        android:layout_gravity="center"
+        android:text="EMPEZAR"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

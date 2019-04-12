@@ -13,7 +13,7 @@
         <item
             android:id="@+id/menu_recom_ali"
             android:icon="@drawable/diet"
-            android:title="@string/menuAlim" />
+            android:title="Recom. de alimentación" />
         <item
             android:id="@+id/menu_exer"
             android:icon="@drawable/brain"
@@ -21,11 +21,11 @@
         <item
             android:id="@+id/menu_recom_relax"
             android:icon="@drawable/meditation"
-            android:title="@string/menuRelax" />
+            android:title="Recom. de relajación" />
         <item
             android:id="@+id/menu_recom_ejerc"
             android:icon="@drawable/exercise"
-            android:title="@string/menExercise" />
+            android:title="Recom. de activación física" />
     </group>
 
     <group android:id="@+id/groupGoOut">

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     android:weightSum="3"
     tools:context=".fragments.HomeFragment">
 
@@ -168,34 +169,6 @@
                 android:text="Percepción y Gnosias"/>
         </LinearLayout>
 
-        <!--
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:layout_weight="1"
-           android:orientation="vertical"
-           android:gravity="center">
-
-           <ImageButton
-               android:id="@+id/button6"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:layout_weight="1"
-               android:padding="20dp"
-               android:scaleType="fitCenter"
-               android:src="@drawable/dice"
-               android:background="@android:color/transparent"/>
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:gravity="center"
-               android:textStyle="bold"
-               android:textSize="40sp"
-               android:textColor="@android:color/black"
-               android:text="Button 6"/>
-       </LinearLayout>
-       -->
    </LinearLayout>
 
 </LinearLayout>

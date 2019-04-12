@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ViewFlipper;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
@@ -19,10 +20,13 @@ import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
  */
 public class RecomFoodFragment2 extends Fragment implements View.OnClickListener {
 
+    private Button btnLeftFood;
+    private Button btnRightFood;
     private Button btnGoOut;
     private Button btnNext;
     private Button btnBack;
     private Button btnYT;
+    private ViewFlipper viewFlipper2;
 
     public RecomFoodFragment2() {
         // Required empty public constructor
@@ -34,11 +38,16 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom_food_fragment2, container, false);
 
+        btnLeftFood = (Button) view.findViewById(R.id.btnLeftFood2);
+        btnRightFood = (Button) view.findViewById(R.id.btnRightFood2);
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnBack = (Button) view.findViewById(R.id.buttonBack);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
         btnYT = (Button) view.findViewById(R.id.btnYT);
+        viewFlipper2 = (ViewFlipper) view.findViewById(R.id.viewFlipperFood2);
 
+        btnLeftFood.setOnClickListener(this);
+        btnRightFood.setOnClickListener(this);
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         btnBack.setOnClickListener(this);
@@ -53,6 +62,14 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
         Fragment fragment = null;
 
         switch (view.getId()) {
+            case R.id.btnLeftFood2:
+                viewFlipper2.showPrevious();
+                break;
+
+            case R.id.btnRightFood2:
+                viewFlipper2.showNext();
+                break;
+
             case R.id.buttonGoOut:
                 fragment = new HomeFragment();
                 fragmentTransaction = true;

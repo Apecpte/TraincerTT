@@ -172,7 +172,7 @@ public class AtentionFragment extends Fragment {
 
             questionLabel.setText(questionModelArraylist.get(currentPosition).getQuestionString());
 
-            scoreLabel.setText("Score :" + numberOfCorrectAnswer + "/" + questionModelArraylist.size());
+            scoreLabel.setText("Puntuación :" + numberOfCorrectAnswer + "/" + questionModelArraylist.size());
             questionCountLabel.setText("Pregunta No : " + (currentPosition + 1));
 
         }else{
@@ -182,7 +182,7 @@ public class AtentionFragment extends Fragment {
             title.setPadding(10, 10, 10, 10);
             title.setGravity(Gravity.CENTER);
             title.setTextSize(40);
-            builder.setMessage("Tu score es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
             builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

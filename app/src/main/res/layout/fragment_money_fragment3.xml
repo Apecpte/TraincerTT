@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".exercises.MoneyFragment3">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20000000"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressMoney3"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="5dp"
+            android:progressTint="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/noQuestionMoney3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:layout_alignParentLeft="true"
+                android:text="Pregunta No : "/>
+            <TextView
+                android:id="@+id/scoreMoney3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:layout_alignParentRight="true"
+                android:text="Puntuación: "/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/moneyImage3"
+            android:layout_width="700dp"
+            android:layout_height="550dp"
+            android:src="@drawable/frutas"
+            android:padding="20dp"
+            android:layout_gravity="center" />
+
+        <!--
+        <Button
+            android:id="@+id/mathsbButtonPista"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Pista"
+            android:layout_gravity="end"
+            android:layout_marginRight="100dp"
+            android:textSize="25sp"/>
+-->
+        <TextView
+            android:id="@+id/textView3MoneyQ"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/moneyImage3"
+            android:background="@color/bg_main"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="35sp" />
+
+        <EditText
+            android:id="@+id/editText3MoneyA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/moneyImage3"
+            android:layout_gravity="center"
+            android:layout_marginTop="305dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Escribe tu respuesta"
+            android:inputType="numberDecimal"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/btn3Money"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/moneyImage3"
+            android:layout_marginTop="420dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="Enviar"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

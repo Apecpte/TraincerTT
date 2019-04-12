@@ -17,7 +17,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
@@ -33,7 +32,6 @@ public class Home extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,7 +140,7 @@ public class Home extends AppCompatActivity {
                     drawerLayout.openDrawer(GravityCompat.START);
                 }
                 return true;
-            //case R.id.menu_song:
+            //case R.id.menu_info:
 
               //  break;
         }
@@ -151,7 +149,7 @@ public class Home extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_song, menu);
+        getMenuInflater().inflate(R.menu.menu_info, menu);
         return true;
     }
 

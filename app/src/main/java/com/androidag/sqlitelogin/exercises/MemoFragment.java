@@ -10,12 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
+import com.androidag.sqlitelogin.fragments.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -38,7 +37,7 @@ public class MemoFragment extends Fragment implements View.OnClickListener {
 
     String quizData[][] = {
             // {"Image Name", "Right Answer", "Choice1", "Choice2", "Choice3"}
-            {"memo1", "Aretes, anillo, lentes y un cierre", "Collar, reloj, pulsera y una bolsa", "Collar, aretes, anillos y lentes", "Aretes, reloj, lentes y un cierre"},
+            {"memo1", "Aretes, anillo, lentes y cierres", "Collar, reloj, pulsera y una bolsa", "Collar, aretes, anillos y lentes", "Aretes, reloj, lentes y cierres"},
     };
 
     public MemoFragment() {
@@ -199,13 +198,25 @@ public class MemoFragment extends Fragment implements View.OnClickListener {
         builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-              getActivity().recreate();
+                SplashMemo2Fragment sm2F2 = new SplashMemo2Fragment();
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content_frame, sm2F2)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                getActivity().finish();
+                HomeFragment hf = new HomeFragment();
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content_frame, hf)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         AlertDialog dialog = builder.create();

@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 
 import com.androidag.sqlitelogin.R;
+import com.androidag.sqlitelogin.meditation.MeditaFragment1;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,7 +69,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 fragmentTransaction = true;
                 break;
             case R.id.buttonRelax:
-                fragment = new RelaxFragment();
+                fragment = new MeditaFragment1();
                 fragmentTransaction = true;
                 break;
             case R.id.buttonRecommExercise:

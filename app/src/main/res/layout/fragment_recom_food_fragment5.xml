@@ -131,7 +131,7 @@
         android:id="@+id/buttonGoOut"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="start"
+        android:layout_marginTop="4dp"
         android:layout_marginLeft="150dp"
         android:layout_below="@id/btnYT"
         android:padding="25dp"

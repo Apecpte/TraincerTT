@@ -35,7 +35,7 @@
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/password"
@@ -50,7 +50,7 @@
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"
-            android:textSize="30dp"/>
+            android:textSize="30sp"/>
 
         <!-- Login Button -->
 
@@ -64,7 +64,7 @@
             android:padding="15dp"
             android:text="@string/btn_login"
             android:textColor="@android:color/black"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:textAlignment="center"/>
 
@@ -80,7 +80,7 @@
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textAlignment="center"/>
     </LinearLayout>
 

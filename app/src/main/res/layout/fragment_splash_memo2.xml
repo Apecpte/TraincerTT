@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".exercises.SplashMemo2Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Visualiza los objetos durante 10 segundos que hay en cada lugar que se encuentran. Luego tendrás que recordarlos."
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/colorBlack"/>
+
+    <ImageView
+        android:layout_width="800dp"
+        android:layout_height="450dp"
+        android:layout_gravity="center"
+        android:src="@drawable/memo3"/>
+
+</LinearLayout>

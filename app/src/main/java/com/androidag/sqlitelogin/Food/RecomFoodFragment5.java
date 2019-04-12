@@ -29,7 +29,6 @@ public class RecomFoodFragment5 extends Fragment implements View.OnClickListener
     private Button btnNext;
     private Button btnBack;
     private Button btnYT;
-    private ImageView imageViewFood5;
     private ViewFlipper viewFlipper5;
 
     public RecomFoodFragment5() {

@@ -8,15 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
-import com.androidag.sqlitelogin.exercises.AtentionFragment;
-import com.androidag.sqlitelogin.exercises.LanguageFragment;
-import com.androidag.sqlitelogin.exercises.LanguageFragment3;
-import com.androidag.sqlitelogin.exercises.MathsFragment;
-import com.androidag.sqlitelogin.exercises.MemoFragment;
-import com.androidag.sqlitelogin.exercises.MemorFragment;
-import com.androidag.sqlitelogin.exercises.PerceFragment;
-import com.androidag.sqlitelogin.exercises.SplashAtentionFragment;
-import com.androidag.sqlitelogin.exercises.SplashLanguageFragment;
+import com.androidag.sqlitelogin.exercises.PerceptionFragment;
 import com.androidag.sqlitelogin.exercises.SplashMathsFragment;
 import com.androidag.sqlitelogin.exercises.SplashPerceFragment;
 
@@ -67,12 +59,12 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
 
             case R.id.button1:
                 //Lenguaje
-                fragment = new SplashLanguageFragment();
+                fragment = new LanguageFragmentMenu();
                 fragmentTransaction = true;
                 break;
             case R.id.button2:
                 //Atención
-                fragment = new SplashAtentionFragment();
+                fragment = new AtentionFragmentMenu();
                 fragmentTransaction = true;
                 break;
             case R.id.button3:
@@ -82,12 +74,12 @@ public class ExercisesFragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.button4:
                 //Calculo
-                fragment = new SplashMathsFragment();
+                fragment = new MathFragmentMenu();
                 fragmentTransaction = true;
                 break;
             case R.id.button5:
                 //Percepcion
-                fragment = new SplashPerceFragment();
+                fragment = new PerceptionFragmentMenu();
                 fragmentTransaction = true;
                 break;
         }

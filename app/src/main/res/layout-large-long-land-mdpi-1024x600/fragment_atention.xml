@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     android:orientation="vertical"
     tools:context=".exercises.AtentionFragment">
 
@@ -20,7 +20,7 @@
             android:layout_height="15dp"
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_marginTop="5dp"
-            android:progressTint="@color/colorAccent"
+            android:progressTint="@color/secondaryDarkColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             />
@@ -72,10 +72,10 @@
             android:layout_height="160dp"
             android:layout_gravity="center"
             android:text="666 el inverso es: "
-            android:textColor="@android:color/black"
+            android:textColor="@color/primaryTextColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@color/bg_main"
+            android:background="@color/colorPrimary"
             android:textSize="40sp"
             android:gravity="center"/>
 
@@ -89,18 +89,20 @@
             android:layout_marginRight="50dp"
             android:hint="Escribe tu respuesta"
             android:inputType="number"
+            android:textColor="@color/primaryTextColor"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/btnAte"
             android:layout_width="700dp"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@color/colorAccent"
+            android:backgroundTint="@color/secondaryDarkColor"
             android:text="Enviar"
+            android:textColor="@color/primaryTextColor"
             android:textSize="40sp" />
     </LinearLayout>
 

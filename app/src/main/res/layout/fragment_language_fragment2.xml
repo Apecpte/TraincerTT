@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     tools:context=".exercises.LanguageFragment2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -30,11 +30,12 @@
             android:layout_marginRight="50dp"
             android:layout_marginBottom="5dp"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/noQuestionLeng2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentLeft="true"
                 android:text="Pregunta No : "/>
@@ -42,7 +43,7 @@
                 android:id="@+id/scoreLeng2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentRight="true"
                 android:text="Score: "/>
@@ -77,68 +78,92 @@
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:text=" I P N "
+                android:text="IPN "
                 android:textColor="@android:color/black"
                 android:textSize="60sp"
                 android:gravity="center"/>
 
-            <EditText
-                android:id="@+id/editTextLeng1A2"
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:hint="_"
-                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-                android:maxLength="1"
                 android:gravity="center"
-                android:textSize="60sp"
-                android:textColor="@color/colorAccent"/>
+                android:textSize="60sp" />
 
             <TextView
                 android:id="@+id/textViewLeng2Q2"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:text="S C O M "
+                android:text="SCOM "
                 android:textColor="@android:color/black"
                 android:textSize="60sp"
                 android:gravity="center"/>
 
-            <EditText
-                android:id="@+id/editTextLeng2A2"
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:hint="_"
-                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-                android:maxLength="1"
                 android:gravity="center"
-                android:textSize="60sp"
-                android:textColor="@color/colorAccent"/>
+                android:textSize="60sp" />
 
             <TextView
                 android:id="@+id/textViewLeng3Q2"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:text="U B G"
+                android:text="UBG"
                 android:textColor="@android:color/black"
                 android:textSize="60sp"
                 android:gravity="center"/>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnLeng2"
-            android:layout_width="700dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:background="@color/colorAccent"
-            android:text="Enviar"
-            android:textSize="40sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn2LengO1"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text="A   B"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btn2LengO2"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text="B   C"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="60sp"/>
+
+            <Button
+                android:id="@+id/btn2LengO3"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text="C   D"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="60sp" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

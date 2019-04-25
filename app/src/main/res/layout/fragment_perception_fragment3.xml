@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:weightSum="1"
     android:orientation="vertical"
-    android:background="@color/bg_login"
+    android:background="@color/secondaryDarkColor"
     tools:context=".exercises.PerceptionFragment3">
 
     <TextView
@@ -38,7 +38,8 @@
                 android:layout_height="200dp"
                 android:scaleY=".65"
                 android:scaleX=".65"
-                android:scaleType="fitXY" />
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"/>
         </LinearLayout>
 
         <LinearLayout
@@ -61,7 +62,7 @@
                     android:scaleY=".85"
                     android:scaleX=".85"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/carta3Perce2"
@@ -70,7 +71,7 @@
                     android:scaleY=".50"
                     android:scaleX=".50"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -95,7 +96,7 @@
                     android:scaleY=".60"
                     android:scaleX=".60"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/carta3Perce4"
@@ -104,7 +105,7 @@
                     android:scaleY=".80"
                     android:scaleX=".80"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
             </LinearLayout>
 
@@ -130,14 +131,14 @@
                     android:scaleY=".90"
                     android:scaleX=".90"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/carta3Perce6"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
             </LinearLayout>
 
@@ -163,7 +164,7 @@
                     android:scaleY=".70"
                     android:scaleX=".70"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/carta3Perce8"
@@ -172,7 +173,7 @@
                     android:scaleY=".65"
                     android:scaleX=".65"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
             </LinearLayout>
 

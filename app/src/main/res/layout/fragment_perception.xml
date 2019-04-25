@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:weightSum="1"
     android:orientation="vertical"
-    android:background="@color/bg_login"
+    android:background="@color/secondaryDarkColor"
     tools:context=".exercises.PerceptionFragment">
 
     <TextView
@@ -38,7 +38,7 @@
                 android:layout_height="220dp"
                 android:scaleType="fitXY"
                 android:layout_gravity="center"
-                android:background="@drawable/imageview_borderblack"/>
+                android:background="@android:color/transparent"/>
         </LinearLayout>
 
         <LinearLayout
@@ -61,14 +61,14 @@
                     android:scaleY=".50"
                     android:scaleX=".50"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/cartaPerce2"
                     android:layout_width="220dp"
                     android:layout_height="220dp"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
             </LinearLayout>
 
@@ -94,7 +94,7 @@
                     android:scaleY=".65"
                     android:scaleX=".65"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/cartaPerce4"
@@ -103,7 +103,7 @@
                     android:scaleY=".80"
                     android:scaleX=".80"
                     android:scaleType="fitXY"
-                    android:background="@drawable/imageview_borderblack"/>
+                    android:background="@android:color/transparent"/>
 
             </LinearLayout>
 

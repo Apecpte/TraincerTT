@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     tools:context=".exercises.SplashLanguageFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -82,10 +82,11 @@
         android:layout_width="250dp"
         android:layout_height="80dp"
         android:layout_marginTop="30dp"
-        android:background="@color/bg_login"
+        android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
         android:text="EMPEZAR"
         android:textSize="40sp"
+        android:textColor="@color/primaryTextColor"
         android:textStyle="bold"/>
 
 </LinearLayout>

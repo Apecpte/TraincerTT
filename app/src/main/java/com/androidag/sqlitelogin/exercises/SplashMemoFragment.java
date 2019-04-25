@@ -3,10 +3,12 @@ package com.androidag.sqlitelogin.exercises;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Chronometer;
 
 import com.androidag.sqlitelogin.R;
 
@@ -15,6 +17,7 @@ import com.androidag.sqlitelogin.R;
  */
 public class SplashMemoFragment extends Fragment {
 
+    private Chronometer chronometer1;
 
     public SplashMemoFragment() {
         // Required empty public constructor
@@ -26,6 +29,27 @@ public class SplashMemoFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_memo, container, false);
 
+        chronometer1 = view.findViewById(R.id.chronometerMemo1);
+
+        chronometer1.start();
+        chronometer1.setBase(SystemClock.elapsedRealtime());
+
+        chronometer1.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+            @Override
+            public void onChronometerTick(Chronometer chronometer) {
+                if ((SystemClock.elapsedRealtime() - chronometer1.getBase()) >= 15000) {
+                    chronometer1.setBase(SystemClock.elapsedRealtime());
+                    MemoFragment m1F = new MemoFragment();
+                    getActivity()
+                            .getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.content_frame, m1F)
+                            .addToBackStack(null)
+                            .commit();
+                }
+            }
+        });
+/*
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override
@@ -43,6 +67,7 @@ public class SplashMemoFragment extends Fragment {
         };
 
         handler.postDelayed(runnable, 15000);
+        */
         // Inflate the layout for this fragment
         return view;
     }

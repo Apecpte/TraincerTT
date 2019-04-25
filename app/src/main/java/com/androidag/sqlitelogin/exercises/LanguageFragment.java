@@ -35,8 +35,6 @@ public class LanguageFragment extends Fragment {
     private TextView questionLabel, questionLabel2, questionCountLabel, scoreLabel;
     private Button answerBtn1;
     private Button answerBtn2;
-    private Button answerBtn3;
-    private Button answerBtn4;
     private String languageAnswers;
     private ProgressBar progressBar;
 
@@ -63,8 +61,6 @@ public class LanguageFragment extends Fragment {
         scoreLabel = view.findViewById(R.id.scoreLeng);
         answerBtn1 = view.findViewById(R.id.btnLengO1);
         answerBtn2 = view.findViewById(R.id.btnLengO2);
-        answerBtn3 = view.findViewById(R.id.btnLengO3);
-        answerBtn4 = view.findViewById(R.id.btnLengO4);
         progressBar = view.findViewById(R.id.progressLeng);
 
         scoreLabel.setText("Puntuación: " + numberOfCorrectAnswer  + "/" + languageQuestions.languageQuestions.length);
@@ -94,30 +90,6 @@ public class LanguageFragment extends Fragment {
                 }
             }
         });
-
-        answerBtn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (answerBtn3.getText() == languageAnswers){
-                    numberOfCorrectAnswer++;
-                    GoodAnswer();
-                } else {
-                    WrongAnswer();
-                }
-            }
-        });
-
-        answerBtn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (answerBtn4.getText() == languageAnswers){
-                    numberOfCorrectAnswer++;
-                    GoodAnswer();
-                } else {
-                    WrongAnswer();
-                }
-            }
-        });
         // Inflate the layout for this fragment
         return view;
     }
@@ -127,8 +99,6 @@ public class LanguageFragment extends Fragment {
         questionLabel2.setText(languageQuestions.getlanguageQuestions2(num));
         answerBtn1.setText(languageQuestions.getChoice1(num));
         answerBtn2.setText(languageQuestions.getChoice2(num));
-        answerBtn3.setText(languageQuestions.getChoice3(num));
-        answerBtn4.setText(languageQuestions.getChoice4(num));
 
         languageAnswers = languageQuestions.getCorrectAnswer(num);
 
@@ -199,7 +169,6 @@ public class LanguageFragment extends Fragment {
         dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 
-
     private void gameOver(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         TextView title = new TextView(getContext());
@@ -212,11 +181,11 @@ public class LanguageFragment extends Fragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
-                SplashLanguageFragment slf2 = new SplashLanguageFragment();
+                LanguageFragment2 lF2 = new LanguageFragment2();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.content_frame, slf2)
+                        .replace(R.id.content_frame, lF2)
                         .addToBackStack(null)
                         .commit();
             }

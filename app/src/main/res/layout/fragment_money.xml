@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     tools:context=".exercises.MoneyFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -20,7 +20,7 @@
             android:layout_height="20dp"
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_marginTop="5dp"
-            android:progressTint="@color/colorAccent"
+            android:progressTint="@color/secondaryDarkColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             />
@@ -34,7 +34,7 @@
                 android:id="@+id/noQuestionMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentLeft="true"
                 android:text="Pregunta No : "/>
@@ -42,7 +42,7 @@
                 android:id="@+id/scoreMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentRight="true"
                 android:text="Puntuación: "/>
@@ -68,9 +68,9 @@
         <ImageView
             android:id="@+id/moneyImage"
             android:layout_width="700dp"
-            android:layout_height="wrap_content"
+            android:layout_height="440dp"
             android:layout_below="@id/tVMonetIns"
-            android:src="@drawable/matebilletes"
+            android:src="@drawable/matesbilletes"
             android:padding="20dp"
             android:layout_gravity="center" />
 
@@ -93,7 +93,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/moneyImage"
-            android:background="@color/bg_main"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:text=""
             android:textColor="@android:color/black"
@@ -122,8 +122,9 @@
             android:layout_marginTop="430dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            android:background="@color/secondaryDarkColor"
             android:text="Enviar"
+            android:textColor="@color/primaryTextColor"
             android:textSize="40sp" />
 
     </RelativeLayout>

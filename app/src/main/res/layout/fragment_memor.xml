@@ -13,7 +13,7 @@
         android:paddingRight="64dp"
         android:paddingTop="16dp"
         tools:context=".exercises.MemorFragment"
-        android:background="#b0beff"
+        android:background="@color/secondaryDarkColor"
         android:shrinkColumns="*"
         android:stretchColumns="*">
 

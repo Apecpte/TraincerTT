@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     android:orientation="vertical"
     tools:context=".exercises.PerceFragment2">
 
@@ -20,7 +20,7 @@
             android:layout_height="20dp"
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_marginTop="5dp"
-            android:progressTint="@color/colorAccent"
+            android:progressTint="@color/secondaryDarkColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             />
@@ -80,7 +80,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/perceImage2"
-            android:background="@color/bg_main"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:text="¿Qué encontramos en la intersección B2?"
             android:textColor="@android:color/black"
@@ -109,8 +109,9 @@
             android:layout_marginTop="450dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            android:backgroundTint="@color/secondaryDarkColor"
             android:text="Enviar"
+            android:textColor="@color/primaryTextColor"
             android:textSize="40sp" />
 
     </RelativeLayout>

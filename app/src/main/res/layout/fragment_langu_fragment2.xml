@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".exercises.LanguFragment2">
@@ -21,7 +21,7 @@
             android:layout_height="20dp"
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_marginTop="5dp"
-            android:progressTint="@color/colorAccent"
+            android:progressTint="@color/secondaryDarkColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             />
@@ -61,10 +61,10 @@
         android:layout_marginRight="100dp"
         android:paddingLeft="80dp"
         android:paddingRight="80dp"
-        android:background="@color/bg_login"
+        android:background="@color/colorPrimary"
         android:gravity="center"
         android:text=""
-        android:textColor="@android:color/black"
+        android:textColor="@color/primaryTextColor"
         android:textSize="50sp"/>
 
     <LinearLayout
@@ -79,14 +79,18 @@
             android:layout_width="500dp"
             android:layout_height="match_parent"
             android:layout_marginRight="50dp"
+            android:backgroundTint="@color/secondaryDarkColor"
             android:text=""
+            android:textColor="@color/primaryTextColor"
             android:textSize="25sp"/>
 
         <Button
             android:id="@+id/answerBtn2Langu2"
             android:layout_width="500dp"
             android:layout_height="match_parent"
+            android:backgroundTint="@color/secondaryDarkColor"
             android:text=""
+            android:textColor="@color/primaryTextColor"
             android:textSize="25sp"/>
 
     </LinearLayout>
@@ -102,7 +106,9 @@
             android:id="@+id/answerBtn2Langu3"
             android:layout_width="500dp"
             android:layout_height="match_parent"
+            android:backgroundTint="@color/secondaryDarkColor"
             android:text=""
+            android:textColor="@color/primaryTextColor"
             android:textSize="25sp"/>
 
     </LinearLayout>

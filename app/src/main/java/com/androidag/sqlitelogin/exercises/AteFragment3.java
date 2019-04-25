@@ -43,9 +43,9 @@ public class AteFragment3 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_ate_fragment3, container, false);
 
-        questionLabel = view.findViewById(R.id.textView1Ate);
-        answerEdt = view.findViewById(R.id.editText1Ate);
-        submitButton = view.findViewById(R.id.btn1Ate);
+        questionLabel = view.findViewById(R.id.textView3Ate);
+        answerEdt = view.findViewById(R.id.editText3Ate);
+        submitButton = view.findViewById(R.id.btn3Ate);
 
         questionModelArraylist = new ArrayList<>();
 

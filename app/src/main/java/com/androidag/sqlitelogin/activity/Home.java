@@ -1,10 +1,12 @@
 package com.androidag.sqlitelogin.activity;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.media.MediaPlayer;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -24,14 +26,15 @@ import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 import com.androidag.sqlitelogin.fragments.NivelExerFragment;
 import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
-import com.androidag.sqlitelogin.fragments.RelaxFragment;
 import com.androidag.sqlitelogin.fragments.TestFragment;
+import com.androidag.sqlitelogin.meditation.MeditaFragment1;
 import com.androidag.sqlitelogin.util.PrefUtil;
 
 public class Home extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,8 @@ public class Home extends AppCompatActivity {
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.navView);
+
+        prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
 
         navigationView.setItemIconTintList(null);
 
@@ -71,8 +76,8 @@ public class Home extends AppCompatActivity {
                     fragmentTransaction = true;
                     break;
                 case R.id.menu_recom_relax:
-                    fragment = new RelaxFragment();
-                    fragmentTransaction = true;;
+                    fragment = new MeditaFragment1();
+                    fragmentTransaction = true;
                     break;
                 case R.id.menu_recom_ejerc:
                     fragment = new NivelExerFragment();
@@ -192,7 +197,9 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 PrefUtil.clearBoolean("Realizado",false,Home.this);
-                startActivity(new Intent(Home.this,Welcome.class));
+                Intent intent = new Intent(Home.this,Welcome.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 //finish();
             }
         });
@@ -210,6 +217,10 @@ public class Home extends AppCompatActivity {
             mediaPlayer = MediaPlayer.create(this,)
         }
     } */
+
+    private void removeSharedPreferences(){
+       prefs.edit().clear().apply();
+    }
 
     public void onBackPressed() {
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {

@@ -52,6 +52,7 @@ public class LanguFragment3 extends Fragment {
         answerBtn1 = view.findViewById(R.id.answerBtn3Langu1);
         answerBtn2 = view.findViewById(R.id.answerBtn3Langu2);
         answerBtn3 = view.findViewById(R.id.answerBtn3Langu3);
+        answerBtn4 = view.findViewById(R.id.answerBtn3Langu4);
         progressBar = view.findViewById(R.id.progressLangu3);
 
         scoreLabel.setText("Puntuación: " + numberOfCorrectAnswer  + "/" + languQuestions.languQuestions.length);

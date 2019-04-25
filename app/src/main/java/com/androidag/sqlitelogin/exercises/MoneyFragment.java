@@ -154,10 +154,10 @@ public class MoneyFragment extends Fragment {
 
     public void setUpQuestion(){
         questionModelArraylist.add(new MathQuestionModel("¿Cuántos billetes hay?","5"));
-        questionModelArraylist.add(new MathQuestionModel("¿Cuántas monedas hay?","6"));
+        questionModelArraylist.add(new MathQuestionModel("¿Cuántas monedas hay?","4"));
         questionModelArraylist.add(new MathQuestionModel("¿Qué cantidad de dinero hay en billetes?","870"));
-        questionModelArraylist.add(new MathQuestionModel("¿Qué cantidad de dinero hay en monedas?","19.50"));
-        questionModelArraylist.add(new MathQuestionModel("¿Qué cantidad de dinero hay en TOTAL?","889.50"));
+        questionModelArraylist.add(new MathQuestionModel("¿Qué cantidad de dinero hay en monedas?","18"));
+        questionModelArraylist.add(new MathQuestionModel("¿Qué cantidad de dinero hay en TOTAL?","888"));
     }
 
     public void setData(){

@@ -10,8 +10,8 @@
     <string name="hint_last_name_two">Apellido Materno</string>
     <string name="btn_login">INICIO DE SESIÓN</string>
     <string name="btn_register">REGISTRAR</string>
-    <string name="btn_link_to_register">¿No estas registrado? Registrate.</string>
-    <string name="btn_link_to_login">¡Ya estas registrado! Inicia Sesión.</string>
+    <string name="btn_link_to_register">¿No estás registrado? Regístrate.</string>
+    <string name="btn_link_to_login">¡Ya estás registrado! Inicia Sesión.</string>
     <string name="welcome">¡Bienvenido!</string>
     <string name="btn_logout">Cerrar Sesión</string>
     <string name="name">Nombre Completo</string>

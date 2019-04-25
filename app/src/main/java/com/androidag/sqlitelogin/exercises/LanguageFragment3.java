@@ -26,11 +26,17 @@ import java.util.ArrayList;
  */
 public class LanguageFragment3 extends Fragment {
 
-    TextView questionLabel, questionLabel2, questionLabel3, questionLabel4, questionCountLabel, scoreLabel;
-    EditText answerEdt, answerEdt2, answerEdt3;
-    Button submitButton;
-    ProgressBar progressBar;
-    ArrayList<LanguageQuestionModel3> questionModelArraylist;
+    private TextView questionLabel, questionLabel2, questionLabel3, questionLabel4, questionCountLabel, scoreLabel;
+    private Button answerBtn1;
+    private Button answerBtn2;
+    private Button answerBtn3;
+    private Button answerBtn4;
+    private String languageAnswers;
+    private ProgressBar progressBar;
+
+    private LanguageQuestionModel3 languageQuestions = new LanguageQuestionModel3();
+
+    private int list = languageQuestions.languageQuestions.length -1 ;
 
     int currentPosition = 0;
     int numberOfCorrectAnswer = 0;
@@ -52,211 +58,173 @@ public class LanguageFragment3 extends Fragment {
         questionLabel3 = view.findViewById(R.id.textViewLeng3Q3);
         questionLabel4 = view.findViewById(R.id.textViewLeng4Q3);
         scoreLabel = view.findViewById(R.id.scoreLeng3);
-
-        answerEdt = view.findViewById(R.id.editTextLeng1A3);
-        answerEdt2 = view.findViewById(R.id.editTextLeng2A3);
-        answerEdt3 = view.findViewById(R.id.editTextLeng3A3);
-        submitButton = view.findViewById(R.id.btnLeng3);
+        answerBtn1 = view.findViewById(R.id.btn3LengO1);
+        answerBtn2 = view.findViewById(R.id.btn3LengO2);
+        answerBtn3 = view.findViewById(R.id.btn3LengO3);
+        answerBtn4 = view.findViewById(R.id.btn3LengO4);
         progressBar = view.findViewById(R.id.progressLeng3);
 
-        questionModelArraylist = new ArrayList<>();
+        scoreLabel.setText("Puntuación: " + numberOfCorrectAnswer  + "/" + languageQuestions.languageQuestions.length);
 
-        setUpQuestion();
+        updateQuestions(currentPosition);
 
-        setData();
-
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        answerBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                checkAnswer();
+            public void onClick(View view) {
+                if (answerBtn1.getText() == languageAnswers){
+                    numberOfCorrectAnswer++;
+                    GoodAnswer();
+                } else {
+                    WrongAnswer();
+                }
             }
         });
 
-        answerEdt.setOnKeyListener(new View.OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                Log.e("event.getAction()",event.getAction()+"");
-                Log.e("event.keyCode()",keyCode+"");
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-
-                    checkAnswer();
-                    return true;
+        answerBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (answerBtn2.getText() == languageAnswers){
+                    numberOfCorrectAnswer++;
+                    GoodAnswer();
+                } else {
+                    WrongAnswer();
                 }
-                return false;
             }
         });
 
-        answerEdt2.setOnKeyListener(new View.OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                Log.e("event.getAction()",event.getAction()+"");
-                Log.e("event.keyCode()",keyCode+"");
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-
-                    checkAnswer();
-                    return true;
+        answerBtn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (answerBtn3.getText() == languageAnswers){
+                    numberOfCorrectAnswer++;
+                    GoodAnswer();
+                } else {
+                    WrongAnswer();
                 }
-                return false;
             }
         });
 
-        answerEdt3.setOnKeyListener(new View.OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                Log.e("event.getAction()",event.getAction()+"");
-                Log.e("event.keyCode()",keyCode+"");
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-
-                    checkAnswer();
-                    return true;
+        answerBtn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (answerBtn4.getText() == languageAnswers){
+                    numberOfCorrectAnswer++;
+                    GoodAnswer();
+                } else {
+                    WrongAnswer();
                 }
-                return false;
             }
         });
         // Inflate the layout for this fragment
         return view;
     }
 
-    public void checkAnswer() {
-        String answerString = answerEdt.getText().toString().trim();
-        String answerString2  = answerEdt2.getText().toString().trim();
-        String answerString3  = answerEdt3.getText().toString().trim();
+    private void updateQuestions(int num) {
+        questionLabel.setText(languageQuestions.getlanguageQuestions(num));
+        questionLabel2.setText(languageQuestions.getlanguageQuestions2(num));
+        questionLabel3.setText(languageQuestions.getlanguageQuestions3(num));
+        questionLabel4.setText(languageQuestions.getlanguageQuestions4(num));
+        answerBtn1.setText(languageQuestions.getChoice1(num));
+        answerBtn2.setText(languageQuestions.getChoice2(num));
+        answerBtn3.setText(languageQuestions.getChoice3(num));
+        answerBtn4.setText(languageQuestions.getChoice4(num));
 
-        if (!answerEdt.getText().toString().isEmpty() && !answerEdt2.getText().toString().isEmpty() && !answerEdt3.getText().toString().isEmpty()) {
-            if (answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer())
-                    && answerString2.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer2())
-                    && answerString3.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer3())) {
-                numberOfCorrectAnswer++;
+        languageAnswers = languageQuestions.getCorrectAnswer(num);
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                TextView titleG = new TextView(getContext());
-                titleG.setText("¡Bien hecho!");
-                titleG.setPadding(10, 10, 10, 10);
-                titleG.setGravity(Gravity.CENTER);
-                titleG.setTextSize(40);
-                builder.setMessage("Respuesta correcta");
-                builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        currentPosition++;
-                        setData();
-                        answerEdt.setText("");
-                        answerEdt2.setText("");
-                        answerEdt3.setText("");
-                    }
-                });
-                AlertDialog dialog = builder.create();
-                dialog.setCanceledOnTouchOutside(false);
-                dialog.setCustomTitle(titleG);
-                dialog.show();
-                TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-                textView.setTextSize(30);
-                dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+        questionCountLabel.setText("Pregunta No : " + (currentPosition + 1));
+        int x = ((currentPosition) * 100) / languageQuestions.languageQuestions.length;
 
-            } else {
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                TextView titleB = new TextView(getContext());
-                titleB.setText("¡Respuesta incorrecta!");
-                titleB.setPadding(10, 10, 10, 10);
-                titleB.setGravity(Gravity.CENTER);
-                titleB.setTextSize(40);
-                builder.setMessage("Las respuesta correcta son: " + questionModelArraylist.get(currentPosition).getAnswer()
-                        + " , " + questionModelArraylist.get(currentPosition).getAnswer2()
-                        + " y " + questionModelArraylist.get(currentPosition).getAnswer3());
-                builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        currentPosition++;
-                        setData();
-                        answerEdt.setText("");
-                        answerEdt2.setText("");
-                        answerEdt3.setText("");
-                    }
-                });
-                AlertDialog dialog = builder.create();
-                dialog.setCanceledOnTouchOutside(false);
-                dialog.setCustomTitle(titleB);
-                dialog.show();
-                TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-                textView.setTextSize(30);
-                dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
-            }
-
-            int x = ((currentPosition + 1) * 100) / questionModelArraylist.size();
-
-            progressBar.setProgress(x);
-        } else {
-            if (answerEdt.getText().toString().isEmpty()) {
-                answerEdt.setError("¡El campo esta vacío!");
-            } else if (answerEdt2.getText().toString().isEmpty()) {
-                answerEdt2.setError("¡El campo esta vacío!");
-            } else if (answerEdt3.getText().toString().isEmpty()) {
-                answerEdt3.setError("¡El campo esta vacío!");
-                //  submitButton.setError("¡El campo esta vacío!");
-            }
-        }
-
-
+        progressBar.setProgress(x);
     }
 
-    public void setUpQuestion () {
-        questionModelArraylist.add(new LanguageQuestionModel3(" ", "oy he jugado al ", "alón con mi ", "ecino.", "h", "b", "v"));
-        questionModelArraylist.add(new LanguageQuestionModel3("El a", "ión ", "iaja a gran ", "elocidad.", "v", "v", "v"));
-        questionModelArraylist.add(new LanguageQuestionModel3("El ", "avilán es un a", "e de rap", "ña.", "g", "v", "i"));
-        questionModelArraylist.add(new LanguageQuestionModel3("", "e dormido ", "asta las nue", "e.", "h", "h", "v"));
-        questionModelArraylist.add(new LanguageQuestionModel3("Mi ", "ecino es ", "ailarín profe", "ional.", "v", "b", "s"));
-        questionModelArraylist.add(new LanguageQuestionModel3("El ", "ueves fu", "mo", " al cine.", "j", "i", "s"));
-        questionModelArraylist.add(new LanguageQuestionModel3("", "oy ", "a sido un día muy ", "onito.", "h", "h", "b"));
-        questionModelArraylist.add(new LanguageQuestionModel3("M", " deporte fa", "orito es el ", "aloncesto.", "i", "v", "b"));
-        questionModelArraylist.add(new LanguageQuestionModel3("El ", "ugo de naran", "a es rico en ", "itamina C.", "j", "j", "v"));
-        questionModelArraylist.add(new LanguageQuestionModel3("El caballo ne", "ro era el que me", "or ", "alopaba.", "g", "j", "g"));
-    }
-
-    public void setData () {
-
-        if (questionModelArraylist.size() > currentPosition) {
-
-            questionLabel.setText(questionModelArraylist.get(currentPosition).getQuestionString());
-            questionLabel2.setText(questionModelArraylist.get(currentPosition).getQuestionString2());
-            questionLabel3.setText(questionModelArraylist.get(currentPosition).getQuestionString3());
-            questionLabel4.setText(questionModelArraylist.get(currentPosition).getQuestionString4());
-
-            scoreLabel.setText("Score :" + numberOfCorrectAnswer + "/" + questionModelArraylist.size());
-            questionCountLabel.setText("Pregunta No : " + (currentPosition + 1));
-
-        } else {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            TextView title = new TextView(getContext());
-            title.setText("!Felicidades, haz concluido con los tres niveles del ejercicio¡");
-            title.setPadding(10, 10, 10, 10);
-            title.setGravity(Gravity.CENTER);
-            title.setTextSize(40);
-            builder.setMessage("Tu score es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size());
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    //getActivity().finish();
-                    HomeFragment hf = new HomeFragment();
-                    getActivity()
-                            .getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.content_frame, hf)
-                            .addToBackStack(null)
-                            .commit();
+    private void GoodAnswer(){
+        scoreLabel.setText("Puntuación: " + numberOfCorrectAnswer + "/" + languageQuestions.languageQuestions.length);
+        //updateQuestions(r.nextInt(tQuestionsLenght));
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        TextView titleG = new TextView(getContext());
+        titleG.setText("¡Bien hecho!");
+        titleG.setPadding(10, 10, 10, 10);
+        titleG.setGravity(Gravity.CENTER);
+        titleG.setTextSize(40);
+        builder.setMessage("Respuesta correcta");
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (currentPosition < list){
+                    currentPosition++;
+                    updateQuestions(currentPosition);
+                    //updateQuestions(r.nextInt(turn));
+                } else {
+                    gameOver();
                 }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.setCanceledOnTouchOutside(false);
-            dialog.setCustomTitle(title);
-            dialog.show();
-            TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-            textView.setTextSize(30);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
-        }
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setCustomTitle(titleG);
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        textView.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+    }
+
+    private void WrongAnswer(){
+        scoreLabel.setText("Puntuación: " + numberOfCorrectAnswer + "/" + languageQuestions.languageQuestions.length);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        TextView titleB = new TextView(getContext());
+        titleB.setText("¡Respuesta incorrecta!");
+        titleB.setPadding(10, 10, 10, 10);
+        titleB.setGravity(Gravity.CENTER);
+        titleB.setTextSize(40);
+        builder.setMessage("La respuesta correcta es: " + languageQuestions.getCorrectAnswer(currentPosition));
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (currentPosition < list){
+                    currentPosition++;
+                    updateQuestions(currentPosition);
+                    //updateQuestions(r.nextInt(turn));
+                } else {
+                    gameOver();
+                }
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setCustomTitle(titleB);
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        textView.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+    }
+
+    private void gameOver(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        TextView title = new TextView(getContext());
+        title.setText("!Felicidades, haz concluido con los tres niveles del ejercicio¡");
+        title.setPadding(10, 10, 10, 10);
+        title.setGravity(Gravity.CENTER);
+        title.setTextSize(40);
+        builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + languageQuestions.languageQuestions.length);
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //getActivity().finish();
+                HomeFragment hf = new HomeFragment();
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content_frame, hf)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setCustomTitle(title);
+        dialog.show();
+        TextView textViewAlert = (TextView) dialog.findViewById(android.R.id.message);
+        textViewAlert.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 }

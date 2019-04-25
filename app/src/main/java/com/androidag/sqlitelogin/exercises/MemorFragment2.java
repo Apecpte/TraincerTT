@@ -499,7 +499,20 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
         //builder.setTitle("Cerrar Sesión");
         builder.setMessage("!Felicidades has ganado¡");
         //builder.setIcon(R.drawable.ic_logout);
-        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //getActivity().finish();
+                MemorFragment3 mF3 = new MemorFragment3();
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content_frame, mF3)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
@@ -517,6 +530,7 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
         dialog.show();
         TextView textView = (TextView) dialog.findViewById(android.R.id.message);
         textView.setTextSize(40);
-        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
     }
 }

@@ -61,7 +61,7 @@ public class TestFragment1 extends Fragment {
         scoreTest = (TextView) view.findViewById(R.id.textViewScore);
         questionT = (TextView) view.findViewById(R.id.textViewTest);
 
-        scoreTest.setText("Score: " + tScore);
+        scoreTest.setText("Puntuación: " + tScore);
 
         updateQuestions(turn);
 
@@ -72,27 +72,27 @@ public class TestFragment1 extends Fragment {
             public void onClick(View view) {
                 if (test_button1.getText() == tAnswers){
                     tScore++;
-                    scoreTest.setText("Score: " + tScore);
+                    scoreTest.setText("Puntuación: " + tScore);
                     //updateQuestions(r.nextInt(tQuestionsLenght));
-                    Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
 
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                 } else {
-                    Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
 
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                     //updateQuestions(r.nextInt(tQuestionsLenght));
@@ -106,26 +106,26 @@ public class TestFragment1 extends Fragment {
             public void onClick(View view) {
                 if (test_button2.getText() == tAnswers){
                     tScore++;
-                    scoreTest.setText("Score: " + tScore);
+                    scoreTest.setText("Puntuación: " + tScore);
                     //updateQuestions(r.nextInt(tQuestionsLenght));
-                    Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                 } else {
-                    Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
 
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                     //updateQuestions(r.nextInt(tQuestionsLenght));
@@ -139,26 +139,26 @@ public class TestFragment1 extends Fragment {
             public void onClick(View view) {
                 if (test_button3.getText() == tAnswers){
                     tScore++;
-                    scoreTest.setText("Score: " + tScore);
+                    scoreTest.setText("Puntuación: " + tScore);
                     //updateQuestions(r.nextInt(tQuestionsLenght));
-                    Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                 } else {
-                    Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
 
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                     //updateQuestions(r.nextInt(tQuestionsLenght));
@@ -172,27 +172,27 @@ public class TestFragment1 extends Fragment {
             public void onClick(View view) {
                 if (test_button4.getText() == tAnswers){
                     tScore++;
-                    scoreTest.setText("Score: " + tScore);
+                    scoreTest.setText("Puntuación: " + tScore);
                     //updateQuestions(r.nextInt(tQuestionsLenght));
-                    Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getActivity(), "Correct!", Toast.LENGTH_LONG).show();
 
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                 } else {
-                    Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
+                   // Toast.makeText(getActivity(), "Wrong!", Toast.LENGTH_LONG).show();
 
                     if (turn < list){
                         turn++;
                         updateQuestions(turn);
                         //updateQuestions(r.nextInt(turn));
                     } else {
-                        Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getActivity(), "You finished the game!", Toast.LENGTH_LONG).show();
                         gameOver();
                     }
                     //gameOver();

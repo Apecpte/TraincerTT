@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primaryLightColor"
     android:orientation="vertical"
     tools:context=".exercises.SplashMathsFragment">
 
@@ -39,7 +40,7 @@
             android:textColor="@android:color/black"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@color/bg_main"
+            android:background="@color/colorPrimary"
             android:textSize="50sp"
             android:gravity="center"/>
 
@@ -58,9 +59,9 @@
         <Button
             android:id="@+id/buttonStartMaths"
             android:layout_width="250dp"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:background="@color/bg_login"
+            android:backgroundTint="@color/bg_login"
             android:layout_gravity="center"
             android:text="EMPEZAR"
             android:textSize="40sp"

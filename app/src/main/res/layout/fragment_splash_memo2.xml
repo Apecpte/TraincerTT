@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     tools:context=".exercises.SplashMemo2Fragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -18,9 +18,18 @@
         android:textSize="40sp"
         android:textColor="@color/colorBlack"/>
 
+    <Chronometer
+        android:id="@+id/chronometerMemo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_gravity="right"
+        android:textColor="@color/secondaryDarkColor"
+        android:textSize="40sp"/>
+
     <ImageView
         android:layout_width="800dp"
-        android:layout_height="450dp"
+        android:layout_height="430dp"
         android:layout_gravity="center"
         android:src="@drawable/memo3"/>
 

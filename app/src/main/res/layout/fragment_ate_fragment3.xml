@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     android:orientation="vertical"
     tools:context=".exercises.AteFragment3">
 
@@ -39,10 +39,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/ateImage3"
-            android:background="@color/bg_login"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:text=""
-            android:textColor="@android:color/black"
+            android:textColor="@color/primaryTextColor"
             android:textSize="50sp" />
 
         <EditText
@@ -57,20 +57,22 @@
             android:layout_marginRight="20dp"
             android:hint="Escribe tu respuesta"
             android:inputType="number"
-            android:textSize="50sp" />
+            android:textSize="50sp"
+            android:textColor="@color/primaryTextColor"/>
 
         <Button
             android:id="@+id/btn3Ate"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_toEndOf="@+id/ateImage3"
             android:layout_marginTop="450dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            android:backgroundTint="@color/secondaryDarkColor"
             android:text="Enviar"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:textColor="@color/primaryTextColor"/>
 
     </RelativeLayout>
 

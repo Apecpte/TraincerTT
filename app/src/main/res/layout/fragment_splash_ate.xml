@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/primaryLightColor"
     tools:context=".exercises.SplashAteFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,7 +15,7 @@
         android:text="¿Cuántos objetos hay en la imagen?"
         android:textSize="60sp"
         android:textStyle="bold"
-        android:textColor="@color/colorBlack"/>
+        android:textColor="@color/primaryTextColor"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:paddingLeft="100dp"
         android:text="EJEMPLO:"
         android:textSize="45sp"
-        android:textColor="@color/colorBlack"/>
+        android:textColor="@color/primaryTextColor"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/splashAteImage"
-            android:background="@color/bg_main"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:text="¿Cuántas llaves hay en la imagen?"
             android:textColor="@android:color/black"
@@ -77,16 +77,17 @@
         <Button
             android:id="@+id/buttonStartAte"
             android:layout_width="250dp"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/tvSplashAte"
             android:layout_toEndOf="@+id/splashAteImage"
             android:layout_marginLeft="165dp"
             android:layout_marginRight="160dp"
-            android:background="@color/bg_login"
+            android:backgroundTint="@color/bg_login"
             android:layout_gravity="center"
             android:text="EMPEZAR"
             android:textSize="40sp"
+            android:textColor="@color/primaryTextColor"
             android:textStyle="bold"/>
 
     </RelativeLayout>

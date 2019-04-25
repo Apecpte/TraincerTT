@@ -33,7 +33,7 @@
                 android:id="@+id/noQuestionAte3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentLeft="true"
                 android:text="Pregunta No : "/>
@@ -41,7 +41,7 @@
                 android:id="@+id/scoreAte3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentRight="true"
                 android:text="Score: "/>
@@ -71,10 +71,10 @@
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:text="666 el inverso es: "
-            android:textColor="@android:color/black"
+            android:textColor="@color/primaryTextColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@color/bg_main"
+            android:background="@color/colorPrimary"
             android:textSize="50sp"
             android:gravity="center"/>
 
@@ -88,6 +88,7 @@
             android:layout_marginRight="50dp"
             android:hint="Escribe tu respuesta"
             android:inputType="number"
+            android:textColor="@color/primaryTextColor"
             android:textSize="60sp" />
 
         <Button
@@ -98,8 +99,9 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@color/colorAccent"
+            android:backgroundTint="@color/secondaryDarkColor"
             android:text="Enviar"
+            android:textColor="@color/primaryTextColor"
             android:textSize="40sp" />
     </LinearLayout>
 

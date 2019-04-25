@@ -1,60 +1,104 @@
 package com.androidag.sqlitelogin.exercises;
 
-import android.print.PageRange;
-
 public class LanguageQuestionModel2 {
 
-    public LanguageQuestionModel2(String questionString, String questionString2, String questionString3, String answer, String answer2) {
-        QuestionString = questionString;
-        QuestionString2 = questionString2;
-        QuestionString3 = questionString3;
-        Answer = answer;
-        Answer2 = answer2;
+    public String languageQuestions[] = {
+            "Hoy estu",
+            "El arroz pesa",
+            "No me ",
+            "Hoy ",
+            "Las ",
+            "El pá",
+            "Los domin",
+            "Estu",
+            "",
+            "A mi "
+    };
+
+    public String languageQuestions2[] = {
+            "e con mi ",
+            "a un kilo en la ",
+            "usta tomar ",
+            "e comido crema de cala",
+            "elas del ",
+            "aro se escapó de la ",
+            "os no ",
+            "e jugando al ",
+            "eneralmente voy al ",
+            "ermana Candy le dio "
+    };
+
+    public String languageQuestions3[] = {
+            "ermana en la feria.",
+            "alanza.",
+            "arabe.",
+            "aza.",
+            "arco eran blancas.",
+            "aula.",
+            "ay colegio.",
+            "alón.",
+            "imnasio los martes.",
+            "ripa."
+    };
+
+    public String languageChoice[][] = {
+            {"v & h", "b & j", "b & h"},
+            {"b & v", "v & b", "b & b"},
+            {"j & g", "g & j", "g & j"},
+            {"l & b", "h & b", "h & v"},
+            {"v & b", "b & v", "b & b"},
+            {"g & j", "j & j", "j & g"},
+            {"j & d", "g & h", "j & h"},
+            {"v & v", "b & b", "v & b"},
+            {"g & g", "g & j", "j & g"},
+            {"h & g", "h & j", "h & b"}
+    };
+
+    public String answers[] = {
+            "v & h",
+            "b & b",
+            "g & j",
+            "h & b",
+            "v & b",
+            "j & j",
+            "g & h",
+            "v & b",
+            "g & g",
+            "h & g"
+    };
+
+    public String getlanguageQuestions(int a) {
+        String questions1 = languageQuestions[a];
+        return questions1;
     }
 
-    public String getQuestionString() {
-        return QuestionString;
+    public String getlanguageQuestions2(int b) {
+        String questions2 = languageQuestions2[b];
+        return questions2;
     }
 
-    public void setQuestionString(String questionString) {
-        QuestionString = questionString;
+    public String getlanguageQuestions3(int c) {
+        String questions3 = languageQuestions3[c];
+        return questions3;
     }
 
-    public String getQuestionString2() {
-        return QuestionString2;
+    public String getChoice1 (int a){
+        String choice = languageChoice[a] [0];
+        return choice;
     }
 
-    public void setQuestionString2(String questionString2) {
-        QuestionString2 = questionString2;
+    public String getChoice2 (int a){
+        String choice = languageChoice[a] [1];
+        return choice;
     }
 
-    public String getQuestionString3() {
-        return QuestionString3;
+    public String getChoice3 (int a){
+        String choice = languageChoice[a] [2];
+        return choice;
     }
 
-    public void setQuestionString3(String questionString3) {
-        QuestionString3 = questionString3;
+    public String getCorrectAnswer(int a){
+        String answersss = answers[a];
+        return answersss;
     }
-
-    public String getAnswer() {
-        return Answer;
-    }
-
-    public void setAnswer(String answer) {
-        Answer = answer;
-    }
-
-    public String getAnswer2() {
-        return Answer2;
-    }
-
-    public void setAnswer2 (String answer2) {
-        Answer2 = answer2;
-    }
-
-    private String QuestionString;
-    private String QuestionString2;
-    private String QuestionString3;
-    private String Answer;
-    private String Answer2;
 }

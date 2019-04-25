@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@color/colorPrimary"
     android:paddingLeft="48dp"
     android:paddingRight="48dp"
     android:paddingTop="16dp"
@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/aboutTest"
+        android:textColor="@color/primaryTextColor"
         android:textSize="45sp"/>
 
     <Button
@@ -35,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_gravity="center"
+        android:backgroundTint="@color/secondaryDarkColor"
         android:text="@string/btn_start"
         android:textSize="50sp" />
 

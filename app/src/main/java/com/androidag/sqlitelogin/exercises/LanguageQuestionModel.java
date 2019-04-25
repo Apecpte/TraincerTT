@@ -29,16 +29,16 @@ public class LanguageQuestionModel {
     };
 
     public String languageChoice[][] = {
-            {"e", "a", "o", "i"},
-            {"s", "l", "c", "z"},
-            {"o", "u", "a", "i"},
-            {"e", "i", "y", "u"},
-            {"u", "e", "i", "a"},
-            {"c", "g", "s", "z"},
-            {"u", "e", "i", "a"},
-            {"s", "c", "z", "a"},
-            {"r", "m", "t", "l"},
-            {"i", "a", "e", "u"}
+            {"e", "a"},
+            {"s", "z"},
+            {"o", "i"},
+            {"i", "y"},
+            {"e", "a"},
+            {"c", "g"},
+            {"e", "i"},
+            {"s", "c"},
+            {"r", "l"},
+            {"a", "u"}
     };
 
     public String answers[] = {
@@ -71,16 +71,6 @@ public class LanguageQuestionModel {
 
     public String getChoice2 (int a){
         String choice = languageChoice[a] [1];
-        return choice;
-    }
-
-    public String getChoice3 (int a){
-        String choice = languageChoice[a] [2];
-        return choice;
-    }
-
-    public String getChoice4 (int a){
-        String choice = languageChoice[a] [3];
         return choice;
     }
 

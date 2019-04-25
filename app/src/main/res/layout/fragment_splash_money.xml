@@ -4,30 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/bg_login"
+    android:background="@color/secondaryLightColor"
     tools:context=".exercises.SplashMoneyFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="150dp"
         android:gravity="center"
         android:text="Realiza la suma de los objetos mostrados en las imagenes."
         android:textAlignment="center"
-        android:textSize="70sp"
+        android:textSize="80sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"/>
+        android:textColor="@color/primaryTextColor" />
 
     <Button
         android:id="@+id/buttonStartMoney"
         android:layout_width="250dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
         android:text="EMPEZAR"
+        android:padding="20dp"
         android:textSize="40sp"
+        android:textColor="@color/primaryTextColor"
         android:textStyle="bold"/>
 
 </LinearLayout>

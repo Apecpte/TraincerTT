@@ -15,7 +15,7 @@
         android:text="APECPTE TT 2019-A059"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
-        android:textColor="#FFF"
+        android:textColor="@color/primaryLightColor"
         android:layout_gravity="bottom"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp" />

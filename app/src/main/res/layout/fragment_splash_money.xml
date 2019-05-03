@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,6 +9,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textViewInstMoney"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
@@ -19,17 +20,28 @@
         android:textStyle="bold"
         android:textColor="@color/primaryTextColor" />
 
+    <ImageButton
+        android:id="@+id/moneyButtonInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewInstMoney"
+        android:src="@mipmap/volume_relax"
+        android:background="@android:color/transparent"/>
+
     <Button
         android:id="@+id/buttonStartMoney"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:layout_below="@+id/moneyButtonInst"
         android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:text="EMPEZAR"
         android:padding="20dp"
         android:textSize="40sp"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"/>
 
-</LinearLayout>
+</RelativeLayout>

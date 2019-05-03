@@ -8,14 +8,31 @@
     tools:context=".exercises.SplashScrabbleLanguageFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="Selecciona la letra que falte."
-        android:textSize="60sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorBlack"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Selecciona la letra que falte."
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"/>
+
+        <ImageButton
+            android:id="@+id/languageScButtonInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/volume_relax"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"

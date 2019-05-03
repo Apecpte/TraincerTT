@@ -20,12 +20,21 @@
         android:textStyle="bold"
         android:textColor="@color/colorBlack"/>
 
+    <ImageButton
+        android:id="@+id/memorButtonInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewInstMemor"
+        android:src="@mipmap/volume_relax"
+        android:background="@android:color/transparent"/>
+
     <Button
         android:id="@+id/buttonStartMemor"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/textViewInstMemor"
+        android:layout_below="@+id/memorButtonInst"
         android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"

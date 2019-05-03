@@ -8,15 +8,30 @@
     tools:context=".exercises.SplashMemoFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:text="Visualiza los objetos durante 15 segundos que hay en cada lugar que se encuentran. Luego tendrás que recordarlos."
-        android:textStyle="bold"
-        android:textSize="40sp"
-        android:textColor="@color/colorBlack"/>
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Visualiza los objetos durante 15 segundos que hay en cada \nlugar que se encuentran. Luego tendrás que recordarlos."
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="@color/colorBlack"/>
+
+        <ImageButton
+            android:id="@+id/memoButtonInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/volume_relax"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
 
     <Chronometer
         android:id="@+id/chronometerMemo1"

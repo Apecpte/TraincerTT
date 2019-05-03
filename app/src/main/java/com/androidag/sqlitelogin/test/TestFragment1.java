@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.activity.Home;
+import com.bumptech.glide.Glide;
 
 import java.util.Random;
 
@@ -224,6 +225,8 @@ public class TestFragment1 extends Fragment {
         test_button3.setText(testQuestions.getChoice3(num));
         test_button4.setText(testQuestions.getChoice4(num));
 
+       // scoreTest.setText(testQuestions.getScooreQ(num));
+
         tAnswers = testQuestions.getCorrectAnswer(num);
     }
 
@@ -231,7 +234,7 @@ public class TestFragment1 extends Fragment {
     private void gameOver(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
         alertDialogBuilder
-                .setMessage("Tu puntuación es: " + tScore + " puntos.")
+                .setMessage("Tu puntuación es: " + tScore + "/12" +" puntos.")
                 .setCancelable(false)
                 .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
                     @Override

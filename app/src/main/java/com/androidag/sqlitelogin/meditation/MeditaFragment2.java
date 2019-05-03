@@ -36,10 +36,10 @@ public class MeditaFragment2 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_medita_fragment2, container, false);
 
-        final MediaPlayer toraxMP = MediaPlayer.create(getContext(), R.raw.torax);
-        final MediaPlayer espaldaMP = MediaPlayer.create(getContext(), R.raw.espalda);
-        final MediaPlayer estoMP = MediaPlayer.create(getContext(), R.raw.estomago);
-        final MediaPlayer cinturaMP = MediaPlayer.create(getContext(), R.raw.cintura);
+        final MediaPlayer toraxMP = MediaPlayer.create(getContext(), R.raw.medi_torax);
+        final MediaPlayer espaldaMP = MediaPlayer.create(getContext(), R.raw.medi_espalda);
+        final MediaPlayer estoMP = MediaPlayer.create(getContext(), R.raw.medi_estomago);
+        final MediaPlayer cinturaMP = MediaPlayer.create(getContext(), R.raw.medi_cintura);
 
         audioTorax = (ImageButton) view.findViewById(R.id.imBtnMedita2AudioTorax);
         audioEspalda = (ImageButton) view.findViewById(R.id.imBtnMedita2AudioEspalda);
@@ -94,11 +94,11 @@ public class MeditaFragment2 extends Fragment {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MeditaFragment1 m1f = new MeditaFragment1();
+                MeditaFragment5 m5f = new MeditaFragment5();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.content_frame, m1f)
+                        .replace(R.id.content_frame, m5f)
                         .addToBackStack(null)
                         .commit();
             }

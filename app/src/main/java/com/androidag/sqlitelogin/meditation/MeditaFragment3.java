@@ -33,7 +33,7 @@ public class MeditaFragment3 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_medita_fragment3, container, false);
 
-        final MediaPlayer fase2MP = MediaPlayer.create(getContext(), R.raw.repaso);
+        final MediaPlayer fase2MP = MediaPlayer.create(getContext(), R.raw.medi_repaso);
 
         audioFase2 = (ImageButton) view.findViewById(R.id.imBtnMedita3AudioFase2);
 

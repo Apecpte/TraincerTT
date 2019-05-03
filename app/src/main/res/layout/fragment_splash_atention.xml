@@ -11,10 +11,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Fíjese en los números siguientes \ny escríbalos de forma inversa."
@@ -22,60 +24,58 @@
             android:textStyle="bold"
             android:textColor="@color/primaryTextColor"/>
 
-        <TextView
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/atentionButtonInst"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingLeft="100dp"
-            android:text="EJEMPLO:"
-            android:textSize="45sp"
-            android:textColor="@color/primaryTextColor"/>
-        <!--
-        <Button
-            android:id="@+id/mathsbButtonPista"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="Pista"
-            android:layout_gravity="end"
-            android:layout_marginRight="100dp"
-            android:textSize="25sp"/>
--->
-        <TextView
-            android:layout_width="700dp"
-            android:layout_height="180dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:text="8025 el inverso es: "
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:background="@color/colorPrimary"
-            android:textSize="50sp"
-            android:gravity="center"/>
-
-        <TextView
-            android:layout_width="700dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:text="5208"
-            android:inputType="number"
-            android:gravity="center"
-            android:textSize="50sp" />
-
-        <Button
-            android:id="@+id/buttonStartAtention"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:backgroundTint="@color/bg_login"
-            android:layout_gravity="center"
-            android:text="EMPEZAR"
-            android:textSize="40sp"
-            android:textStyle="bold"/>
-
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/volume_relax"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingLeft="100dp"
+        android:text="EJEMPLO:"
+        android:textSize="45sp"
+        android:textColor="@color/primaryTextColor"/>
+
+    <TextView
+        android:layout_width="700dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="8025 el inverso es: "
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/colorPrimary"
+        android:textSize="50sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="5208"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/buttonStartAtention"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/bg_login"
+        android:layout_gravity="center"
+        android:text="EMPEZAR"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
 
 </LinearLayout>

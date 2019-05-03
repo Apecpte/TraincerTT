@@ -1,6 +1,7 @@
 package com.androidag.sqlitelogin.exercises;
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Chronometer;
+import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
 
@@ -18,6 +20,7 @@ import com.androidag.sqlitelogin.R;
 public class SplashMemo2Fragment extends Fragment {
 
     private Chronometer chronometer2;
+    private ImageButton audioInstMemo2;
 
     public SplashMemo2Fragment() {
         // Required empty public constructor
@@ -29,7 +32,18 @@ public class SplashMemo2Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_memo2, container, false);
 
+        final MediaPlayer memo2MP = MediaPlayer.create(getContext(), R.raw.donde_esta);
+
         chronometer2 = view.findViewById(R.id.chronometerMemo2);
+        audioInstMemo2 = (ImageButton) view.findViewById(R.id.memo2ButtonInst);
+
+        audioInstMemo2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                memo2MP.start();
+            }
+        });
+
 
         chronometer2.start();
         chronometer2.setBase(SystemClock.elapsedRealtime());

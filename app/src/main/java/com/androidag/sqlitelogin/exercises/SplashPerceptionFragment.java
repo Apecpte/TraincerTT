@@ -1,12 +1,14 @@
 package com.androidag.sqlitelogin.exercises;
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
 
@@ -16,6 +18,7 @@ import com.androidag.sqlitelogin.R;
 public class SplashPerceptionFragment extends Fragment {
 
     private Button btnStartPerception;
+    private ImageButton audioInstPerception;
 
     public SplashPerceptionFragment() {
         // Required empty public constructor
@@ -27,7 +30,17 @@ public class SplashPerceptionFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_perception, container, false);
 
+        final MediaPlayer perceptionMP = MediaPlayer.create(getContext(), R.raw.relaciona_imagen);
+
         btnStartPerception = (Button) view.findViewById(R.id.buttonStartPerception);
+        audioInstPerception = (ImageButton) view.findViewById(R.id.perceptionButtonInst);
+
+        audioInstPerception.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                perceptionMP.start();
+            }
+        });
 
         btnStartPerception.setOnClickListener(new View.OnClickListener() {
             @Override

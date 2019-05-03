@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.test.TestFragment1;
+import com.androidag.sqlitelogin.test.gifTestFragment1;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,7 +45,7 @@ public class TestFragment extends Fragment implements View.OnClickListener {
 
         switch (view.getId()) {
             case R.id.button_start_test:
-                fragment = new TestFragment1();
+                fragment = new gifTestFragment1();
                 fragmentTransaction = true;
                 break;
 

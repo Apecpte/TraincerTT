@@ -7,15 +7,31 @@
     android:background="@color/primaryLightColor"
     tools:context=".exercises.SplashAteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="¿Cuántos objetos hay en la imagen?"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        android:textColor="@color/primaryTextColor"/>
+        android:orientation="horizontal">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuántos objetos hay en la imagen?"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryTextColor"/>
+
+        <ImageButton
+            android:id="@+id/ateButtonInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/volume_relax"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"

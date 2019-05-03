@@ -39,14 +39,14 @@ public class MeditaFragment1 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_medita_fragment1, container, false);
 
-        final MediaPlayer posIniMP = MediaPlayer.create(getContext(), R.raw.posicion_inicial);
-        final MediaPlayer frenteMP = MediaPlayer.create(getContext(), R.raw.frente);
-        final MediaPlayer ojosMP = MediaPlayer.create(getContext(), R.raw.ojos);
-        final MediaPlayer narizMP = MediaPlayer.create(getContext(), R.raw.nariz);
-        final MediaPlayer bocaMP = MediaPlayer.create(getContext(), R.raw.boca);
-        final MediaPlayer lenguaMP = MediaPlayer.create(getContext(), R.raw.lengua);
-        final MediaPlayer mandiMP = MediaPlayer.create(getContext(), R.raw.mandibula);
-        final MediaPlayer labiosMP = MediaPlayer.create(getContext(), R.raw.labios);
+        final MediaPlayer posIniMP = MediaPlayer.create(getContext(), R.raw.medi_posinicial);
+        final MediaPlayer frenteMP = MediaPlayer.create(getContext(), R.raw.medi_frente);
+        final MediaPlayer ojosMP = MediaPlayer.create(getContext(), R.raw.medi_ojos);
+        final MediaPlayer narizMP = MediaPlayer.create(getContext(), R.raw.medi_nariz);
+        final MediaPlayer bocaMP = MediaPlayer.create(getContext(), R.raw.medi_boca);
+        final MediaPlayer lenguaMP = MediaPlayer.create(getContext(), R.raw.medi_lengua);
+        final MediaPlayer mandiMP = MediaPlayer.create(getContext(), R.raw.medi_mandi);
+        final MediaPlayer labiosMP = MediaPlayer.create(getContext(), R.raw.medi_labios);
 
         audioPosInicial = (ImageButton) view.findViewById(R.id.imBtnMeditaAudioPosIni);
         audioFrente = (ImageButton) view.findViewById(R.id.imBtnMedita1AudioFrente);

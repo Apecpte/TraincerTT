@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "user_database";
+    private static final String DB_NAME = "cogniaim_db";
     private static final String TB_NAME = "user_table";
     private static final String COL_ID = "user_id";
     private static final String COL_FIRST_NAME = "user_first_name";

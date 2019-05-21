@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:gravity="center"
-        android:text="Selecciona cúal imagen es \nexactamente igual a la de la izquierda."
+        android:text="Selecciona la imagen exactamente \nigual a la de la izquierda."
         android:textAlignment="center"
         android:textSize="70sp"
         android:textStyle="bold"

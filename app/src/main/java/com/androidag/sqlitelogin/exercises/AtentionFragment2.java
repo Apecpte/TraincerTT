@@ -177,7 +177,7 @@ public class AtentionFragment2 extends Fragment {
         }else{
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             TextView title = new TextView(getContext());
-            title.setText("¡Haz concluido con el ejercicio!");
+            title.setText("¡Has concluido con el ejercicio!");
             title.setPadding(10, 10, 10, 10);
             title.setGravity(Gravity.CENTER);
             title.setTextSize(40);

@@ -411,7 +411,7 @@ public class MemorFragment3 extends Fragment implements View.OnClickListener{
     public void alertScoreMemo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         TextView title = new TextView(getContext());
-        title.setText("¡Haz concluido con los tres niveles del ejercicio!");
+        title.setText("¡Felicidades, has concluido con los tres niveles del ejercicio!");
         title.setPadding(10, 10, 10, 10);
         title.setGravity(Gravity.CENTER);
         title.setTextSize(40);

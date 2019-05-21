@@ -30,7 +30,7 @@ public class SplashAteFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_ate, container, false);
 
-        final MediaPlayer ateMP = MediaPlayer.create(getContext(), R.raw.cuantos_objetos);
+        final MediaPlayer ateMP = MediaPlayer.create(getContext(), R.raw.cuantos_objetos1);
 
         btnStartAte = (Button) view.findViewById(R.id.buttonStartAte);
         audioInstAte = (ImageButton) view.findViewById(R.id.ateButtonInst);

@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Completa en el guión las letras que falten."
+            android:text="Selecciona la letra que falte."
             android:textSize="60sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"/>

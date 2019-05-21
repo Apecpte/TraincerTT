@@ -31,7 +31,7 @@ public class SplashLanguFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_splash_langu, container, false);
 
-        final MediaPlayer languMP = MediaPlayer.create(getContext(), R.raw.resp_preguntas);
+        final MediaPlayer languMP = MediaPlayer.create(getContext(), R.raw.resp_preguntas1);
 
         btnStartLangu = (Button) view.findViewById(R.id.buttonStartLangu);
         audioInstLangu = (ImageButton) view.findViewById(R.id.languButtonInst);

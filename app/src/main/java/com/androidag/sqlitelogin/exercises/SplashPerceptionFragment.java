@@ -30,7 +30,7 @@ public class SplashPerceptionFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_perception, container, false);
 
-        final MediaPlayer perceptionMP = MediaPlayer.create(getContext(), R.raw.relaciona_imagen);
+        final MediaPlayer perceptionMP = MediaPlayer.create(getContext(), R.raw.relaciona_imagen1);
 
         btnStartPerception = (Button) view.findViewById(R.id.buttonStartPerception);
         audioInstPerception = (ImageButton) view.findViewById(R.id.perceptionButtonInst);

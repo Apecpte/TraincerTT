@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -106,11 +107,15 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
              5> Password & confirm password are matched or not.*/
 
             if (et_first_name.getText().toString().isEmpty()) {
-                et_first_name.setError("Data Empty");
-            }else if (et_last_name.getText().toString().isEmpty()) {
-                et_last_name.setError("Data Empty");
+                et_first_name.setFilters(new InputFilter[] { new InputFilter.LengthFilter(15) });
+                et_first_name.setError("Dato vacío");
+            }
+            else if (et_last_name.getText().toString().isEmpty()) {
+                et_last_name.setFilters(new InputFilter[] { new InputFilter.LengthFilter(15) });
+                et_last_name.setError("Dato vacío");
             }else if (et_last_name_two.getText().toString().isEmpty()) {
-                et_last_name_two.setError("Data Empty");
+                et_last_name_two.setFilters(new InputFilter[] { new InputFilter.LengthFilter(15) });
+                et_last_name_two.setError("Dato vacío");
             }
             //else if (et_mobile_number.getText().toString().isEmpty()) {
               //  et_mobile_number.setError("Data Empty");
@@ -123,12 +128,14 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
               //  et_email.setError("Invalid");
             //}
             else if (et_username.getText().toString().isEmpty()) {
-              et_username.setError("Invalid");
+                et_username.setFilters(new InputFilter[] { new InputFilter.LengthFilter(25) });
+              et_username.setError("Invalido");
             }
             else if (et_password.getText().toString().isEmpty()) {
-                et_password.setError("Data Empty");
+                et_password.setFilters(new InputFilter[] { new InputFilter.LengthFilter(15) });
+                et_password.setError("Dato vacío");
             }else if (et_birth_date.getText().toString().isEmpty()) {
-                et_birth_date.setError("Data Empty");
+                et_birth_date.setError("Dato vacío");
             }
 
             else {
@@ -148,14 +155,14 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
                         helper.onInsert(user);
                         Intent i = new Intent(Register.this,MainActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        Toast.makeText(Register.this, "You are SuccTessfully Register your Data", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, "¡Has sido registrado correctamente!", Toast.LENGTH_SHORT).show();
                         startActivity(i);i.putExtra("Model",user);
                         finish();
                     } else {
-                        et_confirm_password.setError("Password Not Matched");
+                        et_confirm_password.setError("Contraseña incorrecta");
                     }
                 } else {
-                        et_username.setError("Username is already Used");
+                        et_username.setError("El nombre de usuario ya está en uso");
                     }
             }
 

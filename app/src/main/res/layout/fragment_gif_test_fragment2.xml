@@ -6,7 +6,6 @@
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="16dp"
     android:background="@color/colorPrimary"
     tools:context=".test.gifTestFragment2">
 
@@ -40,7 +39,7 @@
             android:gravity="center"
             android:text="Lea la serie de números."
             android:textColor="@color/primaryTextColor"
-            android:textSize="50sp"/>
+            android:textSize="60sp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -49,7 +48,7 @@
             android:gravity="center"
             android:text="2 1 8 5 4"
             android:textColor="@color/primaryTextColor"
-            android:textSize="80sp"
+            android:textSize="100sp"
             android:textStyle="bold"/>
 
     </RelativeLayout>

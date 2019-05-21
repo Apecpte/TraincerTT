@@ -19,8 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="¿En qué coordenada esta la figura?"
-            android:textSize="60sp"
+            android:text="Ubica en la imagen las coordenadas o el objeto \ny escribe con el teclado tu respuesta. "
+            android:textSize="50sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"/>
 

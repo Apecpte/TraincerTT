@@ -81,7 +81,7 @@
             android:backgroundTint="@color/secondaryDarkColor"
             android:text=""
             android:textColor="@color/primaryTextColor"
-            android:textSize="25sp"/>
+            android:textSize="30sp"/>
 
         <Button
             android:id="@+id/answerBtnLangu2"
@@ -90,7 +90,7 @@
             android:backgroundTint="@color/secondaryDarkColor"
             android:text=""
             android:textColor="@color/primaryTextColor"
-            android:textSize="25sp"/>
+            android:textSize="30sp"/>
 
     </LinearLayout>
 

@@ -34,7 +34,7 @@
                 android:id="@+id/noQuestionAte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="16sp"
                 android:layout_alignParentLeft="true"
                 android:text="Pregunta No : "/>
@@ -42,7 +42,7 @@
                 android:id="@+id/scoreAte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="16sp"
                 android:layout_alignParentRight="true"
                 android:text="Puntuación: "/>

@@ -64,7 +64,7 @@ public class RecomExerFragment7 extends Fragment implements View.OnClickListener
                 break;
 
             case R.id.buttonNext:
-                fragment = new RecomExerFragment();
+                fragment = new Recom2ExerFragment();
                 fragmentTransaction = true;
                 break;
         }

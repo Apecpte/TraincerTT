@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Realice las siguientes operaciones \naritméticas."
+            android:text="Realiza las operaciones aritméticas \ny contesta en el espacio marcado."
             android:textSize="60sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"/>

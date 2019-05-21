@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -232,22 +233,114 @@ public class TestFragment1 extends Fragment {
 
 
     private void gameOver(){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
-        alertDialogBuilder
-                .setMessage("Tu puntuación es: " + tScore + "/12" +" puntos.")
-                .setCancelable(false)
-                .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(getActivity(), Home.class));
-                        getActivity().finish();
-                    }
-                });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-        TextView textView = (TextView) alertDialog.findViewById(android.R.id.message);
-        textView.setTextSize(50);
-        alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+        if (tScore < 3){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+
+            TextView title = new TextView(getContext());
+            title.setText("Tu puntuación es: " + tScore + "/12" + " puntos.");
+            title.setPadding(10, 10, 10, 10);
+            title.setGravity(Gravity.CENTER);
+            title.setTextSize(40);
+
+            alertDialogBuilder
+                    .setMessage("Tu deterioro cognitivo es grave, acude con un especialista lo más pronto posible.")
+                    .setCancelable(false)
+                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            startActivity(new Intent(getActivity(), Home.class));
+                            getActivity().finish();
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.setCustomTitle(title);
+            alertDialog.show();
+            TextView textView = (TextView) alertDialog.findViewById(android.R.id.message);
+            textView.setTextSize(30);
+            alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+        }
+        else if (tScore >= 4 && tScore <=6){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+
+            TextView title = new TextView(getContext());
+            title.setText("Tu puntuación es: " + tScore + "/12" + " puntos.");
+            title.setPadding(10, 10, 10, 10);
+            title.setGravity(Gravity.CENTER);
+            title.setTextSize(40);
+
+            alertDialogBuilder
+                    .setMessage("Tu deterioro cognitivo es moderado. Se te recomienda acudir con un especialista.")
+                    .setCancelable(false)
+                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            startActivity(new Intent(getActivity(), Home.class));
+                            getActivity().finish();
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.setCustomTitle(title);
+            alertDialog.show();
+            TextView textView = (TextView) alertDialog.findViewById(android.R.id.message);
+            textView.setTextSize(30);
+            alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+        }
+        else if (tScore >= 7 && tScore <=9){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+
+            TextView title = new TextView(getContext());
+            title.setText("Tu puntuación es: " + tScore + "/12" + " puntos.");
+            title.setPadding(10, 10, 10, 10);
+            title.setGravity(Gravity.CENTER);
+            title.setTextSize(40);
+
+            alertDialogBuilder
+                    .setMessage("Tu deterioro cognitivo es leve.")
+                    .setCancelable(false)
+                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            startActivity(new Intent(getActivity(), Home.class));
+                            getActivity().finish();
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.setCustomTitle(title);
+            alertDialog.show();
+            TextView textView = (TextView) alertDialog.findViewById(android.R.id.message);
+            textView.setTextSize(30);
+            alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+        }
+        else if (tScore >= 10 && tScore <=12){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+
+            TextView title = new TextView(getContext());
+            title.setText("Tu puntuación es: " + tScore + "/12" + " puntos.");
+            title.setPadding(10, 10, 10, 10);
+            title.setGravity(Gravity.CENTER);
+            title.setTextSize(40);
+
+            alertDialogBuilder
+                    .setMessage("¡Felicidades, capacidad cognoscitiva es normal!")
+                    .setCancelable(false)
+                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            startActivity(new Intent(getActivity(), Home.class));
+                            getActivity().finish();
+                        }
+                    });
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.setCustomTitle(title);
+            alertDialog.show();
+            TextView textView = (TextView) alertDialog.findViewById(android.R.id.message);
+            textView.setTextSize(30);
+            alertDialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+        }
     }
 
 }

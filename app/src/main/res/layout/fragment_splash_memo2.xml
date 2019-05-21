@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Visualiza los objetos durante 10 segundos que hay en cada \nlugar que se encuentran. Luego tendrás que recordarlos."
+            android:text="Visualiza durante 10 segundos los objetos que hay en cada \nlugar y en donde se encuentran. Luego tendrás que recordarlos."
             android:textStyle="bold"
             android:textSize="40sp"
             android:textColor="@color/colorBlack"/>

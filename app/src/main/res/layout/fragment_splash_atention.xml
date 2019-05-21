@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Fíjese en los números siguientes \ny escríbalos de forma inversa."
+            android:text="Vuelve a escribir los números que se te \npiden, pero ahora de derecha a izquierda."
             android:textSize="60sp"
             android:textStyle="bold"
             android:textColor="@color/primaryTextColor"/>

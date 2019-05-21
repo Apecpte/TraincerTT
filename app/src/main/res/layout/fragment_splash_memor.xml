@@ -15,7 +15,7 @@
        android:layout_marginTop="150dp"
         android:gravity="center"
         android:layout_gravity="center_vertical"
-        android:text="Voltea las cartas para ver las \nimágenes y comienza a jugar."
+        android:text="Voltea las cartas para ver las imágenes y encontrar a su igual."
         android:textSize="80sp"
         android:textStyle="bold"
         android:textColor="@color/colorBlack"/>

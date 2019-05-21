@@ -128,7 +128,7 @@ public class PerceptionFragment3 extends Fragment {
         //updateQuestions(r.nextInt(tQuestionsLenght));
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         TextView titleG = new TextView(getContext());
-        titleG.setText("¡Bien hecho!");
+        titleG.setText("¡Felicidades!");
         titleG.setPadding(10, 10, 10, 10);
         titleG.setGravity(Gravity.CENTER);
         titleG.setTextSize(40);
@@ -184,7 +184,7 @@ public class PerceptionFragment3 extends Fragment {
     private void gameOver(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         TextView title = new TextView(getContext());
-        title.setText("¡Haz concluido con los tres niveles del ejercicio!");
+        title.setText("¡Felicidades, has concluido con los tres niveles del ejercicio!");
         title.setPadding(10, 10, 10, 10);
         title.setGravity(Gravity.CENTER);
         title.setTextSize(40);

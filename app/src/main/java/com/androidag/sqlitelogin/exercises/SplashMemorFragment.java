@@ -30,7 +30,7 @@ public class SplashMemorFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_memor, container, false);
 
-        final MediaPlayer memorMP = MediaPlayer.create(getContext(), R.raw.memorama);
+        final MediaPlayer memorMP = MediaPlayer.create(getContext(), R.raw.memorama1);
 
         btnStartMemor = (Button) view.findViewById(R.id.buttonStartMemor);
         audioInstMemor = (ImageButton) view.findViewById(R.id.memorButtonInst);

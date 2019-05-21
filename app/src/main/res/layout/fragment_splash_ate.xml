@@ -18,8 +18,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Cuántos objetos hay en la imagen?"
-            android:textSize="60sp"
+            android:text="Escribe el número de objetos que hay en la imagen."
+            android:textSize="50sp"
+            android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/primaryTextColor"/>
 

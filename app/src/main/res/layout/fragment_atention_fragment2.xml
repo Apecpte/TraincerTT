@@ -45,7 +45,7 @@
                 android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentRight="true"
-                android:text="Score: "/>
+                android:text="Puntuación: "/>
 
         </RelativeLayout>
 
@@ -88,6 +88,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:hint="Escribe tu respuesta"
+            android:textColor="@color/primaryTextColor"
             android:inputType="number"
             android:textSize="60sp" />
 

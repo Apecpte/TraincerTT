@@ -30,7 +30,7 @@ public class SplashMathsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_maths, container, false);
 
-        final MediaPlayer mathsMP = MediaPlayer.create(getContext(), R.raw.op_aritmeticas);
+        final MediaPlayer mathsMP = MediaPlayer.create(getContext(), R.raw.op_arimeticas1);
 
         btnStartMaths = (Button) view.findViewById(R.id.buttonStartMaths);
         audioInstMaths = (ImageButton) view.findViewById(R.id.mathsButtonInst);

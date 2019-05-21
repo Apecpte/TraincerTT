@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lee la frase y elige la palabra adecuada."
+            android:text="Lee la frase y elige la palabra \nadecuada entre las opciones."
             android:textSize="60sp"
             android:textStyle="bold"
             android:textColor="@color/primaryTextColor"/>
@@ -45,7 +45,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"

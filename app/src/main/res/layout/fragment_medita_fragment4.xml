@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:text="Fase 3"
             android:layout_marginRight="20dp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/primaryTextColor"
             android:textSize="60sp"
             android:textStyle="bold"/>
 

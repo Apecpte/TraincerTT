@@ -88,7 +88,7 @@ public class AteFragment2 extends Fragment {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 TextView titleG = new TextView(getContext());
-                titleG.setText("¡Bien hecho!");
+                titleG.setText("¡Correcto!");
                 titleG.setPadding(10, 10, 10, 10);
                 titleG.setGravity(Gravity.CENTER);
                 titleG.setTextSize(40);
@@ -117,7 +117,7 @@ public class AteFragment2 extends Fragment {
                 titleB.setPadding(10, 10, 10, 10);
                 titleB.setGravity(Gravity.CENTER);
                 titleB.setTextSize(40);
-                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer());
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\nIntenta de nuevo");
                 builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -154,11 +154,11 @@ public class AteFragment2 extends Fragment {
         }else{
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             TextView title = new TextView(getContext());
-            title.setText("¡Haz concluido con el ejercicio!");
+            title.setText("¡Has concluido con el ejercicio!");
             title.setPadding(10, 10, 10, 10);
             title.setGravity(Gravity.CENTER);
             title.setTextSize(40);
-            builder.setMessage("Tu score es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
             builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

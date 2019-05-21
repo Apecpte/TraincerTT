@@ -30,7 +30,7 @@ public class SplashMoneyFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_money, container, false);
 
-        final MediaPlayer moneyMP = MediaPlayer.create(getContext(), R.raw.cuanto_dinero);
+        final MediaPlayer moneyMP = MediaPlayer.create(getContext(), R.raw.cuanto_dinero1);
 
         btnStartMoney = (Button) view.findViewById(R.id.buttonStartMoney);
         audioInstMoney = (ImageButton) view.findViewById(R.id.moneyButtonInst);

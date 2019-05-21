@@ -497,7 +497,7 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
     public void alertScoreMemo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         //builder.setTitle("Cerrar Sesión");
-        builder.setMessage("!Felicidades has ganado¡");
+        builder.setMessage("!Felicidades, has concluido con el ejercicio¡");
         //builder.setIcon(R.drawable.ic_logout);
         builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
             @Override

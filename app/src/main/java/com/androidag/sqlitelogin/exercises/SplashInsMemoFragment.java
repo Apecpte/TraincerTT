@@ -3,7 +3,6 @@ package com.androidag.sqlitelogin.exercises;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,12 +15,13 @@ import com.androidag.sqlitelogin.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SplashLanguageFragment extends Fragment {
+public class SplashInsMemoFragment extends Fragment {
 
     private Button btnStartMemo;
+    private ImageButton audioInstMemo;
     //private ImageButton audioInstLanguage;
 
-    public SplashLanguageFragment() {
+    public SplashInsMemoFragment() {
         // Required empty public constructor
     }
 
@@ -29,28 +29,28 @@ public class SplashLanguageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_splash_language, container, false);
+        View view = inflater.inflate(R.layout.fragment_splash_inst_memo, container, false);
 
-//        final MediaPlayer languageMP = MediaPlayer.create(getContext(), R.raw.completaPalabra);
+        final MediaPlayer memoMP = MediaPlayer.create(getContext(), R.raw.donde_esta_inst);
 
-        btnStartMemo = (Button) view.findViewById(R.id.buttonStartMemo);
-  /*      audioInstLanguage = (ImageButton) view.findViewById(R.id.languageButtonInst);
+        btnStartMemo = (Button) view.findViewById(R.id.buttonStartMemoSplash);
+        audioInstMemo = (ImageButton) view.findViewById(R.id.memoSplashButtonInst);
 
-        audioInstLanguage.setOnClickListener(new View.OnClickListener() {
+        audioInstMemo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                languageMP.start();
+                memoMP.start();
             }
         });
-*/
+
         btnStartMemo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LanguageFragment2 l2F = new LanguageFragment2();
+                SplashMemoFragment smF1 = new SplashMemoFragment();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.content_frame, l2F)
+                        .replace(R.id.content_frame, smF1)
                         .addToBackStack(null)
                         .commit();
             }

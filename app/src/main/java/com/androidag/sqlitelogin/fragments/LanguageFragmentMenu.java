@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
-import com.androidag.sqlitelogin.exercises.LanguFragment;
 import com.androidag.sqlitelogin.exercises.SplashLanguFragment;
-import com.androidag.sqlitelogin.exercises.SplashLanguageFragment;
 import com.androidag.sqlitelogin.exercises.SplashScrabbleLanguageFragment;
 
 /**

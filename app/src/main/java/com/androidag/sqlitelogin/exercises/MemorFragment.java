@@ -335,7 +335,7 @@ public class MemorFragment extends Fragment implements View.OnClickListener{
         title.setTextSize(40);
         builder.setMessage("¿Deseas continuar con el siguiente nivel?");
         //builder.setIcon(R.drawable.ic_logout);
-        builder.setPositiveButton("SÍ", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
@@ -348,7 +348,7 @@ public class MemorFragment extends Fragment implements View.OnClickListener{
                         .commit();
             }
         });
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();

@@ -496,23 +496,13 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
 
     public void alertScoreMemo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        //builder.setTitle("Cerrar Sesión");
-        builder.setMessage("!Felicidades, has concluido con el ejercicio¡");
+        TextView title = new TextView(getContext());
+        title.setText("¡Felicidades, has concluido con los tres niveles del ejercicio!");
+        title.setPadding(10, 10, 10, 10);
+        title.setGravity(Gravity.CENTER);
+        title.setTextSize(40);
         //builder.setIcon(R.drawable.ic_logout);
-        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                //getActivity().finish();
-                MemorFragment3 mF3 = new MemorFragment3();
-                getActivity()
-                        .getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.content_frame, mF3)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
@@ -527,10 +517,10 @@ public class MemorFragment2 extends Fragment implements View.OnClickListener{
         });
         AlertDialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
+        dialog.setCustomTitle(title);
         dialog.show();
         TextView textView = (TextView) dialog.findViewById(android.R.id.message);
-        textView.setTextSize(40);
-        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
+        textView.setTextSize(30);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
     }
 }

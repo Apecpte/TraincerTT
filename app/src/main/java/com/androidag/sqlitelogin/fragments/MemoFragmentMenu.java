@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.exercises.MemoFragment;
 import com.androidag.sqlitelogin.exercises.MemorFragment;
+import com.androidag.sqlitelogin.exercises.SplashInsMemoFragment;
 import com.androidag.sqlitelogin.exercises.SplashMemoFragment;
 import com.androidag.sqlitelogin.exercises.SplashMemorFragment;
 
@@ -55,7 +56,7 @@ public class MemoFragmentMenu extends Fragment implements View.OnClickListener {
                 break;
             case R.id.buttonRemember:
                 //Atención
-                fragment = new SplashMemoFragment();
+                fragment = new SplashInsMemoFragment();
                 fragmentTransaction = true;
                 break;
         }

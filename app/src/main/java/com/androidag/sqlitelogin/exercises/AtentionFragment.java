@@ -96,7 +96,7 @@ public class AtentionFragment extends Fragment {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 TextView titleG = new TextView(getContext());
-                titleG.setText("¡Bien hecho!");
+                titleG.setText("¡Muy bien hecho!");
                 titleG.setPadding(10, 10, 10, 10);
                 titleG.setGravity(Gravity.CENTER);
                 titleG.setTextSize(40);
@@ -124,7 +124,7 @@ public class AtentionFragment extends Fragment {
                 titleB.setPadding(10, 10, 10, 10);
                 titleB.setGravity(Gravity.CENTER);
                 titleB.setTextSize(40);
-                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer());
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\nTómate tu tiempo");
                 builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

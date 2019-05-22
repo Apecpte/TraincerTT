@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/secondaryLightColor"
+    tools:context=".exercises.SplashInsMemoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textViewInstMemoSplash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:text="Visualiza durante algunos segundos \nlos objetos que hay en cada lugar \ny en donde se encuentran. \nLuego tendrás que recordarlos."
+        android:textSize="70sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"/>
+
+    <ImageButton
+        android:id="@+id/memoSplashButtonInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewInstMemoSplash"
+        android:src="@mipmap/volume_relax"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/buttonStartMemoSplash"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/memoSplashButtonInst"
+        android:backgroundTint="@color/bg_login"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="EMPEZAR"
+        android:padding="20dp"
+        android:textSize="40sp"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

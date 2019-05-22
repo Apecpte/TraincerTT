@@ -324,7 +324,7 @@ public class TestFragment1 extends Fragment {
             title.setTextSize(40);
 
             alertDialogBuilder
-                    .setMessage("¡Felicidades, capacidad cognoscitiva es normal!")
+                    .setMessage("¡Felicidades, capacidad cognoscitiva normal!")
                     .setCancelable(false)
                     .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
                         @Override

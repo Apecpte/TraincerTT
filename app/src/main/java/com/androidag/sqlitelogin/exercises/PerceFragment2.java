@@ -153,7 +153,7 @@ public class PerceFragment2 extends Fragment {
     }
 
     public void setUpQuestion(){
-        questionModelArraylist.add(new MathQuestionModel("¿Qué encontramos en la intersección C1?","hexagono"));
+        questionModelArraylist.add(new MathQuestionModel("¿Qué encontramos en la intersección C1?", "hexágono"));
         questionModelArraylist.add(new MathQuestionModel("¿Dónde hay un rombo?","A2"));
         questionModelArraylist.add(new MathQuestionModel("¿Qué encontramos en la intersección D3?","cuadrado"));
         questionModelArraylist.add(new MathQuestionModel("¿Dónde hay un pentagono?","B4"));

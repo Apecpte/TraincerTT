@@ -1,6 +1,7 @@
 package com.androidag.sqlitelogin.meditation;
 
 
+import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -36,7 +36,7 @@ public class Recom2ExerFragment4 extends Fragment implements View.OnClickListene
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom2_exer_fragment4, container, false);
 
-        final MediaPlayer ejerF2_4_MP = MediaPlayer.create(getContext(), R.raw.ejer_f2_ejer_pectorales);
+        final MediaPlayer ejerF2_4_MP = MediaPlayer.create(getContext(), R.raw.ejer_f2_ejer_pectorales2);
 
         ImageView imageView = (ImageView) view.findViewById (R.id.imageView2GifExer);
 

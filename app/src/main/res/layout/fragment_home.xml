@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/menuTest"
+                android:text="Prueba de evaluación cognitiva"
                 android:textStyle="bold"
                 android:textSize="31sp"
                 android:textColor="@android:color/black"/>

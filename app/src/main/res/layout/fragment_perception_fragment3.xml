@@ -8,19 +8,13 @@
     android:background="@color/secondaryDarkColor"
     tools:context=".exercises.PerceptionFragment3">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:text="Selecciona cuál imagen es \nexactamente igual a la de la izquierda."
-        android:textAlignment="center"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:baselineAligned="false"
         android:gravity="center">
 
@@ -34,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/imageViewPerception3"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="145dp"
+                android:layout_height="145dp"
                 android:scaleY=".65"
                 android:scaleX=".65"
                 android:scaleType="fitXY"
@@ -50,15 +44,16 @@
             android:gravity="center" >
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="145dp"
+                android:layout_height="290dp"
                 android:orientation="vertical"
                 android:gravity="center" >
 
                 <ImageButton
                     android:id="@+id/carta3Perce1"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleY=".85"
                     android:scaleX=".85"
                     android:scaleType="fitXY"
@@ -66,8 +61,9 @@
 
                 <ImageButton
                     android:id="@+id/carta3Perce2"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleY=".50"
                     android:scaleX=".50"
                     android:scaleType="fitXY"
@@ -84,15 +80,16 @@
             android:gravity="center" >
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="145dp"
+                android:layout_height="290dp"
                 android:orientation="vertical"
                 android:gravity="center" >
 
                 <ImageButton
                     android:id="@+id/carta3Perce3"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleY=".60"
                     android:scaleX=".60"
                     android:scaleType="fitXY"
@@ -100,8 +97,9 @@
 
                 <ImageButton
                     android:id="@+id/carta3Perce4"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleY=".80"
                     android:scaleX=".80"
                     android:scaleType="fitXY"
@@ -119,15 +117,16 @@
             android:gravity="center" >
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="145dp"
+                android:layout_height="290dp"
                 android:orientation="vertical"
                 android:gravity="center" >
 
                 <ImageButton
                     android:id="@+id/carta3Perce5"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleY=".90"
                     android:scaleX=".90"
                     android:scaleType="fitXY"
@@ -135,8 +134,9 @@
 
                 <ImageButton
                     android:id="@+id/carta3Perce6"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleType="fitXY"
                     android:background="@android:color/transparent"/>
 
@@ -152,15 +152,16 @@
             android:gravity="center" >
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="145dp"
+                android:layout_height="290dp"
                 android:orientation="vertical"
                 android:gravity="center" >
 
                 <ImageButton
                     android:id="@+id/carta3Perce7"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleY=".70"
                     android:scaleX=".70"
                     android:scaleType="fitXY"
@@ -168,8 +169,9 @@
 
                 <ImageButton
                     android:id="@+id/carta3Perce8"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:scaleY=".65"
                     android:scaleX=".65"
                     android:scaleType="fitXY"

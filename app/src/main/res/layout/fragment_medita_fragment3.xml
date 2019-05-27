@@ -1,182 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/primaryLightColor"
     tools:context=".meditation.MeditaFragment3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:text="Relajación progresiva de Jacobson"
-        android:textColor="@color/colorBlack"
-        android:textSize="70sp"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonsMeditaF3"
+        android:layout_alignParentTop="true">
 
         <TextView
+            android:id="@+id/textViewMeditaTitle3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text=""
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="Relajación progresiva de Jacobson"
             android:textColor="@color/colorBlack"
-            android:textSize="50sp" />
+            android:textSize="60sp"
+            android:textStyle="bold"/>
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Fase 2"
-        android:textColor="@color/colorAccent"
-        android:textSize="60sp"
-        android:textStyle="bold"/>
-
-    <ImageButton
-        android:id="@+id/imBtnMedita3AudioFase2"
-        android:layout_width="wrap_content"
-        android:layout_height="82dp"
-        android:layout_gravity="center"
-        android:background="@color/white"
-        android:src="@mipmap/volume_relax"/>
-
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center">
-
-        <TableRow
+        <TextView
+            android:id="@+id/tvMeditaFase3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/textViewMeditaTitle3"
+            android:text="Fase 2"
+            android:textColor="@color/colorAccent"
+            android:textSize="60sp"
+            android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:textSize="32sp" />
-
-        </TableRow>
-
-        <TableRow
+        <ImageButton
+            android:id="@+id/imBtnMedita3AudioFase2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMeditaFase3"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:src="@mipmap/volume_relax"/>
 
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="50dp" />
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="50dp"/>
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="50dp"/>
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="50dp"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center" />
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center" />
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center" />
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center" />
-        </TableRow>
-    </TableLayout>
+    </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonsMeditaF3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/buttonGoOutMedita3"
-            android:layout_width="210dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginRight="145dp"
-            android:layout_marginTop="4dp"
-            android:padding="25dp"
+            android:layout_marginRight="33dp"
+            android:layout_weight="0.3"
+            android:padding="15dp"
             android:backgroundTint="@color/secondaryDarkColor"
-            android:text="@string/btn_goOut"
-            android:textSize="30dp"
-            android:textStyle="bold"/>
+            android:textColor="@color/primaryTextColor"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:text="@string/btn_goOut"/>
 
         <Button
             android:id="@+id/buttonBackMedita3"
-            android:layout_width="210dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginRight="145dp"
-            android:layout_marginTop="4dp"
-            android:padding="25dp"
+            android:layout_weight="0.3"
+            android:layout_marginRight="33dp"
+            android:padding="15dp"
             android:backgroundTint="@color/secondaryDarkColor"
-            android:text="ATRÁS"
+            android:textColor="@color/primaryTextColor"
             android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:text="ATRÁS" />
 
         <Button
             android:id="@+id/buttonNextMedita3"
-            android:layout_width="210dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="4dp"
-            android:padding="25dp"
+            android:layout_weight="0.3"
+            android:padding="15dp"
             android:backgroundTint="@color/secondaryDarkColor"
-            android:text="@string/btn_next"
+            android:textColor="@color/primaryTextColor"
             android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:text="@string/btn_next"/>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

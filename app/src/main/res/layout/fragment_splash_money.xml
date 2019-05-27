@@ -3,38 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/secondaryLightColor"
     tools:context=".exercises.SplashMoneyFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textViewInstMoney"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:gravity="center"
-        android:text="Realiza sumas con ayuda \nde los objetos mostrados \nen las imágenes."
-        android:textAlignment="center"
-        android:textSize="80sp"
-        android:textStyle="bold"
-        android:textColor="@color/primaryTextColor" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonStartMoney"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp">
 
-    <ImageButton
-        android:id="@+id/moneyButtonInst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewInstMoney"
-        android:src="@mipmap/volume_relax"
-        android:background="@android:color/transparent"/>
+        <TextView
+            android:id="@+id/textViewInstMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="Realiza sumas con ayuda de los \nobjetos mostrados en las imágenes."
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryTextColor" />
+
+        <ImageButton
+            android:id="@+id/moneyButtonInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textViewInstMoney"
+            android:src="@mipmap/volume_relax"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/buttonStartMoney"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/moneyButtonInst"
         android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
+import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 
 import java.util.ArrayList;
@@ -210,7 +211,7 @@ public class MemoFragment2 extends Fragment implements View.OnClickListener{
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                HomeFragment hf = new HomeFragment();
+                ExercisesFragment hf = new ExercisesFragment();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()

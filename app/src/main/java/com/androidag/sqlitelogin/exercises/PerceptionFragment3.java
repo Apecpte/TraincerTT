@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
+import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 
 /**
@@ -192,7 +193,7 @@ public class PerceptionFragment3 extends Fragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
-                HomeFragment hf = new HomeFragment();
+                ExercisesFragment hf = new ExercisesFragment();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()

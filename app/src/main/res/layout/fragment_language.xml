@@ -20,7 +20,7 @@
             android:layout_height="20dp"
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_marginTop="5dp"
-            android:progressTint="@color/secondaryDarkColor"
+            android:progressTint="@color/primaryTextColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             />
@@ -56,35 +56,26 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
-        <!--
-        <Button
-            android:id="@+id/mathsbButtonPista"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="Pista"
-            android:layout_gravity="end"
-            android:layout_marginRight="100dp"
-            android:textSize="25sp"/>
-    -->
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:orientation="horizontal"
             android:gravity="center">
 
             <TextView
                 android:id="@+id/textViewLengQ1"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="I P N "
+                android:text="E s t "
                 android:textColor="@android:color/black"
                 android:textSize="60sp"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint=" _ "
                 android:gravity="center"
@@ -94,9 +85,9 @@
             <TextView
                 android:id="@+id/textViewLengQ2"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=" E S C O M"
+                android:text=" d i a n t e"
                 android:textColor="@android:color/black"
                 android:textSize="60sp"
                 android:gravity="center"/>
@@ -107,6 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:gravity="center_horizontal">
 
             <Button

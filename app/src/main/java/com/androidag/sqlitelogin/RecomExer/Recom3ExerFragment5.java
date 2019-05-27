@@ -1,16 +1,19 @@
 package com.androidag.sqlitelogin.RecomExer;
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+import com.androidag.sqlitelogin.fragments.NivelExerFragment;
 import com.bumptech.glide.Glide;
 
 /**
@@ -21,6 +24,7 @@ public class Recom3ExerFragment5 extends Fragment implements View.OnClickListene
     private Button btnGoOut;
     private Button btnNext;
     private Button btnBack;
+    private ImageButton audioEjerF3_5;
 
     public Recom3ExerFragment5() {
         // Required empty public constructor
@@ -32,12 +36,22 @@ public class Recom3ExerFragment5 extends Fragment implements View.OnClickListene
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom3_exer_fragment5, container, false);
 
+        final MediaPlayer ejerF3_5_MP = MediaPlayer.create(getContext(), R.raw.ejer_f3_flex_ext_rodilla);
+
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView3GifExer);
         imageView.setImageResource(R.drawable.re3_flexionrodilla);
 
         btnGoOut = (Button) view.findViewById(R.id.button3GoOut);
         btnNext = (Button) view.findViewById(R.id.button3Next);
         btnBack = (Button) view.findViewById(R.id.button3Back);
+        audioEjerF3_5 = (ImageButton) view.findViewById(R.id.imBtnRecomExer3Audio5);
+
+        audioEjerF3_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ejerF3_5_MP.start();
+            }
+        });
 
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
@@ -53,7 +67,7 @@ public class Recom3ExerFragment5 extends Fragment implements View.OnClickListene
 
         switch (view.getId()) {
             case R.id.button3GoOut:
-                fragment = new HomeFragment();
+                fragment = new NivelExerFragment();
                 fragmentTransaction = true;
                 break;
 

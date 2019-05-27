@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (helper.loginValidation(username,password)) {
                     PrefUtil.putbooleanPref("done",true,MainActivity.this);
                     saveOnPreferences(username, password);
-                    Toast.makeText(this, "You are Successfully Register your Data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Información correcta", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this,Home.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
@@ -85,13 +85,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             else if (helper.loginValidation(username,password)) {
                 PrefUtil.putbooleanPref("done",true,MainActivity.this);
                 saveOnPreferences(username, password);
-                Toast.makeText(this, "You are Successfully Register your Data", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Información correcta", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(this,Home.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
             }else {
-                et_username.setError("Password not matched");
+                et_username.setError("El usuario o contraseña son incorrectos");
             }
 
         }else if (view.getId() == R.id.btnLinkToRegisterScreen) {

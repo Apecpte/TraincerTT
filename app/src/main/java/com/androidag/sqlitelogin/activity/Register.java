@@ -155,7 +155,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
                         helper.onInsert(user);
                         Intent i = new Intent(Register.this,MainActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        Toast.makeText(Register.this, "¡Has sido registrado correctamente!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "¡Registrado correctamente!", Toast.LENGTH_LONG).show();
                         startActivity(i);i.putExtra("Model",user);
                         finish();
                     } else {

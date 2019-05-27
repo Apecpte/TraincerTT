@@ -2,6 +2,7 @@ package com.androidag.sqlitelogin.Food;
 
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ViewFlipper;
 
 import com.androidag.sqlitelogin.R;
@@ -26,6 +28,7 @@ public class RecomFoodFragment3 extends Fragment implements View.OnClickListener
     private Button btnBack;
     private Button btnYT;
     private ViewFlipper viewFlipper3;
+    private ImageButton audioAli_3;
 
     public RecomFoodFragment3() {
         // Required empty public constructor
@@ -37,6 +40,8 @@ public class RecomFoodFragment3 extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom_food_fragment3, container, false);
 
+        final MediaPlayer ali_3_MP = MediaPlayer.create(getContext(), R.raw.ali_legumbres);
+
         btnLeftFood = (Button) view.findViewById(R.id.btnLeftFood3);
         btnRightFood = (Button) view.findViewById(R.id.btnRightFood3);
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
@@ -44,6 +49,15 @@ public class RecomFoodFragment3 extends Fragment implements View.OnClickListener
         btnBack = (Button) view.findViewById(R.id.buttonBack);
         btnYT = (Button) view.findViewById(R.id.btnYT);
         viewFlipper3 = (ViewFlipper) view.findViewById(R.id.viewFlipperFood3);
+
+        audioAli_3 = (ImageButton) view.findViewById(R.id.imBtnRecomAliAudio3);
+
+        audioAli_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ali_3_MP.start();
+            }
+        });
 
         btnLeftFood.setOnClickListener(this);
         btnRightFood.setOnClickListener(this);

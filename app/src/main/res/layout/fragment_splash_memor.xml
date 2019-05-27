@@ -3,38 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/secondaryLightColor"
     tools:context=".exercises.SplashMemorFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textViewInstMemor"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       android:layout_marginTop="150dp"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:text="Voltea las cartas para ver las imágenes y encontrar a su igual."
-        android:textSize="80sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorBlack"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonStartMemor"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp">
 
-    <ImageButton
-        android:id="@+id/memorButtonInst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewInstMemor"
-        android:src="@mipmap/volume_relax"
-        android:background="@android:color/transparent"/>
+        <TextView
+            android:id="@+id/textViewInstMemor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="Voltea las cartas para ver las \nimágenes y encontrar a su igual."
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"/>
+
+        <ImageButton
+            android:id="@+id/memorButtonInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textViewInstMemor"
+            android:src="@mipmap/volume_relax"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/buttonStartMemor"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/memorButtonInst"
         android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"

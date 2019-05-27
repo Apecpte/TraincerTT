@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/primaryLightColor"
     tools:context=".activity.Welcome">
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/buttonsWelcome"
+    android:layout_alignParentTop="true">
+
     <TextView
         android:id="@+id/textViewWelcome"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:layout_gravity="center"
         android:text="@string/welcome"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -23,24 +26,31 @@
 
     <ImageView
         android:id="@+id/imageViewLogo"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
+        android:layout_below="@id/textViewWelcome"
         android:src="@drawable/cogni_aim_logo1"/>
 
+</RelativeLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonsWelcome"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="25dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/buttonLogin"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="200dp"
+            android:layout_marginRight="100dp"
+            android:layout_weight="0.5"
             android:padding="25dp"
             android:backgroundTint="@color/secondaryDarkColor"
             android:textColor="@color/primaryTextColor"
@@ -50,10 +60,9 @@
 
         <Button
             android:id="@+id/buttonRegister"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_weight="0.5"
             android:padding="25dp"
             android:backgroundTint="@color/secondaryDarkColor"
             android:textColor="@color/primaryTextColor"
@@ -62,4 +71,5 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>

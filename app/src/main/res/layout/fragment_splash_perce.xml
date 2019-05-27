@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/primaryLightColor"
+    android:background="@color/secondaryLightColor"
     tools:context=".exercises.SplashPerceFragment">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonStartPerce"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp">
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
+            android:id="@+id/textViewInstPerce"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Ubica en la imagen las coordenadas o el objeto \ny escribe con el teclado tu respuesta. "
-            android:textSize="50sp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="Ubica en la imagen las coordenadas \no el objeto y escribe con el teclado \ntu respuesta. "
+            android:textSize="51sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"/>
 
@@ -28,86 +30,27 @@
             android:id="@+id/perceButtonInst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textViewInstPerce"
             android:src="@mipmap/volume_relax"
             android:background="@android:color/transparent"/>
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:paddingLeft="100dp"
-        android:text="EJEMPLO:"
-        android:textSize="45sp"
-        android:textColor="@color/colorBlack"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/perceImage"
-            android:layout_width="700dp"
-            android:layout_height="450dp"
-            android:src="@drawable/perce_game"
-            android:padding="20dp"
-            android:layout_gravity="center" />
-
-        <!--
-        <Button
-            android:id="@+id/mathsbButtonPista"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="Pista"
-            android:layout_gravity="end"
-            android:layout_marginRight="100dp"
-            android:textSize="25sp"/>
--->
-        <TextView
-            android:id="@+id/textViewPerceQ"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_toEndOf="@+id/perceImage"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:text="¿Qué encontramos en la intersección A1?"
-            android:textColor="@android:color/black"
-            android:textSize="50sp" />
-
-        <TextView
-            android:id="@+id/editTextPerceA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_toEndOf="@+id/perceImage"
-            android:layout_gravity="center"
-            android:layout_marginTop="255dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="círculo"
-            android:inputType="text"
-            android:textSize="50sp" />
+    </RelativeLayout>
 
         <Button
             android:id="@+id/buttonStartPerce"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_below="@+id/editTextPerceA"
-            android:layout_toEndOf="@+id/perceImage"
-            android:layout_marginLeft="165dp"
-            android:layout_marginRight="160dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/bg_login"
             android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
             android:text="EMPEZAR"
+            android:padding="20dp"
             android:textSize="40sp"
+            android:textColor="@color/primaryTextColor"
             android:textStyle="bold"/>
 
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

@@ -8,19 +8,13 @@
     android:background="@color/secondaryDarkColor"
     tools:context=".exercises.PerceptionFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:text="Selecciona cúal imagen es \nexactamente igual a la de la izquierda."
-        android:textAlignment="center"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:baselineAligned="false"
         android:gravity="center">
 
@@ -34,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/imageViewPerception1"
-                android:layout_width="220dp"
-                android:layout_height="220dp"
+                android:layout_width="205dp"
+                android:layout_height="205dp"
                 android:scaleType="fitXY"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"/>
@@ -56,8 +50,9 @@
 
                 <ImageButton
                     android:id="@+id/cartaPerce1"
-                    android:layout_width="220dp"
-                    android:layout_height="220dp"
+                    android:layout_width="205dp"
+                    android:layout_height="205dp"
+                    android:layout_weight="1"
                     android:scaleY=".50"
                     android:scaleX=".50"
                     android:scaleType="fitXY"
@@ -65,8 +60,9 @@
 
                 <ImageButton
                     android:id="@+id/cartaPerce2"
-                    android:layout_width="220dp"
-                    android:layout_height="220dp"
+                    android:layout_width="205dp"
+                    android:layout_height="205dp"
+                    android:layout_weight="1"
                     android:scaleType="fitXY"
                     android:background="@android:color/transparent"/>
 
@@ -89,8 +85,9 @@
 
                 <ImageButton
                     android:id="@+id/cartaPerce3"
-                    android:layout_width="220dp"
-                    android:layout_height="220dp"
+                    android:layout_width="205dp"
+                    android:layout_height="205dp"
+                    android:layout_weight="1"
                     android:scaleY=".65"
                     android:scaleX=".65"
                     android:scaleType="fitXY"
@@ -98,8 +95,9 @@
 
                 <ImageButton
                     android:id="@+id/cartaPerce4"
-                    android:layout_width="220dp"
-                    android:layout_height="220dp"
+                    android:layout_width="205dp"
+                    android:layout_height="205dp"
+                    android:layout_weight="1"
                     android:scaleY=".80"
                     android:scaleX=".80"
                     android:scaleType="fitXY"

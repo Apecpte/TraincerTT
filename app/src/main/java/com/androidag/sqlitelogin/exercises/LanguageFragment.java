@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.activity.Home;
+import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 
 import java.util.ArrayList;
@@ -194,7 +195,7 @@ public class LanguageFragment extends Fragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
-                HomeFragment hf = new HomeFragment();
+                ExercisesFragment hf = new ExercisesFragment();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()

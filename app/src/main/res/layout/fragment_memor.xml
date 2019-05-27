@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:paddingLeft="64dp"
         android:paddingRight="64dp"
-        android:paddingTop="16dp"
+        android:paddingTop="10dp"
         tools:context=".exercises.MemorFragment"
         android:background="@color/secondaryDarkColor"
         android:shrinkColumns="*"

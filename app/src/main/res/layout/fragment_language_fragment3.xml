@@ -54,7 +54,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:orientation="vertical">
         <!--
         <Button
@@ -68,72 +68,72 @@
     -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:orientation="horizontal"
             android:gravity="center">
 
             <TextView
                 android:id="@+id/textViewLeng1Q3"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="I P N "
+                android:text="El caballo ne"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="_"
                 android:gravity="center"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/textViewLeng2Q3"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="S C O M "
+                android:text="ro era el que me"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="_"
                 android:gravity="center"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/textViewLeng3Q3"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="I R L "
+                android:text="or "
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="_"
                 android:gravity="center"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/textViewLeng4Q3"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="U B G"
+                android:text="alopaba."
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:gravity="center"/>
 
         </LinearLayout>
@@ -142,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="25dp"
             android:gravity="center_horizontal">
 
             <Button
@@ -155,7 +155,7 @@
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="A"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn3LengO2"
@@ -167,7 +167,7 @@
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="B"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="60sp"/>
+                android:textSize="50sp"/>
 
         </LinearLayout>
 
@@ -188,7 +188,7 @@
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="C"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn3LengO4"
@@ -200,7 +200,7 @@
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="D"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
         </LinearLayout>
     </LinearLayout>

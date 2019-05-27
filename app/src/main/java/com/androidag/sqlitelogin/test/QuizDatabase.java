@@ -23,8 +23,8 @@ public class QuizDatabase {
     Integer testImage[] = {
             0,
             R.drawable.test_image1,
-            R.drawable.cubo,
-            R.drawable.test_image3,
+            R.drawable.cubo_verde,
+            R.drawable.reloj,
             R.drawable.test_image4,
             0,
             0,

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="drawer_width">320dp</dimen>
+    <dimen name="design_navigation_icon_size" tools:override="true">40dp</dimen>
+</resources>

@@ -1,43 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    android:paddingLeft="48dp"
-    android:paddingRight="48dp"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp"
     android:orientation="vertical"
     tools:context=".fragments.TestFragment">
 
-    <TextView
-        android:id="@+id/textViewTitleTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_gravity="center"
-        android:text="@string/menuTest"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:textSize="85sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_start_test"
+        android:layout_alignParentTop="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/aboutTest"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="45sp"/>
+        <TextView
+            android:id="@+id/textViewTitleTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="Prueba de evaluación cognitiva"
+            android:textColor="@android:color/black"
+            android:textSize="55sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/textViewTitleTest"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="Las siguientes preguntas son una ayuda para determinar \nsi se recomienda o no buscar asesoramiento médico \npara una evaluación cognitiva.  \nNo proporcionan un diagnóstico de ninguna manera, sino \nque actúan como una ayuda para dar sus primeros signos \nde alerta para buscar un diagnóstico temprano."
+            android:textColor="@color/primaryTextColor"
+            android:textSize="33sp"/>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/button_start_test"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
-        android:backgroundTint="@color/secondaryDarkColor"
-        android:text="@string/btn_start"
-        android:textSize="50sp" />
+        android:layout_centerHorizontal="true"
+        android:text="EMPEZAR"
+        android:padding="20dp"
+        android:textSize="40sp"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"/>
 
-</LinearLayout>
+</RelativeLayout>

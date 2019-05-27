@@ -32,7 +32,7 @@ public class SplashMemoFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_memo, container, false);
 
-        final MediaPlayer memoMP = MediaPlayer.create(getContext(), R.raw.donde_esta15seg);
+        final MediaPlayer memoMP = MediaPlayer.create(getContext(), R.raw.de_15segundos);
 
         chronometer1 = view.findViewById(R.id.chronometerMemo1);
         audioInstMemo = (ImageButton) view.findViewById(R.id.memoButtonInst);

@@ -47,6 +47,4 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="aboutTest">The following set of questions are an aid for determing whether or not it is recommended you seek medical advice for a cognitive assesment.  \\nThey do not in any way provide a diagnosis but instead act as an aid for giving your early warning signs in order to gain an early diagnosis.</string>
-
 </resources>

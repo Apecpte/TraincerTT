@@ -1,16 +1,19 @@
 package com.androidag.sqlitelogin.RecomExer;
 
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+import com.androidag.sqlitelogin.fragments.NivelExerFragment;
 import com.bumptech.glide.Glide;
 
 /**
@@ -21,6 +24,7 @@ public class Recom2ExerFragment5 extends Fragment implements View.OnClickListene
     private Button btnGoOut;
     private Button btnNext;
     private Button btnBack;
+    private ImageButton audioEjerF2_5;
 
     public Recom2ExerFragment5() {
         // Required empty public constructor
@@ -32,6 +36,8 @@ public class Recom2ExerFragment5 extends Fragment implements View.OnClickListene
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom2_exer_fragment5, container, false);
 
+        final MediaPlayer ejerF2_5_MP = MediaPlayer.create(getContext(), R.raw.ejer_f2_ejer_rodillas_1);
+
         ImageView imageView = (ImageView) view.findViewById (R.id.imageView2GifExer);
 
         Glide.with(getContext()).load(R.drawable.re2_silla1).into(imageView);
@@ -39,6 +45,14 @@ public class Recom2ExerFragment5 extends Fragment implements View.OnClickListene
         btnGoOut = (Button) view.findViewById(R.id.button2GoOut);
         btnNext = (Button) view.findViewById(R.id.button2Next);
         btnBack = (Button) view.findViewById(R.id.button2Back);
+        audioEjerF2_5 = (ImageButton) view.findViewById(R.id.imBtnRecomExer2Audio5);
+
+        audioEjerF2_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ejerF2_5_MP.start();
+            }
+        });
 
         btnGoOut.setOnClickListener(this);
         btnNext.setOnClickListener(this);
@@ -54,7 +68,7 @@ public class Recom2ExerFragment5 extends Fragment implements View.OnClickListene
 
         switch (view.getId()) {
             case R.id.button2GoOut:
-                fragment = new HomeFragment();
+                fragment = new NivelExerFragment();
                 fragmentTransaction = true;
                 break;
 

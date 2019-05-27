@@ -3,38 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/secondaryLightColor"
     tools:context=".exercises.SplashPerceptionFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textViewInstPerception"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:gravity="center"
-        android:text="Selecciona la imagen exactamente \nigual a la de la izquierda."
-        android:textAlignment="center"
-        android:textSize="70sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonStartPerception"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp">
 
-    <ImageButton
-        android:id="@+id/perceptionButtonInst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewInstPerception"
-        android:src="@mipmap/volume_relax"
-        android:background="@android:color/transparent"/>
+        <TextView
+            android:id="@+id/textViewInstPerception"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="Selecciona la imagen exactamente \nigual a la de la izquierda."
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <ImageButton
+            android:id="@+id/perceptionButtonInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textViewInstPerception"
+            android:src="@mipmap/volume_relax"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/buttonStartPerception"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/perceptionButtonInst"
         android:backgroundTint="@color/bg_login"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"

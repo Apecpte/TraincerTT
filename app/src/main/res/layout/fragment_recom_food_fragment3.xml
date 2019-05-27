@@ -8,117 +8,160 @@
     tools:context=".fragments.RecomFoodFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textViewFoodTitle3"
+    <LinearLayout
+        android:id="@+id/llLegumbres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/FoodTitle3"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        android:textSize="55sp" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tVSubtitle3"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewFoodTitle3"
-        android:gravity="center"
-        android:text=""
-        android:textColor="@color/colorBlack"
-        android:textSize="40sp"
-        android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/textViewFoodTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FoodTitle3"
+            android:layout_marginRight="25dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="60sp" />
 
-    <TextView
-        android:id="@+id/tVInst3"
-        android:layout_width="750dp"
-        android:layout_height="330dp"
-        android:text="Tiene efectos favorables sobre \nla glucemia, y aporta hidratos \nde carbono (HC) complejos, \nque contribuyen a regular el perfil \ncalórico de la dieta. Además, tienen \nalto contenido en compuestos \nbioactivos, fibra y proteínas."
-        android:layout_below="@+id/tVSubtitle3"
-        android:textColor="@color/colorBlack"
-        android:textStyle="italic"
-        android:textAlignment="textEnd"
-        android:textSize="38sp" />
+        <ImageButton
+            android:id="@+id/imBtnRecomAliAudio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/primaryLightColor"
+            android:src="@mipmap/volume_relax"/>
 
-    <Button
-        android:id="@+id/btnLeftFood3"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_left"
-        android:layout_toRightOf="@+id/tVInst3"
-        android:layout_marginVertical="270dp"/>
+    </LinearLayout>
 
-    <ViewFlipper
-        android:id="@+id/viewFlipperFood3"
-        android:layout_width="400dp"
-        android:layout_height="330dp"
-        android:layout_below="@+id/tVSubtitle3"
-        android:layout_toRightOf="@+id/btnLeftFood3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/llLegumbres"
+        android:layout_above="@id/btnYT">
 
-        <ImageView
-            android:id="@+id/imageView3Food1"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:padding="10dp"
-            android:src="@drawable/legumbresbolsas" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView3Food2"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/chana"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+            <TextView
+                android:id="@+id/tVInst3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiene efectos favorables sobre la \nglucemia, y aporta hidratos de carbono complejos, que contribuyen a regular el \nperfil calórico de la dieta. Además, \ntienen alto contenido en compuestos \nbioactivos, fibra y proteínas."
+                android:textColor="@color/colorBlack"
+                android:textStyle="italic"
+                android:textAlignment="textEnd"
+                android:textSize="30sp" />
 
-        <ImageView
-            android:id="@+id/imageView3Food3"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/chicharo"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView3Food4"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/beansbolsas"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageView3Food5"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/beans"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+            <Button
+                android:id="@+id/btnLeftFood3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_left" />
 
-    </ViewFlipper>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/btnRightFood3"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_right"
-        android:layout_toRightOf="@+id/viewFlipperFood3"
-        android:layout_marginVertical="270dp"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35"
+            android:layout_marginRight="10dp">
+
+            <ViewFlipper
+                android:id="@+id/viewFlipperFood3"
+                android:layout_width="400dp"
+                android:layout_height="330dp" >
+
+                <ImageView
+                    android:id="@+id/imageView3Food1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/legumbresbolsas" />
+
+                <ImageView
+                    android:id="@+id/imageView3Food2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/chana"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/imageView3Food3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/chicharo"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/imageView3Food4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/beansbolsas"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/imageView3Food5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/beans"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+            </ViewFlipper>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRightFood3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnYT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_below="@+id/tVInst3"
+        android:layout_above="@+id/buttonGoOut"
         android:background="@null"
         android:text="Si quieres saber más beneficios de las legumbres. Da click aquí."
         android:textAllCaps="false"
@@ -130,13 +173,15 @@
         android:id="@+id/buttonGoOut"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="150dp"
-        android:layout_below="@id/btnYT"
-        android:padding="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:text="@string/btn_goOut"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"/>
 
@@ -144,13 +189,13 @@
         android:id="@+id/buttonBack"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnYT"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
-        android:padding="25dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:text="Atrás"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold" />
 
@@ -158,12 +203,12 @@
         android:id="@+id/buttonNext"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnYT"
-        android:layout_alignRight="@id/btnYT"
-        android:layout_marginRight="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="end"
-        android:layout_marginTop="4dp"
-        android:padding="25dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:text="@string/btn_next"
         android:textSize="30sp"

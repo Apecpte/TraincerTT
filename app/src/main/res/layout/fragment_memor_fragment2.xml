@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,72 +17,74 @@
         android:stretchColumns="*">
 
         <TableRow
+            android:layout_weight="0.25"
             android:paddingBottom="8dp">
 
             <ImageButton
                 android:id="@+id/imb2Carta1"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border" />
 
             <ImageButton
                 android:id="@+id/imb2Carta2"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta3"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta4"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
         </TableRow>
 
         <TableRow
+            android:layout_weight="0.25"
             android:paddingBottom="8dp">
 
             <ImageButton
                 android:id="@+id/imb2Carta5"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta6"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta7"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@mipmap/brain_memory"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta8"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@mipmap/brain_memory"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/imageview_border"/>
@@ -91,71 +92,73 @@
         </TableRow>
 
         <TableRow
+            android:layout_weight="0.25"
             android:paddingBottom="8dp">
 
             <ImageButton
                 android:id="@+id/imb2Carta9"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta10"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@mipmap/brain_memory"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta11"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@mipmap/brain_memory"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta12"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@mipmap/brain_memory"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/imageview_border"/>
         </TableRow>
 
         <TableRow
+            android:layout_weight="0.25"
             android:paddingBottom="8dp">
 
             <ImageButton
                 android:id="@+id/imb2Carta13"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@mipmap/brain_memory"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta14"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
 
             <ImageButton
                 android:id="@+id/imb2Carta15"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:src="@mipmap/brain_memory"
                 android:background="@drawable/imageview_border"/>
             <ImageButton
                 android:id="@+id/imb2Carta16"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@mipmap/brain_memory"
                 android:layout_marginRight="8dp"
                 android:background="@drawable/imageview_border"/>

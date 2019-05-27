@@ -132,11 +132,11 @@ public class MeditaFragment1 extends Fragment {
         goNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MeditaFragment2 m2f = new MeditaFragment2();
+                MeditaFragment5 m5f = new MeditaFragment5();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.content_frame, m2f)
+                        .replace(R.id.content_frame, m5f)
                         .addToBackStack(null)
                         .commit();
             }

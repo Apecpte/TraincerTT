@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
     android:background="@color/colorPrimary"
     tools:context=".test.TestFragment1">
 
@@ -18,15 +18,15 @@
         android:layout_centerHorizontal="true"
         android:gravity="left"
         android:text=""
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@android:color/transparent"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="24dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:paddingTop="24dp" >
+        android:layout_below="@+id/textViewScore"
+        android:layout_above="@+id/buttonsTestOptions"
+        android:layout_alignParentTop="true">
 
         <TextView
             android:id="@+id/textViewTest"
@@ -34,100 +34,97 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:padding="10dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:gravity="center"
             android:text="To many questions?"
             android:textColor="@color/primaryTextColor"
-            android:textSize="50sp"/>
+            android:textSize="40sp"/>
 
         <ImageView
             android:id="@+id/imageViewTest"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_below="@+id/textViewTest"
             android:layout_centerHorizontal="true"
             android:src="@drawable/test_image1"/>
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/buttonsTestOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:orientation="horizontal"
-        android:gravity="left">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/test_button4"
-            android:layout_width="615dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/secondaryDarkColor"
-            android:text=""
-            android:textColor="@color/primaryTextColor"
-            android:textSize="35sp" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/test_button3"
-            android:layout_width="615dp"
+            <Button
+                android:id="@+id/test_button4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text=""
+                android:textColor="@color/primaryTextColor"
+                android:textSize="29sp" />
+
+            <Button
+                android:id="@+id/test_button3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text=""
+                android:textColor="@color/primaryTextColor"
+                android:textSize="29sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_above="@+id/test_button4"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/secondaryDarkColor"
-            android:text=""
-            android:textColor="@color/primaryTextColor"
-            android:textSize="35sp"/>
+            android:orientation="horizontal">
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/test_button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text=""
+                android:textColor="@color/primaryTextColor"
+                android:textSize="29sp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:orientation="horizontal"
-        android:gravity="right">
+            <Button
+                android:id="@+id/test_button1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text=""
+                android:textColor="@color/primaryTextColor"
+                android:textSize="29sp"/>
 
-        <Button
-            android:id="@+id/test_button2"
-            android:layout_width="615dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/secondaryDarkColor"
-            android:text=""
-            android:textColor="@color/primaryTextColor"
-            android:textSize="35sp"/>
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/test_button1"
-            android:layout_width="615dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_above="@+id/test_button2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/secondaryDarkColor"
-            android:text=""
-            android:textColor="@color/primaryTextColor"
-            android:textSize="35sp"/>
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

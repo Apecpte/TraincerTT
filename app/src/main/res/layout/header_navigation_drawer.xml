@@ -5,14 +5,14 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="180dp"
         android:scaleType="centerCrop"
         android:src="@drawable/navigation_drawer"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="APECPTE TT 2019-A059"
+        android:text="CogniAim TT 2018-A059"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         android:textColor="@color/primaryLightColor"

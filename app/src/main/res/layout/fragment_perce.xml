@@ -8,6 +8,7 @@
     tools:context=".exercises.PerceFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,75 +46,80 @@
                 android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentRight="true"
-                android:text="Score: "/>
+                android:text="Puntuación: "/>
         </RelativeLayout>
     </LinearLayout>
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/textViewPerceQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="40sp"
+        android:text="¿Qué encontramos en la intersección B2?" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/perceImage"
-            android:layout_width="700dp"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:src="@drawable/perce_game"
-            android:padding="20dp"
-            android:layout_gravity="center" />
+            android:layout_weight="0.6"
+            android:orientation="vertical">
 
-            <!--
-            <Button
-                android:id="@+id/mathsbButtonPista"
-                android:layout_width="100dp"
+            <ImageView
+                android:id="@+id/perceImage"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Pista"
-                android:layout_gravity="end"
-                android:layout_marginRight="100dp"
-                android:textSize="25sp"/>
-    -->
-        <TextView
-            android:id="@+id/textViewPerceQ"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_toEndOf="@+id/perceImage"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:text="¿Qué encontramos en la intersección B2?"
-            android:textColor="@android:color/black"
-            android:textSize="50sp" />
+                android:src="@drawable/ejercicio_1"
+                android:padding="10dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
             <EditText
                 android:id="@+id/editTextPerceA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_toEndOf="@+id/perceImage"
                 android:layout_gravity="center"
-                android:layout_marginTop="325dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:hint="Escribe tu respuesta"
-                android:inputType="text"
-                android:textSize="50sp" />
+                android:inputType="number"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="40sp" />
 
             <Button
                 android:id="@+id/btnPerce"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextPerceA"
                 android:layout_gravity="center"
-                android:layout_toEndOf="@+id/perceImage"
-                android:layout_marginTop="450dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="Enviar"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="40sp" />
+        </RelativeLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.androidag.sqlitelogin.fragments;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -33,6 +34,7 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
     private Button btnNext;
     private Button btnYT;
     private ViewFlipper viewFlipper1;
+    private ImageButton audioAli_1;
 
     public RecomFoodFragment() {
         // Required empty public constructor
@@ -46,12 +48,23 @@ public class RecomFoodFragment extends Fragment implements View.OnClickListener 
 
         alertRecomFood();
 
+        final MediaPlayer ali_1_MP = MediaPlayer.create(getContext(), R.raw.ali_pescado);
+
         btnLeftFood = (Button) view.findViewById(R.id.btnLeftFood1);
         btnRightFood = (Button) view.findViewById(R.id.btnRightFood1);
         btnGoOut = (Button) view.findViewById(R.id.buttonGoOut);
         btnNext = (Button) view.findViewById(R.id.buttonNext);
         btnYT = (Button) view.findViewById(R.id.btnYT);
         viewFlipper1 = (ViewFlipper) view.findViewById(R.id.viewFlipperFood1);
+
+        audioAli_1 = (ImageButton) view.findViewById(R.id.imBtnRecomAliAudio1);
+
+        audioAli_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ali_1_MP.start();
+            }
+        });
 
         btnLeftFood.setOnClickListener(this);
         btnRightFood.setOnClickListener(this);

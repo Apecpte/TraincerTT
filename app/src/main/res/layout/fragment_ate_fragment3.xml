@@ -8,74 +8,75 @@
     tools:context=".exercises.AteFragment3">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+    <TextView
+        android:id="@+id/textView3Ate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="40sp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/ateImage3"
-            android:layout_width="700dp"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:padding="20dp"
-            android:src="@drawable/ate_2"
-            android:layout_gravity="center" />
+            android:layout_weight="0.6"
+            android:orientation="vertical">
 
-        <!-- ate_2
-        <Button
-            android:id="@+id/mathsbButtonPista"
-            android:layout_width="100dp"
+            <ImageView
+                android:id="@+id/ateImage3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/ate_x"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Pista"
-            android:layout_gravity="end"
-            android:layout_marginRight="100dp"
-            android:textSize="25sp"/>
--->
-        <TextView
-            android:id="@+id/textView3Ate"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_toEndOf="@+id/ateImage3"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:text=""
-            android:textColor="@color/primaryTextColor"
-            android:textSize="50sp" />
-
-        <EditText
-            android:id="@+id/editText3Ate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_toEndOf="@+id/ateImage3"
-            android:layout_below="@+id/textView3Ate"
-            android:layout_gravity="center"
+            android:layout_weight="0.4"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:hint="Escribe tu respuesta"
-            android:inputType="number"
-            android:textSize="50sp"
-            android:textColor="@color/primaryTextColor"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-        <Button
-            android:id="@+id/btn3Ate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_toEndOf="@+id/ateImage3"
-            android:layout_below="@+id/editText3Ate"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:backgroundTint="@color/secondaryDarkColor"
-            android:text="Enviar"
-            android:textSize="40sp"
-            android:textColor="@color/primaryTextColor"/>
 
-    </RelativeLayout>
+            <EditText
+                android:id="@+id/editText3Ate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:hint="Escribe tu respuesta"
+                android:inputType="number"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn3Ate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/editText3Ate"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:text="Enviar"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="40sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
+import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 
 import java.util.ArrayList;
@@ -142,7 +143,7 @@ public class AteFragment3 extends Fragment {
     }
 
     public void setUpQuestion(){
-        questionModelArraylist.add(new MathQuestionModel("¿Cuántos rombos hay en la imagen?","13"));
+        questionModelArraylist.add(new MathQuestionModel("¿Cuántos tomates hay en la imagen?","7"));
     }
 
     public void setData(){
@@ -154,16 +155,29 @@ public class AteFragment3 extends Fragment {
         }else{
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             TextView title = new TextView(getContext());
-            title.setText("¡Felicidades, has concluido con los tres niveles del ejercicio!");
+            title.setText("¡Has concluido con el ejercicio!");
             title.setPadding(10, 10, 10, 10);
             title.setGravity(Gravity.CENTER);
             title.setTextSize(40);
-            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size());
-            builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size()  + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //getActivity().finish();
-                    HomeFragment hf = new HomeFragment();
+                    AteFragment2 aF2 = new AteFragment2();
+                    getActivity()
+                            .getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.content_frame, aF2)
+                            .addToBackStack(null)
+                            .commit();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //getActivity().finish();
+                    ExercisesFragment hf = new ExercisesFragment();
                     getActivity()
                             .getSupportFragmentManager()
                             .beginTransaction()
@@ -172,13 +186,15 @@ public class AteFragment3 extends Fragment {
                             .commit();
                 }
             });
+
             AlertDialog dialog = builder.create();
             dialog.setCanceledOnTouchOutside(false);
             dialog.setCustomTitle(title);
             dialog.show();
             TextView textView = (TextView) dialog.findViewById(android.R.id.message);
             textView.setTextSize(30);
-            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextSize(25);
+            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextSize(25);
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextSize(25);
         }
     }
 }

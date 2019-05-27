@@ -9,7 +9,7 @@
         <item
             android:id="@+id/menu_test"
             android:icon="@drawable/test"
-            android:title="@string/menuTest" />
+            android:title="Prueba de evaluación cognitiva" />
         <item
             android:id="@+id/menu_recom_ali"
             android:icon="@drawable/diet"

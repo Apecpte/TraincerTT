@@ -48,5 +48,5 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hola Fragmento en blanco</string>
-    <string name="aboutTest">Las siguientes preguntas son una ayuda para determinar si se recomienda o no buscar asesoramiento médico para una evaluación cognitiva.  \nNo proporcionan un diagnóstico de ninguna manera, sino que actúan como una ayuda para dar sus primeros signos de alerta para obtener un diagnóstico temprano.</string>
+
 </resources>

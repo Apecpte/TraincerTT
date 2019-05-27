@@ -8,118 +8,172 @@
     tools:context=".fragments.RecomFoodFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textViewFoodTitle5"
+    <LinearLayout
+        android:id="@+id/llAliCarne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/FoodTitle5"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        android:textSize="55sp" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewFoodTitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FoodTitle5"
+            android:layout_marginRight="25dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="55sp" />
+
+        <ImageButton
+            android:id="@+id/imBtnRecomAliAudio5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/primaryLightColor"
+            android:src="@mipmap/volume_relax"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tVSubtitle5"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textViewFoodTitle5"
+        android:layout_below="@+id/llAliCarne"
         android:gravity="center"
-        android:text="(carnes, huevos)"
+        android:text="(carnes, huevos y derivados)"
         android:textColor="@color/colorBlack"
         android:textSize="40sp"
         android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/tVInst5"
-        android:layout_width="750dp"
-        android:layout_height="330dp"
-        android:padding="24dp"
-        android:text="Aportan nutrientes que en los alimentos \nde origen vegetal se encuentran en \nmenor cantidad, como son: \ncalcio,zinc, hierro, vitamina B12, etc."
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
         android:layout_below="@+id/tVSubtitle5"
-        android:textColor="@color/colorBlack"
-        android:textStyle="italic"
-        android:textAlignment="textEnd"
-        android:textSize="40sp" />
+        android:layout_above="@id/btnYT">
 
-    <Button
-        android:id="@+id/btnLeftFood5"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_left"
-        android:layout_toRightOf="@+id/tVInst5"
-        android:layout_marginVertical="270dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
 
-    <ViewFlipper
-        android:id="@+id/viewFlipperFood5"
-        android:layout_width="400dp"
-        android:layout_height="330dp"
-        android:layout_below="@+id/tVSubtitle5"
-        android:layout_toRightOf="@+id/btnLeftFood5">
+            <TextView
+                android:id="@+id/tVInst5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aportan nutrientes que en los alimentos \nde origen vegetal se encuentran en \nmenor cantidad, como son: calcio, zinc, \nhierro, vitamina B12, etc."
+                android:textColor="@color/colorBlack"
+                android:textStyle="italic"
+                android:textAlignment="textEnd"
+                android:textSize="31sp" />
 
-        <ImageView
-            android:id="@+id/imageView5Food1"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:padding="10dp"
-            android:src="@drawable/asparagus" />
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView5Food2"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/browneggs"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageView5Food3"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/meet"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+            <Button
+                android:id="@+id/btnLeftFood5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_left" />
 
-        <ImageView
-            android:id="@+id/imageView5Food4"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/steak"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView5Food5"
-            android:layout_width="400dp"
-            android:layout_height="330dp"
-            android:visibility="invisible"
-            android:padding="10dp"
-            android:src="@drawable/tomatoes"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35"
+            android:layout_marginRight="10dp">
 
-    </ViewFlipper>
+            <ViewFlipper
+                android:id="@+id/viewFlipperFood5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnRightFood5"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_right"
-        android:layout_toRightOf="@+id/viewFlipperFood5"
-        android:layout_marginVertical="270dp"/>
+                <ImageView
+                    android:id="@+id/imageView5Food1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/asparagus" />
+
+                <ImageView
+                    android:id="@+id/imageView5Food2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/browneggs"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/imageView5Food3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/meet"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/imageView5Food4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/steak"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/imageView5Food5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:padding="10dp"
+                    android:src="@drawable/tomatoes"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp" />
+
+            </ViewFlipper>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRightFood5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnYT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_below="@+id/tVInst5"
+        android:layout_above="@+id/buttonGoOut"
         android:background="@null"
         android:text="Si quieres saber más beneficios de los alimentos de origen animal. Da click aquí."
         android:textAllCaps="false"
@@ -131,13 +185,15 @@
         android:id="@+id/buttonGoOut"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="150dp"
-        android:layout_below="@id/btnYT"
-        android:padding="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:text="@string/btn_goOut"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"/>
 
@@ -145,13 +201,13 @@
         android:id="@+id/buttonBack"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnYT"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
-        android:padding="25dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:text="Atrás"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold" />
 
@@ -159,12 +215,12 @@
         android:id="@+id/buttonNext"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnYT"
-        android:layout_alignRight="@id/btnYT"
-        android:layout_marginRight="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="end"
-        android:layout_marginTop="4dp"
-        android:padding="25dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
         android:backgroundTint="@color/secondaryDarkColor"
         android:text="@string/btn_next"
         android:textSize="30sp"

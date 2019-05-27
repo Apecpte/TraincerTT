@@ -20,7 +20,7 @@
             android:layout_height="20dp"
             style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_marginTop="5dp"
-            android:progressTint="@color/colorAccent"
+            android:progressTint="@color/primaryTextColor"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             />
@@ -46,7 +46,7 @@
                 android:textColor="@color/primaryTextColor"
                 android:textSize="24sp"
                 android:layout_alignParentRight="true"
-                android:text="Score: "/>
+                android:text="Puntuación: "/>
 
         </RelativeLayout>
 
@@ -69,54 +69,54 @@
     -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:orientation="horizontal"
             android:gravity="center">
 
             <TextView
                 android:id="@+id/textViewLeng1Q2"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="IPN "
+                android:text="Hoy estu"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="_"
                 android:gravity="center"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/textViewLeng2Q2"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="SCOM "
+                android:text="e con mi "
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:gravity="center"/>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:hint="_"
                 android:gravity="center"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/textViewLeng3Q2"
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="UBG"
+                android:text="ermana en la feria."
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:gravity="center"/>
 
         </LinearLayout>
@@ -125,6 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:layout_marginTop="25dp"
             android:gravity="center_horizontal">
 
             <Button
@@ -137,7 +138,7 @@
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="A   B"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/btn2LengO2"
@@ -149,7 +150,7 @@
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="B   C"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="60sp"/>
+                android:textSize="50sp"/>
 
             <Button
                 android:id="@+id/btn2LengO3"
@@ -161,7 +162,7 @@
                 android:backgroundTint="@color/secondaryDarkColor"
                 android:text="C   D"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
         </LinearLayout>
     </LinearLayout>

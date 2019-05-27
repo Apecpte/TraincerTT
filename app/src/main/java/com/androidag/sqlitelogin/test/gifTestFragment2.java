@@ -43,7 +43,7 @@ public class gifTestFragment2 extends Fragment {
             }
         };
 
-        handler.postDelayed(runnable, 5000);
+        handler.postDelayed(runnable, 10000);
         // Inflate the layout for this fragment
         return view;
     }

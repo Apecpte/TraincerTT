@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
+import com.androidag.sqlitelogin.fragments.ExercisesFragment;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
 
 import java.util.ArrayList;
@@ -164,11 +165,11 @@ public class AteFragment extends Fragment {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //getActivity().finish();
-                    AteFragment2 aF2 = new AteFragment2();
+                    AteFragment3 aF3 = new AteFragment3();
                     getActivity()
                             .getSupportFragmentManager()
                             .beginTransaction()
-                            .replace(R.id.content_frame, aF2)
+                            .replace(R.id.content_frame, aF3)
                             .addToBackStack(null)
                             .commit();
                 }
@@ -177,7 +178,7 @@ public class AteFragment extends Fragment {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //getActivity().finish();
-                    HomeFragment hf = new HomeFragment();
+                    ExercisesFragment hf = new ExercisesFragment();
                     getActivity()
                             .getSupportFragmentManager()
                             .beginTransaction()

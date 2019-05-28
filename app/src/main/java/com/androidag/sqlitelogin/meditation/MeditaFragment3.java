@@ -52,6 +52,7 @@ public class MeditaFragment3 extends Fragment {
         goOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fase2MP.stop();
                 HomeFragment hf = new HomeFragment();
                 getActivity()
                         .getSupportFragmentManager()
@@ -65,6 +66,7 @@ public class MeditaFragment3 extends Fragment {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fase2MP.stop();
                 MeditaFragment2 m2f = new MeditaFragment2();
                 getActivity()
                         .getSupportFragmentManager()
@@ -78,6 +80,7 @@ public class MeditaFragment3 extends Fragment {
         goNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fase2MP.stop();
                 MeditaFragment4 m4f = new MeditaFragment4();
                 getActivity()
                         .getSupportFragmentManager()

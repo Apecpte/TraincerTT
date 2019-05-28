@@ -56,11 +56,11 @@
                 android:id="@+id/tv2E2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Giramos la cabeza a la izquierda y a la \nderecha (como diciendo &quot;no&quot; con la \ncabeza, mirando a un lado y a otro). \n10 repeticiones."
+                android:text="Giramos la cabeza a la izquierda y a la derecha (como diciendo &quot;no&quot; con la cabeza, mirando a un lado y a otro).\n10 repeticiones."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="35sp" />
+                android:textSize="33sp" />
 
         </LinearLayout>
 

@@ -248,8 +248,19 @@ public class TestFragment1 extends Fragment {
                     .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            startActivity(new Intent(getActivity(), Home.class));
-                            getActivity().finish();
+                            ScoreTestFragment sTF = new ScoreTestFragment();
+
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("score", tScore);
+
+                            sTF.setArguments(bundle);
+
+                            getActivity()
+                                    .getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.content_frame, sTF)
+                                    .addToBackStack(null)
+                                    .commit();
                         }
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
@@ -275,8 +286,19 @@ public class TestFragment1 extends Fragment {
                     .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            startActivity(new Intent(getActivity(), Home.class));
-                            getActivity().finish();
+                            ScoreTestFragment sTF = new ScoreTestFragment();
+
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("score", tScore);
+
+                            sTF.setArguments(bundle);
+
+                            getActivity()
+                                    .getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.content_frame, sTF)
+                                    .addToBackStack(null)
+                                    .commit();
                         }
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
@@ -302,8 +324,19 @@ public class TestFragment1 extends Fragment {
                     .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            startActivity(new Intent(getActivity(), Home.class));
-                            getActivity().finish();
+                            ScoreTestFragment sTF = new ScoreTestFragment();
+
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("score", tScore);
+
+                            sTF.setArguments(bundle);
+
+                            getActivity()
+                                    .getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.content_frame, sTF)
+                                    .addToBackStack(null)
+                                    .commit();
                         }
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
@@ -329,8 +362,20 @@ public class TestFragment1 extends Fragment {
                     .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            startActivity(new Intent(getActivity(), Home.class));
-                            getActivity().finish();
+
+                            ScoreTestFragment sTF = new ScoreTestFragment();
+
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("score", tScore);
+
+                            sTF.setArguments(bundle);
+
+                            getActivity()
+                                    .getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.content_frame, sTF)
+                                    .addToBackStack(null)
+                                    .commit();
                         }
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();

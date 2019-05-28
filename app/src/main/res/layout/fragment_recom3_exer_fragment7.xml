@@ -56,11 +56,11 @@
                 android:id="@+id/tv3E2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Con el adulto mayor sentado, le pedimos \nque se incline su tronco hacia delante. \nEl familiar ayudará este movimiento de \nforma suave con un empuje desde su \nespalda. Siempre realizar sin dolor. \nRepetir 10 veces."
+                android:text="Con el adulto mayor sentado, le pedimos que se incline su tronco hacia delante. El familiar ayudará este movimiento de forma suave con un empuje desde su espalda. Siempre realizar sin dolor.\nRepetir 10 veces."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="33sp" />
+                android:textSize="31sp" />
 
         </LinearLayout>
 

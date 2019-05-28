@@ -24,6 +24,7 @@ public class Recom3ExerFragment extends Fragment implements View.OnClickListener
     private Button btnGoOut;
     private Button btnNext;
     private ImageButton audioEjerF3_1;
+    private MediaPlayer ejerF3_1_MP;
 
     public Recom3ExerFragment() {
         // Required empty public constructor
@@ -35,7 +36,7 @@ public class Recom3ExerFragment extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom3_exer, container, false);
 
-        final MediaPlayer ejerF3_1_MP = MediaPlayer.create(getContext(), R.raw.ejer_f3_flex_ext_brazo);
+        ejerF3_1_MP = MediaPlayer.create(getContext(), R.raw.ejer_f3_flex_ext_brazo);
 
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView3GifExer);
         imageView.setImageResource(R.drawable.re3_flexionbrazo);
@@ -65,11 +66,13 @@ public class Recom3ExerFragment extends Fragment implements View.OnClickListener
 
         switch (view.getId()) {
             case R.id.button3GoOut:
+                ejerF3_1_MP.stop();
                 fragment = new NivelExerFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.button3Next:
+                ejerF3_1_MP.stop();
                 fragment = new Recom3ExerFragment2();
                 fragmentTransaction = true;
                 break;

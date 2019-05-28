@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryLightColor"
+    tools:context=".meditation.PasitaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonStartMaths"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tVTitlePasita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+           android:text="Meditación de la pasa"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/tVInstPasita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tVTitlePasita"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:text="&#8226; Es importante disponer de un lugar adecuado, \ncómodo, limpio y ordenado, sin interrupciones.\n&#8226; Se comienza con una pequeña relajación o ejercicio \nde respiración simple para generar una actitud \nde atención y auto-observación."
+            android:textSize="34sp"
+            android:textStyle="italic"
+            android:textColor="@color/colorBlack"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonPlayPasita"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bg_login"
+            android:layout_gravity="center"
+            android:text="Reproducir"
+            android:padding="15dp"
+            android:textSize="40sp"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/buttonPausePasita"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bg_login"
+            android:layout_gravity="center"
+            android:text="Pausa"
+            android:padding="15dp"
+            android:textSize="40sp"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/buttonStopPasita"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bg_login"
+            android:layout_gravity="center"
+            android:text="Detener"
+            android:padding="15dp"
+            android:textSize="40sp"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

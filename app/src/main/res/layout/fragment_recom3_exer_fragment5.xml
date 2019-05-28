@@ -56,11 +56,11 @@
                 android:id="@+id/tv3E2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Con el adulto mayor acostado o sentado, \nle pedimos que intente estirar su rodilla \ny después flexionar. Un familiar completará los movimientos \nlentamente y sin provocar dolor. \nRealizar 10 repeticiones con cada pierna."
+                android:text="Con el adulto mayor acostado o sentado, le pedimos que intente estirar su rodilla y después flexionar. Un familiar completará los movimientos lentamente y sin provocar dolor.\nRealizar 10 repeticiones con cada pierna."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="33sp" />
+                android:textSize="31sp" />
 
         </LinearLayout>
 

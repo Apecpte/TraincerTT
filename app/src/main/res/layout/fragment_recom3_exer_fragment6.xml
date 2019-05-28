@@ -56,11 +56,11 @@
                 android:id="@+id/tv3E2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Con el adulto mayor acostado o sentado, \nle pedimos que intente flexionar su \ntobillo hacia arriba y hacia abajo. \nEl familiar completará los movimientos \nlentamente y sin provocar dolor. \nRealizar 10 repeticiones con cada pie."
+                android:text="Con el adulto mayor acostado o sentado, le pedimos que intente flexionar su tobillo hacia arriba y hacia abajo. El familiar completará los movimientos lentamente y sin provocar dolor.\nRealizar 10 repeticiones con cada pie."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="33sp" />
+                android:textSize="31sp" />
 
         </LinearLayout>
 

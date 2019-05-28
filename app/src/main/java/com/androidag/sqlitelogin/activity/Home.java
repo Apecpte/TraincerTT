@@ -28,6 +28,7 @@ import com.androidag.sqlitelogin.fragments.NivelExerFragment;
 import com.androidag.sqlitelogin.fragments.RecomFoodFragment;
 import com.androidag.sqlitelogin.fragments.TestFragment;
 import com.androidag.sqlitelogin.meditation.MeditaFragment1;
+import com.androidag.sqlitelogin.meditation.MeditaMenuFragment;
 import com.androidag.sqlitelogin.util.PrefUtil;
 
 public class Home extends AppCompatActivity {
@@ -76,7 +77,7 @@ public class Home extends AppCompatActivity {
                     fragmentTransaction = true;
                     break;
                 case R.id.menu_recom_relax:
-                    fragment = new MeditaFragment1();
+                    fragment = new MeditaMenuFragment();
                     fragmentTransaction = true;
                     break;
                 case R.id.menu_recom_ejerc:

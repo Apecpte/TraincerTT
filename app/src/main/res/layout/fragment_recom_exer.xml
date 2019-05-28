@@ -54,9 +54,9 @@
 
             <TextView
                 android:id="@+id/tvE1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="De pie, hacemos círculos primero con \nun tobillo y después con el otro. \n15 repeticiones hacia la izquierda y \n15 repeticiones hacia la derecha."
+                android:text="De pie, hacemos círculos primero con un tobillo y después con el otro.\n15 repeticiones hacia la izquierda y \n15 repeticiones hacia la derecha."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"

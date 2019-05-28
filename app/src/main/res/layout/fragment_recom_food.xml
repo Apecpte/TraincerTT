@@ -57,12 +57,12 @@
                 android:id="@+id/tVInst1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Coma de preferencia pescado azul \nya que tiene mayor contenido en \nomega 3. Por ejemplo, atún, sardina, salmón, trucha, cazón, etcétera. \nMínimo 2 veces por semana."
+                android:text="Coma de preferencia pescado azul ya que tiene mayor contenido en omega 3. Por ejemplo, atún, sardina, salmón, trucha, cazón, etcétera. \nMínimo 2 veces por semana."
                 android:layout_below="@+id/tVSubtitle1"
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="33sp" />
+                android:textSize="31sp" />
 
         </LinearLayout>
 

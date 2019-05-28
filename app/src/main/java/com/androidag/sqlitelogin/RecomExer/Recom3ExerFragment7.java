@@ -28,6 +28,7 @@ public class Recom3ExerFragment7 extends Fragment implements View.OnClickListene
     private Button btnNext;
     private Button btnBack;
     private ImageButton audioEjerF3_7;
+    private MediaPlayer ejerF3_7_MP;
 
     public Recom3ExerFragment7() {
         // Required empty public constructor
@@ -39,7 +40,7 @@ public class Recom3ExerFragment7 extends Fragment implements View.OnClickListene
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom3_exer_fragment7, container, false);
 
-        final MediaPlayer ejerF3_7_MP = MediaPlayer.create(getContext(), R.raw.ejer_f3_flex_ext_tronco);
+        ejerF3_7_MP = MediaPlayer.create(getContext(), R.raw.ejer_f3_flex_ext_tronco);
 
         ImageView imageView = (ImageView) view.findViewById (R.id.imageView3GifExer);
 
@@ -71,16 +72,19 @@ public class Recom3ExerFragment7 extends Fragment implements View.OnClickListene
 
         switch (view.getId()) {
             case R.id.button3GoOut:
+                ejerF3_7_MP.stop();
                 fragment = new NivelExerFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.button3Back:
+                ejerF3_7_MP.stop();
                 fragment = new Recom3ExerFragment6();
                 fragmentTransaction = true;
                 break;
 
             case R.id.button3Next:
+                ejerF3_7_MP.stop();
                 gameOver();
                 break;
         }
@@ -117,7 +121,7 @@ public class Recom3ExerFragment7 extends Fragment implements View.OnClickListene
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
-                HomeFragment hf = new HomeFragment();
+                NivelExerFragment hf = new NivelExerFragment();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()

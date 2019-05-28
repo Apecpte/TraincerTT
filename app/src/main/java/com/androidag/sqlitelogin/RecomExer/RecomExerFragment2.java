@@ -25,6 +25,7 @@ public class RecomExerFragment2 extends Fragment implements View.OnClickListener
     private Button btnNext;
     private Button btnBack;
     private ImageButton audioEjerF1_2;
+    private MediaPlayer ejerF1_2_MP;
 
     public RecomExerFragment2() {
         // Required empty public constructor
@@ -37,7 +38,7 @@ public class RecomExerFragment2 extends Fragment implements View.OnClickListener
 
         View view = inflater.inflate(R.layout.fragment_recom_exer_fragment2, container, false);
 
-        final MediaPlayer ejerF1_2_MP = MediaPlayer.create(getContext(), R.raw.ejer_f1_giros_rodillas);
+        ejerF1_2_MP = MediaPlayer.create(getContext(), R.raw.ejer_f1_giros_rodillas);
 
         ImageView imageView = (ImageView) view.findViewById (R.id.imageViewGifExer);
 
@@ -70,16 +71,19 @@ public class RecomExerFragment2 extends Fragment implements View.OnClickListener
 
         switch (view.getId()) {
             case R.id.buttonGoOut:
+                ejerF1_2_MP.stop();
                 fragment = new NivelExerFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.buttonBack:
+                ejerF1_2_MP.stop();
                 fragment = new RecomExerFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.buttonNext:
+                ejerF1_2_MP.stop();
                 fragment = new RecomExerFragment3();
                 fragmentTransaction = true;
                 break;

@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.meditation.MeditaFragment1;
+import com.androidag.sqlitelogin.meditation.MeditaMenuFragment;
 import com.androidag.sqlitelogin.test.TestFragment1;
 
 /**
@@ -74,7 +75,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 fragmentTransaction = true;
                 break;
             case R.id.buttonRelax:
-                fragment = new MeditaFragment1();
+                fragment = new MeditaMenuFragment();
                 fragmentTransaction = true;
                 break;
             case R.id.buttonRecommExercise:

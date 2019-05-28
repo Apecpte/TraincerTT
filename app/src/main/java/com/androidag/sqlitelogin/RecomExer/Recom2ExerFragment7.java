@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+import com.androidag.sqlitelogin.fragments.NivelExerFragment;
 import com.bumptech.glide.Glide;
 
 /**
@@ -28,6 +29,7 @@ public class Recom2ExerFragment7 extends Fragment implements View.OnClickListene
     private Button btnNext;
     private Button btnBack;
     private ImageButton audioEjerF2_7;
+    private MediaPlayer ejerF2_7_MP;
 
     public Recom2ExerFragment7() {
         // Required empty public constructor
@@ -39,7 +41,7 @@ public class Recom2ExerFragment7 extends Fragment implements View.OnClickListene
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_recom2_exer_fragment7, container, false);
 
-        final MediaPlayer ejerF2_7_MP = MediaPlayer.create(getContext(), R.raw.ejer_f2_botar_balon);
+        ejerF2_7_MP = MediaPlayer.create(getContext(), R.raw.ejer_f2_botar_balon);
 
         ImageView imageView = (ImageView) view.findViewById (R.id.imageView2GifExer);
 
@@ -71,16 +73,19 @@ public class Recom2ExerFragment7 extends Fragment implements View.OnClickListene
 
         switch (view.getId()) {
             case R.id.button2GoOut:
+                ejerF2_7_MP.stop();
                 fragment = new HomeFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.button2Back:
+                ejerF2_7_MP.stop();
                 fragment = new Recom2ExerFragment6();
                 fragmentTransaction = true;
                 break;
 
             case R.id.button2Next:
+                ejerF2_7_MP.stop();
                 gameOver();
                 break;
         }
@@ -117,7 +122,7 @@ public class Recom2ExerFragment7 extends Fragment implements View.OnClickListene
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //getActivity().finish();
-                HomeFragment hf = new HomeFragment();
+                NivelExerFragment hf = new NivelExerFragment();
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()

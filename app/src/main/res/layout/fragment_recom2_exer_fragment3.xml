@@ -56,7 +56,7 @@
                 android:id="@+id/tv2E2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sujetamos el hombro con la mano \ny con el brazo estirado hacemos \ncírculos hacia delante \n(como si fuera la aguja de un reloj). \nCambiamos de brazo. \n10 repeticiones."
+                android:text="Sujetamos el hombro con la mano y con el brazo estirado hacemos círculos hacia delante \n(como si fuera la aguja de un reloj).\nCambiamos de brazo. \n10 repeticiones."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"

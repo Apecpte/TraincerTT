@@ -55,11 +55,11 @@
                 android:id="@+id/tv3E2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Con el adulto mayor acostado o sentado, le \npedimos que intente flexionar su cadera. Un familiar \ncompletará el movimiento lentamente sin provocar \ndolor. A continuación, le intentará extender y nuevamente el familiar acompañará el movimiento. \nRealizar 10 repeticiones con cada pierna."
+                android:text="Con el adulto mayor acostado o sentado, le pedimos que intente flexionar su cadera. Un familiar completará el movimiento lentamente sin provocar dolor. A continuación, le intentará extender y nuevamente el familiar acompañará el movimiento.\nRealizar 10 repeticiones con cada pierna."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="30sp" />
+                android:textSize="28sp" />
 
         </LinearLayout>
 

@@ -20,6 +20,7 @@
             android:screenOrientation="landscape">
         </activity>
         <activity android:name=".activity.Home"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="landscape">
         </activity>
         <activity android:name=".activity.Register"

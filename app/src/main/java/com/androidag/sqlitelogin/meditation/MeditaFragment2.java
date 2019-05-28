@@ -1,6 +1,7 @@
 package com.androidag.sqlitelogin.meditation;
 
 
+import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,10 +39,7 @@ public class MeditaFragment2 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_medita_fragment2, container, false);
 
-        final MediaPlayer toraxMP = MediaPlayer.create(getContext(), R.raw.medi_torax);
-        final MediaPlayer espaldaMP = MediaPlayer.create(getContext(), R.raw.medi_espalda);
-        final MediaPlayer estoMP = MediaPlayer.create(getContext(), R.raw.medi_estomago);
-        final MediaPlayer cinturaMP = MediaPlayer.create(getContext(), R.raw.medi_cintura);
+        final MediaPlayer mediaPlayer = new MediaPlayer();
 
         audioTorax = (ImageButton) view.findViewById(R.id.imBtnMedita2AudioTorax);
         audioEspalda = (ImageButton) view.findViewById(R.id.imBtnMedita2AudioEspalda);
@@ -53,34 +53,35 @@ public class MeditaFragment2 extends Fragment {
         audioTorax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toraxMP.start();
+                stopAndPlay(R.raw.medi_torax, mediaPlayer);
             }
         });
 
         audioEspalda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                espaldaMP.start();
+                stopAndPlay(R.raw.medi_espalda, mediaPlayer);
             }
         });
 
         audioEstomago.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                estoMP.start();
+                stopAndPlay(R.raw.medi_estomago, mediaPlayer);
             }
         });
 
         audioCintura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cinturaMP.start();
+                stopAndPlay(R.raw.medi_cintura, mediaPlayer);
             }
         });
 
         goOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 HomeFragment hf = new HomeFragment();
                 getActivity()
                         .getSupportFragmentManager()
@@ -94,6 +95,7 @@ public class MeditaFragment2 extends Fragment {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 MeditaFragment5 m5f = new MeditaFragment5();
                 getActivity()
                         .getSupportFragmentManager()
@@ -107,6 +109,7 @@ public class MeditaFragment2 extends Fragment {
         goNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 MeditaFragment3 m3f = new MeditaFragment3();
                 getActivity()
                         .getSupportFragmentManager()
@@ -118,6 +121,19 @@ public class MeditaFragment2 extends Fragment {
         });
         // Inflate the layout for this fragment
         return view;
+    }
+
+    // This resets the mediaPlayer and starts the given audio
+    private void stopAndPlay(int rawId, MediaPlayer mediaPlayer) {
+        mediaPlayer.reset();
+        AssetFileDescriptor afd = this.getResources().openRawResourceFd(rawId);
+        try {
+            mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+            mediaPlayer.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mediaPlayer.start();
     }
 
 }

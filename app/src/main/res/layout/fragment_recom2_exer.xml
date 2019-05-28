@@ -54,9 +54,9 @@
 
             <TextView
                 android:id="@+id/tv2E1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Inclinamos la cabeza adelante y atrás \n(como diciendo &quot;sí&quot; con la cabeza, \nmirando arriba y abajo). \n10 repeticiones."
+                android:text="Inclinamos la cabeza adelante y atrás (como diciendo &quot;sí&quot; con la cabeza, mirando arriba y abajo). \n10 repeticiones."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"

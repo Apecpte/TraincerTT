@@ -30,6 +30,7 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
     private Button btnYT;
     private ViewFlipper viewFlipper2;
     private ImageButton audioAli_2;
+    private MediaPlayer ali_2_MP;
 
     public RecomFoodFragment2() {
         // Required empty public constructor
@@ -41,7 +42,7 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recom_food_fragment2, container, false);
 
-        final MediaPlayer ali_2_MP = MediaPlayer.create(getContext(), R.raw.ali_frutas);
+        ali_2_MP = MediaPlayer.create(getContext(), R.raw.ali_frutas);
 
         btnLeftFood = (Button) view.findViewById(R.id.btnLeftFood2);
         btnRightFood = (Button) view.findViewById(R.id.btnRightFood2);
@@ -85,21 +86,25 @@ public class RecomFoodFragment2 extends Fragment implements View.OnClickListener
                 break;
 
             case R.id.buttonGoOut:
+                ali_2_MP.stop();
                 fragment = new HomeFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.buttonBack:
+                ali_2_MP.stop();
                 fragment = new RecomFoodFragment();
                 fragmentTransaction = true;
                 break;
 
             case R.id.buttonNext:
+                ali_2_MP.stop();
                 fragment = new RecomFoodFragment3();
                 fragmentTransaction = true;
                 break;
 
             case R.id.btnYT:
+                ali_2_MP.stop();
                 youtubeFyV("qbXoxyIcxug");
                 break;
         }

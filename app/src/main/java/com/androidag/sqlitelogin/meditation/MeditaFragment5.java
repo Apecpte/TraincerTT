@@ -1,6 +1,7 @@
 package com.androidag.sqlitelogin.meditation;
 
 
+import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,10 +39,7 @@ public class MeditaFragment5 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_medita_fragment5, container, false);
 
-        final MediaPlayer brazosMP = MediaPlayer.create(getContext(), R.raw.medi_brazosmanos);
-        final MediaPlayer cuelloMP = MediaPlayer.create(getContext(), R.raw.medi_cuellonuca);
-        final MediaPlayer hombrosMP = MediaPlayer.create(getContext(), R.raw.medi_hombroscuello);
-        final MediaPlayer piernasMP = MediaPlayer.create(getContext(), R.raw.medi_piernas);
+        final MediaPlayer mediaPlayer = new MediaPlayer();
 
         audioBrazos = (ImageButton) view.findViewById(R.id.imBtnMedita5AudioBrazos);
         audioCuello = (ImageButton) view.findViewById(R.id.imBtnMedita5AudioCuello);
@@ -53,34 +53,35 @@ public class MeditaFragment5 extends Fragment {
         audioBrazos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                brazosMP.start();
+                stopAndPlay(R.raw.medi_brazosmanos, mediaPlayer);
             }
         });
 
         audioCuello.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cuelloMP.start();
+                stopAndPlay(R.raw.medi_cuellonuca, mediaPlayer);
             }
         });
 
         audioHombros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                hombrosMP.start();
+                stopAndPlay(R.raw.medi_hombroscuello, mediaPlayer);
             }
         });
 
         audioPiernas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                piernasMP.start();
+                stopAndPlay(R.raw.medi_piernas, mediaPlayer);
             }
         });
 
         goOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 HomeFragment hf = new HomeFragment();
                 getActivity()
                         .getSupportFragmentManager()
@@ -94,6 +95,7 @@ public class MeditaFragment5 extends Fragment {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 MeditaFragment1 m1f = new MeditaFragment1();
                 getActivity()
                         .getSupportFragmentManager()
@@ -107,6 +109,7 @@ public class MeditaFragment5 extends Fragment {
         goNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 MeditaFragment2 m2f = new MeditaFragment2();
                 getActivity()
                         .getSupportFragmentManager()
@@ -118,6 +121,19 @@ public class MeditaFragment5 extends Fragment {
         });
         // Inflate the layout for this fragment
         return view;
+    }
+
+    // This resets the mediaPlayer and starts the given audio
+    private void stopAndPlay(int rawId, MediaPlayer mediaPlayer) {
+        mediaPlayer.reset();
+        AssetFileDescriptor afd = this.getResources().openRawResourceFd(rawId);
+        try {
+            mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+            mediaPlayer.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mediaPlayer.start();
     }
 
 }

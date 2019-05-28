@@ -56,11 +56,11 @@
                 android:id="@+id/tv3E2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Con el adulto mayor acostado o sentado, \nun familiar colocará las manos pegadas \na la axila, y realizará movimientos lentos \ny circulares sin provocar dolor. \nRealizar 10 repeticiones con cada brazo."
+                android:text="Con el adulto mayor acostado o sentado, un familiar colocará las manos pegadas a la axila, y realizará movimientos lentos y circulares sin provocar dolor.\nRealizar 10 repeticiones con cada brazo."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="33sp" />
+                android:textSize="31sp" />
 
         </LinearLayout>
 

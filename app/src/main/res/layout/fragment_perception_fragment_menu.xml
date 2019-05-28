@@ -68,7 +68,7 @@
                 android:layout_height="140dp"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textSize="52sp"
+                android:textSize="50sp"
                 android:textColor="@android:color/black"
                 android:text="¿En qué coordenada esta la figura?"/>
 

@@ -21,8 +21,8 @@
             android:gravity="center"
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
-            android:text="Visualiza durante algunos segundos los objetos \nque hay en cada lugar y en donde se encuentran. \nLuego tendrás que recordarlos."
-            android:textSize="45sp"
+            android:text="Visualiza durante algunos segundos los objetos que hay en cada lugar y en donde se encuentran. \nLuego tendrás que recordarlos."
+            android:textSize="43sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"/>
 

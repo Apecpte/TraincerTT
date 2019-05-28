@@ -56,11 +56,11 @@
                 android:id="@+id/tv3E1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Con el adulto mayor acostado o sentado, \nle pedimos que intente levantar el brazo. \nUn familiar completará el movimiento \nlentamente sin provocar dolor. \nRealizar 10 repeticiones con cada brazo."
+                android:text="Con el adulto mayor acostado o sentado, le pedimos que intente levantar el brazo. Un familiar completará el movimiento lentamente sin provocar dolor.\nRealizar 10 repeticiones con cada brazo."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"
-                android:textSize="33sp" />
+                android:textSize="31sp" />
 
         </LinearLayout>
 

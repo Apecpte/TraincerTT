@@ -21,7 +21,7 @@
             android:gravity="center"
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
-            android:text="Realiza las operaciones aritméticas \ny contesta en el espacio marcado."
+            android:text="Realiza las operaciones aritméticas y contesta en el espacio marcado."
             android:textSize="60sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"/>

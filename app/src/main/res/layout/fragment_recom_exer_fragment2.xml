@@ -54,9 +54,9 @@
 
             <TextView
                 android:id="@+id/tvE2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="De pie con ambas piernas juntas, \nflexionamos un poco las rodillas \ny hacemos círculos con ellas. \n15 repeticiones hacia la izquierda y \n15 repeticiones hacia la derecha."
+                android:text="De pie con ambas piernas juntas, flexionamos un poco las rodillas y hacemos círculos con ellas.\n15 repeticiones hacia la izquierda y \n15 repeticiones hacia la derecha."
                 android:textColor="@color/colorBlack"
                 android:textStyle="italic"
                 android:textAlignment="textEnd"

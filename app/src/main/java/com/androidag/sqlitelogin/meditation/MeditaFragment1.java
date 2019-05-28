@@ -1,6 +1,7 @@
 package com.androidag.sqlitelogin.meditation;
 
 
+import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.widget.ImageButton;
 
 import com.androidag.sqlitelogin.R;
 import com.androidag.sqlitelogin.fragments.HomeFragment;
+
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +32,8 @@ public class MeditaFragment1 extends Fragment {
     private Button goOut;
     private Button goNext;
 
+
+
     public MeditaFragment1() {
         // Required empty public constructor
     }
@@ -39,14 +44,7 @@ public class MeditaFragment1 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_medita_fragment1, container, false);
 
-        final MediaPlayer posIniMP = MediaPlayer.create(getContext(), R.raw.medi_posinicial);
-        final MediaPlayer frenteMP = MediaPlayer.create(getContext(), R.raw.medi_frente);
-        final MediaPlayer ojosMP = MediaPlayer.create(getContext(), R.raw.medi_ojos);
-        final MediaPlayer narizMP = MediaPlayer.create(getContext(), R.raw.medi_nariz);
-        final MediaPlayer bocaMP = MediaPlayer.create(getContext(), R.raw.medi_boca);
-        final MediaPlayer lenguaMP = MediaPlayer.create(getContext(), R.raw.medi_lengua);
-        final MediaPlayer mandiMP = MediaPlayer.create(getContext(), R.raw.medi_mandi);
-        final MediaPlayer labiosMP = MediaPlayer.create(getContext(), R.raw.medi_labios);
+        final MediaPlayer mediaPlayer = new MediaPlayer();
 
         audioPosInicial = (ImageButton) view.findViewById(R.id.imBtnMeditaAudioPosIni);
         audioFrente = (ImageButton) view.findViewById(R.id.imBtnMedita1AudioFrente);
@@ -63,62 +61,63 @@ public class MeditaFragment1 extends Fragment {
         audioPosInicial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                posIniMP.start();
+                stopAndPlay(R.raw.medi_posinicial, mediaPlayer);
             }
         });
 
         audioFrente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                frenteMP.start();
+                stopAndPlay(R.raw.medi_frente, mediaPlayer);
             }
         });
 
         audioOjos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ojosMP.start();
+                stopAndPlay(R.raw.medi_ojos, mediaPlayer);
             }
         });
 
         audioNariz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                narizMP.start();
+                stopAndPlay(R.raw.medi_nariz, mediaPlayer);
             }
         });
 
         audioBoca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bocaMP.start();
+                stopAndPlay(R.raw.medi_boca, mediaPlayer);
             }
         });
 
         audioLengua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                lenguaMP.start();
+                stopAndPlay(R.raw.medi_lengua, mediaPlayer);
             }
         });
 
         audioMandi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mandiMP.start();
+                stopAndPlay(R.raw.medi_mandi, mediaPlayer);
             }
         });
 
         audioLabios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                labiosMP.start();
+                stopAndPlay(R.raw.medi_labios, mediaPlayer);
             }
         });
 
         goOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 HomeFragment hf = new HomeFragment();
                 getActivity()
                         .getSupportFragmentManager()
@@ -132,6 +131,7 @@ public class MeditaFragment1 extends Fragment {
         goNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer.stop();
                 MeditaFragment5 m5f = new MeditaFragment5();
                 getActivity()
                         .getSupportFragmentManager()
@@ -144,4 +144,18 @@ public class MeditaFragment1 extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+
+    // This resets the mediaPlayer and starts the given audio
+    private void stopAndPlay(int rawId, MediaPlayer mediaPlayer) {
+        mediaPlayer.reset();
+        AssetFileDescriptor afd = this.getResources().openRawResourceFd(rawId);
+        try {
+            mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+            mediaPlayer.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mediaPlayer.start();
+    }
+
 }

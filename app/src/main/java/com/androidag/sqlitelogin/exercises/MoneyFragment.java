@@ -124,7 +124,7 @@ public class MoneyFragment extends Fragment {
                 titleB.setPadding(10, 10, 10, 10);
                 titleB.setGravity(Gravity.CENTER);
                 titleB.setTextSize(40);
-                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\nTómate tu tiempo");
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\n\nTómate tu tiempo");
                 builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -177,7 +177,7 @@ public class MoneyFragment extends Fragment {
             title.setPadding(10, 10, 10, 10);
             title.setGravity(Gravity.CENTER);
             title.setTextSize(40);
-            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n\n¿Deseas continuar con el siguiente nivel?");
             builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

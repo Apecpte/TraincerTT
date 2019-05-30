@@ -19,6 +19,7 @@ public class SplashMoneyFragment extends Fragment {
 
     private Button btnStartMoney;
     private ImageButton audioInstMoney;
+    private MediaPlayer moneyMP;
 
     public SplashMoneyFragment() {
         // Required empty public constructor
@@ -30,7 +31,7 @@ public class SplashMoneyFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_money, container, false);
 
-        final MediaPlayer moneyMP = MediaPlayer.create(getContext(), R.raw.cuanto_dinero1);
+        moneyMP = MediaPlayer.create(getContext(), R.raw.cuanto_dinero1);
 
         btnStartMoney = (Button) view.findViewById(R.id.buttonStartMoney);
         audioInstMoney = (ImageButton) view.findViewById(R.id.moneyButtonInst);
@@ -45,6 +46,7 @@ public class SplashMoneyFragment extends Fragment {
         btnStartMoney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                moneyMP.stop();
                 MoneyFragment mo1F = new MoneyFragment();
                 getActivity()
                         .getSupportFragmentManager()

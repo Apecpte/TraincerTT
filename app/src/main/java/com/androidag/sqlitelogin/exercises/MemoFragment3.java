@@ -171,7 +171,7 @@ public class MemoFragment3 extends Fragment implements View.OnClickListener {
             titleB.setPadding(10, 10, 10, 10);
             titleB.setGravity(Gravity.CENTER);
             titleB.setTextSize(40);
-            builder.setMessage("La respuesta correcta es: " + rightAnswer + "\nTú puedes");
+            builder.setMessage("La respuesta correcta es: " + rightAnswer + "\n\nTú puedes");
             builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

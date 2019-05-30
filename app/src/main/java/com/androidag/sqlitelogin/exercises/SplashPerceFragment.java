@@ -20,6 +20,7 @@ public class SplashPerceFragment extends Fragment {
 
     private Button btnStartPerce;
     private ImageButton audioInstPerce;
+    private MediaPlayer perceMP;
 
     public SplashPerceFragment() {
         // Required empty public constructor
@@ -31,7 +32,7 @@ public class SplashPerceFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_perce, container, false);
 
-        final MediaPlayer perceMP = MediaPlayer.create(getContext(), R.raw.coordenadas1);
+        perceMP = MediaPlayer.create(getContext(), R.raw.coordenadas1);
 
         btnStartPerce = (Button) view.findViewById(R.id.buttonStartPerce);
         audioInstPerce = (ImageButton) view.findViewById(R.id.perceButtonInst);
@@ -46,6 +47,7 @@ public class SplashPerceFragment extends Fragment {
         btnStartPerce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                perceMP.stop();
                 PerceFragment p1F = new PerceFragment();
                 getActivity()
                         .getSupportFragmentManager()

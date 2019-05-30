@@ -19,6 +19,7 @@ public class SplashAteFragment extends Fragment {
 
     private Button btnStartAte;
     private ImageButton audioInstAte;
+    private MediaPlayer ateMP;
 
     public SplashAteFragment() {
         // Required empty public constructor
@@ -30,7 +31,7 @@ public class SplashAteFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_ate, container, false);
 
-        final MediaPlayer ateMP = MediaPlayer.create(getContext(), R.raw.cuantos_objetos1);
+        ateMP = MediaPlayer.create(getContext(), R.raw.cuantos_objetos1);
 
         btnStartAte = (Button) view.findViewById(R.id.buttonStartAte);
         audioInstAte = (ImageButton) view.findViewById(R.id.ateButtonInst);
@@ -45,6 +46,7 @@ public class SplashAteFragment extends Fragment {
         btnStartAte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ateMP.stop();
                 AteFragment aF = new AteFragment();
                 getActivity()
                         .getSupportFragmentManager()

@@ -177,7 +177,7 @@ public class LanguageFragment3 extends Fragment {
         titleB.setPadding(10, 10, 10, 10);
         titleB.setGravity(Gravity.CENTER);
         titleB.setTextSize(40);
-        builder.setMessage("La respuesta correcta es: " + languageQuestions.getCorrectAnswer(currentPosition) + "\nTú puedes");
+        builder.setMessage("La respuesta correcta es: " + languageQuestions.getCorrectAnswer(currentPosition) + "\n\nTú puedes");
         builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

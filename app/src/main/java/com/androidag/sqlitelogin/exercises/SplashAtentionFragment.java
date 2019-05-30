@@ -19,6 +19,7 @@ public class SplashAtentionFragment extends Fragment {
 
     private Button btnStartAtention;
     private ImageButton audioInstAtention;
+    private MediaPlayer atentionMP;
 
     public SplashAtentionFragment() {
         // Required empty public constructor
@@ -30,7 +31,7 @@ public class SplashAtentionFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_splash_atention, container, false);
 
-        final MediaPlayer atentionMP = MediaPlayer.create(getContext(), R.raw.invierte_numeros1);
+        atentionMP = MediaPlayer.create(getContext(), R.raw.invierte_numeros1);
 
         btnStartAtention = (Button) view.findViewById(R.id.buttonStartAtention);
         audioInstAtention = (ImageButton) view.findViewById(R.id.atentionButtonInst);
@@ -45,6 +46,7 @@ public class SplashAtentionFragment extends Fragment {
         btnStartAtention.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                atentionMP.stop();
                 AtentionFragment aF = new AtentionFragment();
                 getActivity()
                         .getSupportFragmentManager()

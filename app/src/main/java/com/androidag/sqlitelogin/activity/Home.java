@@ -139,16 +139,15 @@ public class Home extends AppCompatActivity {
                 // abrir menu lateral
                 //drawerLayout.openDrawer(GravityCompat.START);
                 //return true;
-
                 if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                     drawerLayout.closeDrawers();
                 } else {
                     drawerLayout.openDrawer(GravityCompat.START);
                 }
                 return true;
-            //case R.id.menu_info:
-
-              //  break;
+            case R.id.menu_info:
+                infoAlert();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -181,6 +180,35 @@ public class Home extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     } */
+
+    public void infoAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+        TextView title = new TextView(Home.this);
+        title.setText("Información sobre la app");
+        builder.setMessage("Esta app ha sido realizada por Roberto Ledesma Rivera y Sergio Enrique Pozos Retana del trabajo terminal 2018-A059 de la Escuela Superior de Cómputo del Instituto Politécnico Nacional." +
+                "\n\nEl trabajo terminal es un diseño de una aplicación para Tablet, que estimulará cognitivamente a personas de la tercera edad, " +
+                "ya que son un sector de la población vulnerable y con mayor riesgo de presentar un deterioro cognitivo por el proceso de envejecimiento natural, " +
+                "aunado a una falta de estimulación cerebral. La aplicación táctil hará uso de diversos recursos, que buscarán estimular áreas cognitivas, " +
+                "además de sugerir recomendaciones para mejorar su bienestar físico y emocional." +
+                "\n\nEn ningún caso, debe tomarse como herramienta de diagnóstico de lesiones traumáticas cerebrales, demencia y/o alzhéimer, Parkinson, diabetes, sarcopenia, depresión, entre otras, " +
+                "ya que esta categorización corresponde únicamente a los profesionales médicos." +
+                "\n\nLos contenidos que se muestran en la app han sido documentados en el reporte técnico, así como el agradecimiento por su apoyo y asesoramiento a nuestros directores el " +
+                "Dr. José Alfredo Jiménez Benítez y M. en C. Jacqueline Arzate Gordillo." +
+                "\n\nCréditos: " +
+                "\nDr. José Alfredo Jiménez Benítez por voz en la recomendación de relajación progresiva de Jacobson." +
+                "\nErick González Arciniega por diseño de los logotipos." +
+                "\nIcono realizado por Freepik en freepik y en www.flaticon.com" +
+                "\nIconos realizados por Darius Dan, Icons8, pongsakornRed, Becris, Pixelmeetup, geotatah, popcorns, Nikita Golubev, Smashicons, surang, bqlqn, monkik, Flat Icons y Vectors Market en www.flaticon.com" +
+                "\nImagenes de congerdesign y Kolibrik en Pixabay") ;
+        //builder.setIcon(R.drawable.ic_logout);
+        builder.setCancelable(true);
+
+        AlertDialog dialog = builder.create();
+        dialog.setCustomTitle(title);
+        dialog.show();
+        TextView textView = (TextView) dialog.findViewById(android.R.id.message);
+        //dialog.getWindow().setLayout(600, 400);
+    }
 
     public void onBackLogin() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);

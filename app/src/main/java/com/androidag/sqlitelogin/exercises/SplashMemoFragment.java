@@ -21,6 +21,7 @@ public class SplashMemoFragment extends Fragment {
 
     private Chronometer chronometer1;
     private ImageButton audioInstMemo;
+    private MediaPlayer memoMP;
 
     public SplashMemoFragment() {
         // Required empty public constructor
@@ -32,7 +33,7 @@ public class SplashMemoFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_memo, container, false);
 
-        final MediaPlayer memoMP = MediaPlayer.create(getContext(), R.raw.de_15segundos);
+        memoMP = MediaPlayer.create(getContext(), R.raw.de_15segundos);
 
         chronometer1 = view.findViewById(R.id.chronometerMemo1);
         audioInstMemo = (ImageButton) view.findViewById(R.id.memoButtonInst);
@@ -53,6 +54,7 @@ public class SplashMemoFragment extends Fragment {
             public void onChronometerTick(Chronometer chronometer) {
                 if ((SystemClock.elapsedRealtime() - chronometer1.getBase()) >= 15000) {
                     chronometer1.setBase(SystemClock.elapsedRealtime());
+                    memoMP.stop();
                     MemoFragment m1F = new MemoFragment();
                     getActivity()
                             .getSupportFragmentManager()

@@ -32,7 +32,6 @@ public class AteFragment3 extends Fragment {
     ArrayList<MathQuestionModel> questionModelArraylist;
 
     int currentPosition = 0;
-    int numberOfCorrectAnswer = 0;
 
     public AteFragment3() {
         // Required empty public constructor
@@ -85,7 +84,6 @@ public class AteFragment3 extends Fragment {
 
         if(!answerEdt.getText().toString().isEmpty()){
             if(answerString.equalsIgnoreCase(questionModelArraylist.get(currentPosition).getAnswer())){
-                numberOfCorrectAnswer ++;
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 TextView titleG = new TextView(getContext());
@@ -118,7 +116,7 @@ public class AteFragment3 extends Fragment {
                 titleB.setPadding(10, 10, 10, 10);
                 titleB.setGravity(Gravity.CENTER);
                 titleB.setTextSize(40);
-                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\nTú puedes");
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\n\nTú puedes");
                 builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -159,7 +157,7 @@ public class AteFragment3 extends Fragment {
             title.setPadding(10, 10, 10, 10);
             title.setGravity(Gravity.CENTER);
             title.setTextSize(40);
-            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size()  + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setMessage("¿Deseas continuar con el siguiente nivel?");
             builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

@@ -151,7 +151,7 @@ public class LanguFragment2 extends Fragment {
         titleB.setPadding(10, 10, 10, 10);
         titleB.setGravity(Gravity.CENTER);
         titleB.setTextSize(40);
-        builder.setMessage("La respuesta correcta es: " + languQuestions.getCorrectAnswer(currentPosition) + "\nIntenta de nuevo");
+        builder.setMessage("La respuesta correcta es: " + languQuestions.getCorrectAnswer(currentPosition) + "\n\nIntenta de nuevo");
         builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -180,7 +180,7 @@ public class LanguFragment2 extends Fragment {
         title.setPadding(10, 10, 10, 10);
         title.setGravity(Gravity.CENTER);
         title.setTextSize(40);
-        builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + languQuestions.languQuestions.length + "\n¿Deseas continuar con el siguiente nivel?");
+        builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + languQuestions.languQuestions.length + "\n\n¿Deseas continuar con el siguiente nivel?");
         builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

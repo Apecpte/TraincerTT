@@ -19,6 +19,7 @@ public class SplashMathsFragment extends Fragment {
 
     private Button btnStartMaths;
     private ImageButton audioInstMaths;
+    private MediaPlayer mathsMP;
 
     public SplashMathsFragment() {
         // Required empty public constructor
@@ -30,7 +31,7 @@ public class SplashMathsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_maths, container, false);
 
-        final MediaPlayer mathsMP = MediaPlayer.create(getContext(), R.raw.op_arimeticas1);
+        mathsMP = MediaPlayer.create(getContext(), R.raw.op_arimeticas1);
 
         btnStartMaths = (Button) view.findViewById(R.id.buttonStartMaths);
         audioInstMaths = (ImageButton) view.findViewById(R.id.mathsButtonInst);
@@ -45,6 +46,7 @@ public class SplashMathsFragment extends Fragment {
         btnStartMaths.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mathsMP.stop();
                 MathsFragment m1F = new MathsFragment();
                 getActivity()
                         .getSupportFragmentManager()

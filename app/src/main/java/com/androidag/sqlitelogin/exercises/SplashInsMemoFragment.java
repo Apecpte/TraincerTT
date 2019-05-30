@@ -19,6 +19,7 @@ public class SplashInsMemoFragment extends Fragment {
 
     private Button btnStartMemo;
     private ImageButton audioInstMemo;
+    private MediaPlayer memoMP;
     //private ImageButton audioInstLanguage;
 
     public SplashInsMemoFragment() {
@@ -31,7 +32,7 @@ public class SplashInsMemoFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_inst_memo, container, false);
 
-        final MediaPlayer memoMP = MediaPlayer.create(getContext(), R.raw.donde_esta_inst);
+        memoMP = MediaPlayer.create(getContext(), R.raw.donde_esta_inst);
 
         btnStartMemo = (Button) view.findViewById(R.id.buttonStartMemoSplash);
         audioInstMemo = (ImageButton) view.findViewById(R.id.memoSplashButtonInst);
@@ -46,6 +47,7 @@ public class SplashInsMemoFragment extends Fragment {
         btnStartMemo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                memoMP.stop();
                 SplashMemoFragment smF1 = new SplashMemoFragment();
                 getActivity()
                         .getSupportFragmentManager()

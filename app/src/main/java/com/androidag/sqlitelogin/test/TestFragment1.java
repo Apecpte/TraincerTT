@@ -245,7 +245,7 @@ public class TestFragment1 extends Fragment {
             alertDialogBuilder
                     .setMessage("Tu deterioro cognitivo es grave, acude con un especialista lo más pronto posible.")
                     .setCancelable(false)
-                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                    .setNeutralButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             ScoreTestFragment sTF = new ScoreTestFragment();
@@ -283,7 +283,7 @@ public class TestFragment1 extends Fragment {
             alertDialogBuilder
                     .setMessage("Tu deterioro cognitivo es moderado. Se te recomienda acudir con un especialista.")
                     .setCancelable(false)
-                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                    .setNeutralButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             ScoreTestFragment sTF = new ScoreTestFragment();
@@ -321,7 +321,7 @@ public class TestFragment1 extends Fragment {
             alertDialogBuilder
                     .setMessage("Tu deterioro cognitivo es leve.")
                     .setCancelable(false)
-                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                    .setNeutralButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             ScoreTestFragment sTF = new ScoreTestFragment();
@@ -359,7 +359,7 @@ public class TestFragment1 extends Fragment {
             alertDialogBuilder
                     .setMessage("¡Felicidades, capacidad cognoscitiva normal!")
                     .setCancelable(false)
-                    .setNeutralButton("MENU", new DialogInterface.OnClickListener() {
+                    .setNeutralButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
 

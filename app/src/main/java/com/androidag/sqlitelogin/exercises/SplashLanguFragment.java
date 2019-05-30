@@ -19,6 +19,7 @@ public class SplashLanguFragment extends Fragment {
 
     private Button btnStartLangu;
     private ImageButton audioInstLangu;
+    private MediaPlayer languMP;
 
     public SplashLanguFragment() {
         // Required empty public constructor
@@ -31,7 +32,7 @@ public class SplashLanguFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_splash_langu, container, false);
 
-        final MediaPlayer languMP = MediaPlayer.create(getContext(), R.raw.resp_preguntas1);
+        languMP = MediaPlayer.create(getContext(), R.raw.resp_preguntas1);
 
         btnStartLangu = (Button) view.findViewById(R.id.buttonStartLangu);
         audioInstLangu = (ImageButton) view.findViewById(R.id.languButtonInst);
@@ -46,6 +47,7 @@ public class SplashLanguFragment extends Fragment {
         btnStartLangu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                languMP.stop();
                 LanguFragment lF = new LanguFragment();
                 getActivity()
                         .getSupportFragmentManager()

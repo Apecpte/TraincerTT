@@ -124,7 +124,7 @@ public class MoneyFragment3 extends Fragment {
                 titleB.setPadding(10, 10, 10, 10);
                 titleB.setGravity(Gravity.CENTER);
                 titleB.setTextSize(40);
-                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\nTú puedes");
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\n\nTú puedes");
                 builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -158,7 +158,7 @@ public class MoneyFragment3 extends Fragment {
         questionModelArraylist.add(new MathQuestionModel("¿Cuánto dinero costará comprar tres kilos de jitomate y dos kilos de cebolla?","132"));
         questionModelArraylist.add(new MathQuestionModel("¿Cuánto dinero costará comprar un kilo de carne, un kilo de cebolla y dos kilos de lima?","244"));
         questionModelArraylist.add(new MathQuestionModel("¿Cuánto dinero costará comprar un kilo de lima, un kilo de sandía y 3 kilos de carne?","565"));
-       // questionModelArraylist.add(new MathQuestionModel("¿Cuánto dinero te costará comprar cada artículo?",""));
+        questionModelArraylist.add(new MathQuestionModel("¿Cuánto dinero te costará comprar cada artículo?","323.50"));
     }
 
     public void setData(){

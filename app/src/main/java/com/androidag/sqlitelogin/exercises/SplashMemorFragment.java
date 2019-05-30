@@ -19,6 +19,7 @@ public class SplashMemorFragment extends Fragment {
 
     private Button btnStartMemor;
     private ImageButton audioInstMemor;
+    private MediaPlayer memorMP;
 
     public SplashMemorFragment() {
         // Required empty public constructor
@@ -30,7 +31,7 @@ public class SplashMemorFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_memor, container, false);
 
-        final MediaPlayer memorMP = MediaPlayer.create(getContext(), R.raw.memorama1);
+        memorMP = MediaPlayer.create(getContext(), R.raw.memorama1);
 
         btnStartMemor = (Button) view.findViewById(R.id.buttonStartMemor);
         audioInstMemor = (ImageButton) view.findViewById(R.id.memorButtonInst);
@@ -45,6 +46,7 @@ public class SplashMemorFragment extends Fragment {
         btnStartMemor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                memorMP.stop();
                 MemorFragment m2F = new MemorFragment();
                 getActivity()
                         .getSupportFragmentManager()

@@ -121,7 +121,7 @@ public class MathsFragment2 extends Fragment {
                 titleB.setPadding(10, 10, 10, 10);
                 titleB.setGravity(Gravity.CENTER);
                 titleB.setTextSize(40);
-                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\nIntenta de nuevo");
+                builder.setMessage("La respuesta correcta es: " + questionModelArraylist.get(currentPosition).getAnswer() + "\n\nIntenta de nuevo");
                 builder.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -179,7 +179,7 @@ public class MathsFragment2 extends Fragment {
             title.setPadding(10, 10, 10, 10);
             title.setGravity(Gravity.CENTER);
             title.setTextSize(40);
-            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n¿Deseas continuar con el siguiente nivel?");
+            builder.setMessage("Tu puntuación es: " + numberOfCorrectAnswer + "/" + questionModelArraylist.size() + "\n\n¿Deseas continuar con el siguiente nivel?");
             builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

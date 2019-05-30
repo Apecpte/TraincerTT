@@ -20,6 +20,7 @@ public class SplashScrabbleLanguageFragment extends Fragment {
 
     private Button btnStartMemoSc;
     private ImageButton audioInstLanguage;
+    private MediaPlayer languageMP;
 
     public SplashScrabbleLanguageFragment() {
         // Required empty public constructor
@@ -31,7 +32,7 @@ public class SplashScrabbleLanguageFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_splash_scrabble_language, container, false);
 
-        final MediaPlayer languageMP = MediaPlayer.create(getContext(), R.raw.completa_palabra1);
+        languageMP = MediaPlayer.create(getContext(), R.raw.completa_palabra1);
 
         btnStartMemoSc = (Button) view.findViewById(R.id.buttonStartMemoSc);
         audioInstLanguage = (ImageButton) view.findViewById(R.id.languageScButtonInst);
@@ -46,6 +47,7 @@ public class SplashScrabbleLanguageFragment extends Fragment {
         btnStartMemoSc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                languageMP.stop();
                 LanguageFragment lF = new LanguageFragment();
                 getActivity()
                         .getSupportFragmentManager()
